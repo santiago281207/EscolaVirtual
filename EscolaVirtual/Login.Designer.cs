@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pLogin = new System.Windows.Forms.Panel();
+            this.formLogin = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pPassword = new System.Windows.Forms.Panel();
             this.pCorPassword = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.lbl_VirtualSchool = new System.Windows.Forms.Label();
-            this.pLogin.SuspendLayout();
+            this.formLogin.SuspendLayout();
             this.pPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.pUsername.SuspendLayout();
@@ -63,20 +63,20 @@
             this.imageList1.Images.SetKeyName(1, "icons8-cadeado-50.png");
             this.imageList1.Images.SetKeyName(2, "icons8-pessoa-do-sexo-masculino-24.png");
             // 
-            // pLogin
+            // formLogin
             // 
-            this.pLogin.BackColor = System.Drawing.Color.White;
-            this.pLogin.Controls.Add(this.btnLogin);
-            this.pLogin.Controls.Add(this.pPassword);
-            this.pLogin.Controls.Add(this.lblPassword);
-            this.pLogin.Controls.Add(this.pUsername);
-            this.pLogin.Controls.Add(this.lblUsername);
-            this.pLogin.Controls.Add(this.pbLogoInete);
-            this.pLogin.Controls.Add(this.lbl_VirtualSchool);
-            this.pLogin.Location = new System.Drawing.Point(263, -1);
-            this.pLogin.Name = "pLogin";
-            this.pLogin.Size = new System.Drawing.Size(431, 652);
-            this.pLogin.TabIndex = 0;
+            this.formLogin.BackColor = System.Drawing.Color.White;
+            this.formLogin.Controls.Add(this.btnLogin);
+            this.formLogin.Controls.Add(this.pPassword);
+            this.formLogin.Controls.Add(this.lblPassword);
+            this.formLogin.Controls.Add(this.pUsername);
+            this.formLogin.Controls.Add(this.lblUsername);
+            this.formLogin.Controls.Add(this.pbLogoInete);
+            this.formLogin.Controls.Add(this.lbl_VirtualSchool);
+            this.formLogin.Location = new System.Drawing.Point(263, -1);
+            this.formLogin.Name = "formLogin";
+            this.formLogin.Size = new System.Drawing.Size(431, 652);
+            this.formLogin.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -223,13 +223,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.pLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.formLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.pLogin.ResumeLayout(false);
-            this.pLogin.PerformLayout();
+            this.Text = "Login";
+            this.formLogin.ResumeLayout(false);
+            this.formLogin.PerformLayout();
             this.pPassword.ResumeLayout(false);
             this.pPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
@@ -244,7 +244,7 @@
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel pLogin;
+        private System.Windows.Forms.Panel formLogin;
         private System.Windows.Forms.PictureBox pbLogoInete;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lbl_VirtualSchool;

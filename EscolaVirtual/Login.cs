@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EscolaVirtual.Classes;
 
 namespace EscolaVirtual
 {
     public partial class Form_Login : Form
     {
-        public Form_Login()
+        public Form_Login(Admin admin)
         {
             InitializeComponent();
         }
