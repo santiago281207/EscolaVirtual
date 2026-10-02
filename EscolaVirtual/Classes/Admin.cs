@@ -15,6 +15,7 @@ namespace EscolaVirtual.Classes
             this.Password = "0000";
         }
 
+        const int maxStudentsPerClass = 25;
 
         #region Properties and Members
         private List<ClassYear> m_classYears = new List<ClassYear>();
