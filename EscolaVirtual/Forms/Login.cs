@@ -37,15 +37,15 @@ namespace EscolaVirtual
                     //User
                     if (user.UserType == 1)
                     {
-                        FormStudent studentForm = new FormStudent(admin);
+                        //FormStudent studentForm = new FormStudent(admin);
                         this.Hide();
-                        studentForm.Show();
+                        //studentForm.Show();
                     }
                     else
                     {
-                        FormTeacher teacherForm = new FormTeacher(admin);
+                        //FormTeacher teacherForm = new FormTeacher(admin);
                         this.Hide();
-                        teacherForm.Show();
+                        //teacherForm.Show();
                     }
                 }
                 else
