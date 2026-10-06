@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EscolaVirtual.Classes;
 
 namespace EscolaVirtual
 {
-    public partial class Form_Login : Form
+    public partial class FormAdmin : Form
     {
-        public Form_Login(Admin admin)
+        Admin admin;
+        public FormAdmin(Admin admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
     }
 }
