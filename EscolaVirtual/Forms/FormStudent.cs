@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace EscolaVirtual
 {
     public partial class FormStudent : Form
     {
-        public FormStudent()
+        Student student;
+        public FormStudent(Student student)
         {
             InitializeComponent();
+            this.student = student;
+        }
+
+        private void FormStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

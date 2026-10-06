@@ -19,5 +19,10 @@ namespace EscolaVirtual
             InitializeComponent();
             this.admin = admin;
         }
+
+        private void FormAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

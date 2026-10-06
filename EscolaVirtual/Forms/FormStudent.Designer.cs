@@ -42,18 +42,20 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(25, 29);
+            this.lblWelcome.Location = new System.Drawing.Point(19, 24);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(140, 29);
+            this.lblWelcome.Size = new System.Drawing.Size(113, 24);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Bem Vindo";
             // 
             // btnData
             // 
             this.btnData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnData.Location = new System.Drawing.Point(30, 266);
+            this.btnData.Location = new System.Drawing.Point(22, 216);
+            this.btnData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(276, 73);
+            this.btnData.Size = new System.Drawing.Size(207, 59);
             this.btnData.TabIndex = 1;
             this.btnData.Text = "Alterar Dados";
             this.btnData.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(30, 699);
+            this.btnExit.Location = new System.Drawing.Point(22, 568);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(276, 73);
+            this.btnExit.Size = new System.Drawing.Size(207, 59);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // btnAbsence
             // 
             this.btnAbsence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbsence.Location = new System.Drawing.Point(30, 140);
+            this.btnAbsence.Location = new System.Drawing.Point(22, 114);
+            this.btnAbsence.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAbsence.Name = "btnAbsence";
-            this.btnAbsence.Size = new System.Drawing.Size(276, 73);
+            this.btnAbsence.Size = new System.Drawing.Size(207, 59);
             this.btnAbsence.TabIndex = 3;
             this.btnAbsence.Text = "Consultar Faltas e Estado";
             this.btnAbsence.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // btnSchoolCard
             // 
             this.btnSchoolCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchoolCard.Location = new System.Drawing.Point(30, 399);
+            this.btnSchoolCard.Location = new System.Drawing.Point(22, 324);
+            this.btnSchoolCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSchoolCard.Name = "btnSchoolCard";
-            this.btnSchoolCard.Size = new System.Drawing.Size(276, 73);
+            this.btnSchoolCard.Size = new System.Drawing.Size(207, 59);
             this.btnSchoolCard.TabIndex = 4;
             this.btnSchoolCard.Text = "Cartão da Escola";
             this.btnSchoolCard.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // btnMessages
             // 
             this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMessages.Location = new System.Drawing.Point(30, 529);
+            this.btnMessages.Location = new System.Drawing.Point(22, 430);
+            this.btnMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMessages.Name = "btnMessages";
-            this.btnMessages.Size = new System.Drawing.Size(276, 73);
+            this.btnMessages.Size = new System.Drawing.Size(207, 59);
             this.btnMessages.TabIndex = 5;
             this.btnMessages.Text = "Mensagens";
             this.btnMessages.UseVisualStyleBackColor = true;
@@ -102,24 +108,26 @@
             // 
             this.lblAverage.AutoSize = true;
             this.lblAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAverage.Location = new System.Drawing.Point(550, 81);
+            this.lblAverage.Location = new System.Drawing.Point(412, 66);
+            this.lblAverage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAverage.Name = "lblAverage";
-            this.lblAverage.Size = new System.Drawing.Size(156, 29);
+            this.lblAverage.Size = new System.Drawing.Size(123, 24);
             this.lblAverage.TabIndex = 6;
             this.lblAverage.Text = "Média Geral";
             // 
             // tvwGradesAndAverage
             // 
-            this.tvwGradesAndAverage.Location = new System.Drawing.Point(555, 140);
+            this.tvwGradesAndAverage.Location = new System.Drawing.Point(416, 114);
+            this.tvwGradesAndAverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tvwGradesAndAverage.Name = "tvwGradesAndAverage";
-            this.tvwGradesAndAverage.Size = new System.Drawing.Size(672, 632);
+            this.tvwGradesAndAverage.Size = new System.Drawing.Size(505, 514);
             this.tvwGradesAndAverage.TabIndex = 7;
             // 
             // FormStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 800);
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.tvwGradesAndAverage);
             this.Controls.Add(this.lblAverage);
             this.Controls.Add(this.btnMessages);
@@ -128,8 +136,10 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.lblWelcome);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormStudent";
             this.Text = "FormStudent";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormStudent_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

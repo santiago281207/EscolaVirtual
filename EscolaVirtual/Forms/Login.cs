@@ -50,7 +50,7 @@ namespace EscolaVirtual
                 }
                 else
                 {
-                    MessageBox.Show("Número de login ou password!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Número de login ou password errados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
