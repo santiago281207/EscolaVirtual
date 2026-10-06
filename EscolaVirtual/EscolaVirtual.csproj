@@ -112,5 +112,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-cadeado-50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Credenciais.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
