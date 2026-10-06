@@ -78,7 +78,6 @@
             this.formLogin.Name = "formLogin";
             this.formLogin.Size = new System.Drawing.Size(575, 802);
             this.formLogin.TabIndex = 0;
-            this.formLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.formLogin_Paint);
             // 
             // btnLogin
             // 
@@ -165,7 +164,6 @@
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(439, 44);
             this.pUsername.TabIndex = 3;
-            this.pUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.pUsername_Paint);
             // 
             // pCorUsername
             // 
