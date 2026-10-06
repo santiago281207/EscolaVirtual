@@ -13,7 +13,7 @@ namespace EscolaVirtual
 {
     public partial class Form_Login : Form
     {
-        public Form_Login(Admin admin)
+        public Form_Login(FormAdmin admin)
         {
             InitializeComponent();
         }
