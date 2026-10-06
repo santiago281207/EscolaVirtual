@@ -17,5 +17,15 @@ namespace EscolaVirtual
         {
             InitializeComponent();
         }
+
+        private void formLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pUsername_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
