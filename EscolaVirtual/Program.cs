@@ -15,7 +15,7 @@ namespace EscolaVirtual
         [STAThread]
         static void Main()
         {
-            Admin admin = new Admin();
+            FormAdmin admin = new FormAdmin();
             admin.StartUp();
 
             Application.EnableVisualStyles();
