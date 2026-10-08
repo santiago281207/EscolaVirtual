@@ -48,5 +48,52 @@ namespace EscolaVirtual
             this.Hide();
             loginForm.Show();
         }
+
+        private void FormTeacher_Load(object sender, EventArgs e)
+        {
+            //Lista de ProfessoresTurmaDisciplina filtrados pelo professor atual
+            List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(t => t.Teacher == teacher);
+
+            Class @class;
+
+            foreach(TeacherClassSubject tcs in teacherClassSubjects)
+            {
+                //Turma do registo
+                @class = tcs.Class;
+
+                TreeNode classFind = null;
+
+                //TreeNode da subject
+                TreeNode tnS = new TreeNode($"{tcs.Subject.SubjectName}");
+                tnS.Tag = $"{tcs.Subject.SubjectName}";
+
+                //Encontrar se já existe node de turma na tvw
+                foreach (TreeNode tnF in tvwSubjectClass.Nodes)
+                {
+                    if (tnF.Tag == @class.Name)
+                    {
+                        classFind = tnF;
+                        break;
+                    }
+                }
+
+                if(classFind == null)
+                {
+                    classFind = new TreeNode($"{@class.Name}");
+                    classFind.Tag = @class.Name;
+                    classFind.Nodes.Add(tnS);
+
+                    tvwSubjectClass.Nodes.Add(classFind);
+                }else
+                {
+                    classFind.Nodes.Add(tnS);
+                }
+
+
+
+
+            }
+            
+        }
     }
 }

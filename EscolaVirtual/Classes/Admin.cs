@@ -66,6 +66,8 @@ namespace EscolaVirtual.Classes
 
         public void StartUp()
         {
+
+
             ClassYear classYear10 = new ClassYear("10º");
             ClassYear classYear11 = new ClassYear("11º");
 
@@ -100,6 +102,65 @@ namespace EscolaVirtual.Classes
 
             this.ClassYears.Add(classYear10);
             this.ClassYears.Add(classYear11);
+
+
+            //         REMOVER ANTES DE ENVIAR
+            //=========================================
+            //=========================================
+            //=========================================
+            //               TESTE
+            //=========================================
+            //=========================================
+            //=========================================
+
+            #region TURMAS TESTE
+            Class class1 = new Class("TGPSI",classYear10);
+            Class class2 = new Class("MAV", classYear11);
+            #endregion
+
+            #region PROFESSORES TESTE
+            Teacher teacher = new Teacher("1111", "1111", "Santiago", "123456789");
+            this.Teachers.Add(teacher);
+            this.Users.Add(teacher);
+            #endregion
+
+
+
+            #region REGISTOS TESTE
+            TeacherClassSubject teacherClassSubject1 = new TeacherClassSubject(teacher, subject1, class1);
+            TeacherClassSubject teacherClassSubject2 = new TeacherClassSubject(teacher, subject2, class1);
+            TeacherClassSubject teacherClassSubject3 = new TeacherClassSubject(teacher, subject3, class1);
+            TeacherClassSubject teacherClassSubject4 = new TeacherClassSubject(teacher, subject4, class1);
+
+            this.TeacherClassSubjects.Add(teacherClassSubject1);
+            this.TeacherClassSubjects.Add(teacherClassSubject2);
+            this.TeacherClassSubjects.Add(teacherClassSubject3);
+            this.TeacherClassSubjects.Add(teacherClassSubject4);
+
+            TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher, subject5, class2);
+            TeacherClassSubject teacherClassSubject6 = new TeacherClassSubject(teacher, subject6, class2);
+            TeacherClassSubject teacherClassSubject7 = new TeacherClassSubject(teacher, subject7, class2);
+            TeacherClassSubject teacherClassSubject8 = new TeacherClassSubject(teacher, subject8, class2);
+
+            this.TeacherClassSubjects.Add(teacherClassSubject5);
+            this.TeacherClassSubjects.Add(teacherClassSubject6);
+            this.TeacherClassSubjects.Add(teacherClassSubject7);
+            this.TeacherClassSubjects.Add(teacherClassSubject8);
+            #endregion
+
+
+
+
+
+
+
+            //=========================================
+            //=========================================
+            //=========================================
+            //               TESTE
+            //=========================================
+            //=========================================
+            //=========================================
 
         }
 
