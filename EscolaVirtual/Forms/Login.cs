@@ -37,18 +37,18 @@ namespace EscolaVirtual
                     //User
                     if (user.UserType == 1)
                     {
-                        //FormStudent studentForm = new FormStudent(admin);
+                        FormStudent studentForm = new FormStudent(admin,(Student)user);
                         this.Hide();
-                        //studentForm.Show();
+                        studentForm.Show();
                     }
-                    else
+                    else //Teacher
                     {
-                        //FormTeacher teacherForm = new FormTeacher(admin);
+                        FormTeacher teacherForm = new FormTeacher(admin,(Teacher)user);
                         this.Hide();
-                        //teacherForm.Show();
+                        teacherForm.Show();
                     }
                 }
-                else
+                else //User not found
                 {
                     MessageBox.Show("Número de login ou password errados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

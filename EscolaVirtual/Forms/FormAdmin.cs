@@ -24,5 +24,12 @@ namespace EscolaVirtual
         {
             Application.Exit();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form_Login loginForm = new Form_Login(admin);
+            this.Hide();
+            loginForm.Show();
+        }
     }
 }
