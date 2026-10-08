@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAddYear.cs">
+    <Compile Include="Forms\FormAddYear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddYear.Designer.cs">
+    <Compile Include="Forms\FormAddYear.Designer.cs">
       <DependentUpon>FormAddYear.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormAbsencesStudent.cs">
@@ -116,7 +116,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAddYear.resx">
+    <EmbeddedResource Include="Forms\FormAddYear.resx">
       <DependentUpon>FormAddYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAbsencesStudent.resx">

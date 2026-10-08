@@ -148,7 +148,9 @@
             this.Controls.Add(this.btnGrades);
             this.Controls.Add(this.tvwSubjectClass);
             this.Controls.Add(this.tvwAVG);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
             this.Load += new System.EventHandler(this.FormTeacher_Load);

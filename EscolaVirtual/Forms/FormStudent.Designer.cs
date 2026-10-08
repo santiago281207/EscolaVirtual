@@ -54,7 +54,7 @@
             // 
             this.btnData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnData.Location = new System.Drawing.Point(22, 216);
-            this.btnData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnData.Margin = new System.Windows.Forms.Padding(2);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(207, 59);
             this.btnData.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(22, 568);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(207, 59);
             this.btnExit.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.btnAbsence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsence.Location = new System.Drawing.Point(22, 114);
-            this.btnAbsence.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAbsence.Margin = new System.Windows.Forms.Padding(2);
             this.btnAbsence.Name = "btnAbsence";
             this.btnAbsence.Size = new System.Drawing.Size(207, 59);
             this.btnAbsence.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.btnSchoolCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchoolCard.Location = new System.Drawing.Point(22, 324);
-            this.btnSchoolCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSchoolCard.Margin = new System.Windows.Forms.Padding(2);
             this.btnSchoolCard.Name = "btnSchoolCard";
             this.btnSchoolCard.Size = new System.Drawing.Size(207, 59);
             this.btnSchoolCard.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMessages.Location = new System.Drawing.Point(22, 430);
-            this.btnMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMessages.Margin = new System.Windows.Forms.Padding(2);
             this.btnMessages.Name = "btnMessages";
             this.btnMessages.Size = new System.Drawing.Size(207, 59);
             this.btnMessages.TabIndex = 5;
@@ -121,7 +121,7 @@
             // tvwGradesAndAverage
             // 
             this.tvwGradesAndAverage.Location = new System.Drawing.Point(416, 114);
-            this.tvwGradesAndAverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tvwGradesAndAverage.Margin = new System.Windows.Forms.Padding(2);
             this.tvwGradesAndAverage.Name = "tvwGradesAndAverage";
             this.tvwGradesAndAverage.Size = new System.Drawing.Size(505, 514);
             this.tvwGradesAndAverage.TabIndex = 7;
@@ -139,8 +139,10 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.lblWelcome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FormStudent";
             this.Text = "FormStudent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormStudent_FormClosed);
