@@ -81,6 +81,7 @@
             this.btnAbsence.TabIndex = 3;
             this.btnAbsence.Text = "Consultar Faltas e Estado";
             this.btnAbsence.UseVisualStyleBackColor = true;
+            this.btnAbsence.Click += new System.EventHandler(this.btnAbsence_Click);
             // 
             // btnSchoolCard
             // 
