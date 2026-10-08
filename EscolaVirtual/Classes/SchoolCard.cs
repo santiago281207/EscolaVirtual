@@ -9,21 +9,15 @@ namespace EscolaVirtual.Classes
     public class SchoolCard
     {
 
-        public SchoolCard(string cardNumber,decimal balance,Student student)
+        public SchoolCard(decimal balance,Student student)
         {
-            this.m_cardNumber = cardNumber;
             this.Balance = balance;
             this.Student = student;
         }
 
 
         #region Properties and Members
-        private string m_cardNumber;
-        public string CardNumber
-        {
-            get { return m_cardNumber; }
-            set { m_cardNumber = value; }
-        }
+    
 
         private Student m_student;
         public Student Student
