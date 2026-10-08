@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace EscolaVirtual
 {
     public partial class FormTeacher : Form
     {
-        public FormTeacher()
+        Admin admin;
+        Teacher teacher;
+        public FormTeacher(Admin admin,Teacher teacher)
         {
             InitializeComponent();
+            this.admin = admin;
+            this.teacher = teacher;
         }
 
         private void btnGrades_Click(object sender, EventArgs e)
@@ -35,6 +40,13 @@ namespace EscolaVirtual
         private void btnMessages_Click(object sender, EventArgs e)
         {
             // criar form para poder mandar mensagens para os alunos
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form_Login loginForm = new Form_Login(admin);
+            this.Hide();
+            loginForm.Show();
         }
     }
 }
