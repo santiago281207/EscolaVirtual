@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdicionarAluno));
             this.pnlCreate = new System.Windows.Forms.Panel();
             this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.lbl_VirtualSchool = new System.Windows.Forms.Label();
@@ -72,7 +73,7 @@
             this.pnlCreate.Controls.Add(this.btnCreateStudent);
             this.pnlCreate.Controls.Add(this.lblName);
             this.pnlCreate.Location = new System.Drawing.Point(263, -1);
-            this.pnlCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlCreate.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCreate.Name = "pnlCreate";
             this.pnlCreate.Size = new System.Drawing.Size(431, 652);
             this.pnlCreate.TabIndex = 0;
@@ -103,7 +104,7 @@
             this.pClass.Controls.Add(this.pColorClass);
             this.pClass.Controls.Add(this.pbClass);
             this.pClass.Location = new System.Drawing.Point(50, 335);
-            this.pClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pClass.Margin = new System.Windows.Forms.Padding(2);
             this.pClass.Name = "pClass";
             this.pClass.Size = new System.Drawing.Size(329, 36);
             this.pClass.TabIndex = 11;
@@ -112,7 +113,7 @@
             // 
             this.cbClass.FormattingEnabled = true;
             this.cbClass.Location = new System.Drawing.Point(2, 10);
-            this.cbClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClass.Margin = new System.Windows.Forms.Padding(2);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(293, 21);
             this.cbClass.TabIndex = 10;
@@ -121,7 +122,7 @@
             // 
             this.pColorClass.BackColor = System.Drawing.Color.Green;
             this.pColorClass.Location = new System.Drawing.Point(0, 29);
-            this.pColorClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pColorClass.Margin = new System.Windows.Forms.Padding(2);
             this.pColorClass.Name = "pColorClass";
             this.pColorClass.Size = new System.Drawing.Size(329, 4);
             this.pColorClass.TabIndex = 9;
@@ -152,7 +153,7 @@
             this.pNIF.Controls.Add(this.pbNIF);
             this.pNIF.Controls.Add(this.textBox4);
             this.pNIF.Location = new System.Drawing.Point(50, 274);
-            this.pNIF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pNIF.Margin = new System.Windows.Forms.Padding(2);
             this.pNIF.Name = "pNIF";
             this.pNIF.Size = new System.Drawing.Size(329, 36);
             this.pNIF.TabIndex = 11;
@@ -161,7 +162,7 @@
             // 
             this.pColorNIF.BackColor = System.Drawing.Color.Green;
             this.pColorNIF.Location = new System.Drawing.Point(0, 29);
-            this.pColorNIF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pColorNIF.Margin = new System.Windows.Forms.Padding(2);
             this.pColorNIF.Name = "pColorNIF";
             this.pColorNIF.Size = new System.Drawing.Size(329, 4);
             this.pColorNIF.TabIndex = 9;
@@ -179,7 +180,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(2, 10);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(293, 20);
             this.textBox4.TabIndex = 2;
@@ -200,7 +201,7 @@
             this.pName.Controls.Add(this.pbUsername);
             this.pName.Controls.Add(this.textBox3);
             this.pName.Location = new System.Drawing.Point(50, 214);
-            this.pName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pName.Margin = new System.Windows.Forms.Padding(2);
             this.pName.Name = "pName";
             this.pName.Size = new System.Drawing.Size(329, 36);
             this.pName.TabIndex = 8;
@@ -209,7 +210,7 @@
             // 
             this.pColorName.BackColor = System.Drawing.Color.Green;
             this.pColorName.Location = new System.Drawing.Point(0, 29);
-            this.pColorName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pColorName.Margin = new System.Windows.Forms.Padding(2);
             this.pColorName.Name = "pColorName";
             this.pColorName.Size = new System.Drawing.Size(329, 4);
             this.pColorName.TabIndex = 9;
@@ -227,7 +228,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(2, 10);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(293, 20);
             this.textBox3.TabIndex = 2;
@@ -237,7 +238,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Green;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.Location = new System.Drawing.Point(52, 552);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(329, 36);
             this.btnExit.TabIndex = 7;
@@ -249,7 +250,7 @@
             this.btnCreateStudent.BackColor = System.Drawing.Color.Green;
             this.btnCreateStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCreateStudent.Location = new System.Drawing.Point(52, 466);
-            this.btnCreateStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateStudent.Name = "btnCreateStudent";
             this.btnCreateStudent.Size = new System.Drawing.Size(329, 36);
             this.btnCreateStudent.TabIndex = 6;
@@ -273,7 +274,8 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.pnlCreate);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdicionarAluno";
             this.Text = "FormAdicionarAluno";
             this.pnlCreate.ResumeLayout(false);

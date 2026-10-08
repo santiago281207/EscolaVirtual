@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTeacher));
             this.tvwAVG = new System.Windows.Forms.TreeView();
             this.tvwSubjectClass = new System.Windows.Forms.TreeView();
             this.btnGrades = new System.Windows.Forms.Button();
@@ -147,6 +148,7 @@
             this.Controls.Add(this.btnGrades);
             this.Controls.Add(this.tvwSubjectClass);
             this.Controls.Add(this.tvwAVG);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
             this.Load += new System.EventHandler(this.FormTeacher_Load);
