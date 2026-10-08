@@ -151,6 +151,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
+            this.Load += new System.EventHandler(this.FormTeacher_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
