@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
             this.formLogin = new System.Windows.Forms.Panel();
+            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pPassword = new System.Windows.Forms.Panel();
             this.pCorPassword = new System.Windows.Forms.Panel();
@@ -44,13 +45,12 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lbl_VirtualSchool = new System.Windows.Forms.Label();
-            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.formLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).BeginInit();
             this.pPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.pUsername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).BeginInit();
             this.SuspendLayout();
             // 
             // ilImages
@@ -75,6 +75,16 @@
             this.formLogin.Name = "formLogin";
             this.formLogin.Size = new System.Drawing.Size(431, 652);
             this.formLogin.TabIndex = 0;
+            // 
+            // pbLogoInete
+            // 
+            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
+            this.pbLogoInete.Location = new System.Drawing.Point(94, 62);
+            this.pbLogoInete.Name = "pbLogoInete";
+            this.pbLogoInete.Size = new System.Drawing.Size(85, 79);
+            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoInete.TabIndex = 7;
+            this.pbLogoInete.TabStop = false;
             // 
             // btnLogin
             // 
@@ -172,7 +182,7 @@
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(2, 10);
-            this.txtLogin.MaxLength = 4;
+            this.txtLogin.MaxLength = 9;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(293, 20);
             this.txtLogin.TabIndex = 4;
@@ -199,16 +209,6 @@
             this.lbl_VirtualSchool.TabIndex = 1;
             this.lbl_VirtualSchool.Text = "Virtual School";
             // 
-            // pbLogoInete
-            // 
-            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
-            this.pbLogoInete.Location = new System.Drawing.Point(94, 62);
-            this.pbLogoInete.Name = "pbLogoInete";
-            this.pbLogoInete.Size = new System.Drawing.Size(85, 79);
-            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoInete.TabIndex = 7;
-            this.pbLogoInete.TabStop = false;
-            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,15 +222,16 @@
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Login_FormClosed);
             this.formLogin.ResumeLayout(false);
             this.formLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).EndInit();
             this.pPassword.ResumeLayout(false);
             this.pPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             this.pUsername.ResumeLayout(false);
             this.pUsername.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).EndInit();
             this.ResumeLayout(false);
 
         }

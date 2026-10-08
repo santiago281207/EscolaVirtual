@@ -119,12 +119,15 @@ namespace EscolaVirtual.Classes
             #endregion
 
             #region PROFESSORES TESTE
-            Teacher teacher = new Teacher("1111", "1111", "Santiago", "123456789");
+            Teacher teacher = new Teacher("1111", "Santiago", "123456789");
             this.Teachers.Add(teacher);
             this.Users.Add(teacher);
             #endregion
 
+            #region ALUNOS TESTE
 
+
+            #endregion
 
             #region REGISTOS TESTE
             TeacherClassSubject teacherClassSubject1 = new TeacherClassSubject(teacher, subject1, class1);
@@ -147,10 +150,6 @@ namespace EscolaVirtual.Classes
             this.TeacherClassSubjects.Add(teacherClassSubject7);
             this.TeacherClassSubjects.Add(teacherClassSubject8);
             #endregion
-
-
-
-
 
 
 

@@ -51,6 +51,7 @@ namespace EscolaVirtual
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = $"Bem vindo, {teacher.Name}";
             //Lista de ProfessoresTurmaDisciplina filtrados pelo professor atual
             List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(t => t.Teacher == teacher);
 
@@ -70,7 +71,7 @@ namespace EscolaVirtual
                 //Encontrar se já existe node de turma na tvw
                 foreach (TreeNode tnF in tvwSubjectClass.Nodes)
                 {
-                    if (tnF.Tag == @class.Name)
+                    if ((string)tnF.Tag == @class.Name)
                     {
                         classFind = tnF;
                         break;
@@ -79,7 +80,19 @@ namespace EscolaVirtual
 
                 if(classFind == null)
                 {
-                    classFind = new TreeNode($"{@class.Name}");
+                    try
+                    {
+                        classFind = new TreeNode($"{@class.Name}: {@class.Student.SelectMany(student => student.Grades).Average(grade => grade.Value)} valores.");
+                    }catch(ArgumentNullException)   //Não existem students ou notas
+                    {
+                        classFind = new TreeNode($"{@class.Name}: Não existem notas para esta turma");
+                    }
+                    catch(InvalidOperationException)   //Não existem valor das notas
+                    {
+                        classFind = new TreeNode($"{@class.Name}: Não existem notas para esta turma");
+                    }
+
+
                     classFind.Tag = @class.Name;
                     classFind.Nodes.Add(tnS);
 
@@ -89,11 +102,12 @@ namespace EscolaVirtual
                     classFind.Nodes.Add(tnS);
                 }
 
-
-
-
             }
+
             
+
+
+
         }
     }
 }
