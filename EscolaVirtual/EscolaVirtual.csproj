@@ -90,6 +90,14 @@
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
 
+    <Compile Include="Forms\FormTeacherMessage.cs">
+  <SubType>Form</SubType>
+</Compile>
+
+<Compile Include="Forms\FormTeacherMessage.Designer.cs">
+  <DependentUpon>FormTeacherMessage.cs</DependentUpon>
+</Compile>
+
     <Compile Include="Forms\FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +124,9 @@
 
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
+    <EmbeddedResource Include="Forms\FormTeacherMessage.resx">
+  <DependentUpon>FormTeacherMessage.cs</DependentUpon>
+</EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAdicionarAluno.resx">
       <DependentUpon>FormAdicionarAluno.cs</DependentUpon>
     </EmbeddedResource>
