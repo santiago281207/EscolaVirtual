@@ -36,21 +36,21 @@
             this.pPassword = new System.Windows.Forms.Panel();
             this.pCorPassword = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pbPassword = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.pUsername = new System.Windows.Forms.Panel();
             this.pCorUsername = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbUsername = new System.Windows.Forms.PictureBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.lbl_VirtualSchool = new System.Windows.Forms.Label();
+            this.pbPassword = new System.Windows.Forms.PictureBox();
+            this.pbUsername = new System.Windows.Forms.PictureBox();
+            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.formLogin.SuspendLayout();
             this.pPassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.pUsername.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             this.formLogin.Controls.Add(this.pbLogoInete);
             this.formLogin.Controls.Add(this.lbl_VirtualSchool);
             this.formLogin.Location = new System.Drawing.Point(351, -1);
-            this.formLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formLogin.Margin = new System.Windows.Forms.Padding(4);
             this.formLogin.Name = "formLogin";
             this.formLogin.Size = new System.Drawing.Size(575, 802);
             this.formLogin.TabIndex = 0;
@@ -88,7 +88,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogin.Location = new System.Drawing.Point(69, 593);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(439, 46);
             this.btnLogin.TabIndex = 6;
@@ -103,7 +103,7 @@
             this.pPassword.Controls.Add(this.pbPassword);
             this.pPassword.Controls.Add(this.txtPassword);
             this.pPassword.Location = new System.Drawing.Point(69, 401);
-            this.pPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pPassword.Name = "pPassword";
             this.pPassword.Size = new System.Drawing.Size(439, 44);
             this.pPassword.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.pCorPassword.BackColor = System.Drawing.Color.Green;
             this.pCorPassword.Location = new System.Drawing.Point(0, 38);
-            this.pCorPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCorPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pCorPassword.Name = "pCorPassword";
             this.pCorPassword.Size = new System.Drawing.Size(439, 5);
             this.pCorPassword.TabIndex = 4;
@@ -120,26 +120,15 @@
             // panel7
             // 
             this.panel7.Location = new System.Drawing.Point(0, 44);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(439, 12);
             this.panel7.TabIndex = 4;
             // 
-            // pbPassword
-            // 
-            this.pbPassword.Image = global::EscolaVirtual.Properties.Resources.icons8_cadeado_50;
-            this.pbPassword.Location = new System.Drawing.Point(401, 6);
-            this.pbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbPassword.Name = "pbPassword";
-            this.pbPassword.Size = new System.Drawing.Size(32, 31);
-            this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPassword.TabIndex = 4;
-            this.pbPassword.TabStop = false;
-            // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(3, 12);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 4;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -166,7 +155,7 @@
             this.pUsername.Controls.Add(this.pbUsername);
             this.pUsername.Controls.Add(this.txtLogin);
             this.pUsername.Location = new System.Drawing.Point(69, 315);
-            this.pUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(439, 44);
             this.pUsername.TabIndex = 3;
@@ -175,7 +164,7 @@
             // 
             this.pCorUsername.BackColor = System.Drawing.Color.Green;
             this.pCorUsername.Location = new System.Drawing.Point(0, 38);
-            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pCorUsername.Name = "pCorUsername";
             this.pCorUsername.Size = new System.Drawing.Size(439, 5);
             this.pCorUsername.TabIndex = 4;
@@ -183,26 +172,15 @@
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 44);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(439, 12);
             this.panel3.TabIndex = 4;
             // 
-            // pbUsername
-            // 
-            this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
-            this.pbUsername.Location = new System.Drawing.Point(401, 6);
-            this.pbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbUsername.Name = "pbUsername";
-            this.pbUsername.Size = new System.Drawing.Size(32, 31);
-            this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsername.TabIndex = 4;
-            this.pbUsername.TabStop = false;
-            // 
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(3, 12);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.MaxLength = 4;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(389, 22);
@@ -221,17 +199,6 @@
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "Login";
             // 
-            // pbLogoInete
-            // 
-            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
-            this.pbLogoInete.Location = new System.Drawing.Point(125, 73);
-            this.pbLogoInete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbLogoInete.Name = "pbLogoInete";
-            this.pbLogoInete.Size = new System.Drawing.Size(101, 94);
-            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoInete.TabIndex = 0;
-            this.pbLogoInete.TabStop = false;
-            // 
             // lbl_VirtualSchool
             // 
             this.lbl_VirtualSchool.AutoSize = true;
@@ -243,6 +210,39 @@
             this.lbl_VirtualSchool.TabIndex = 1;
             this.lbl_VirtualSchool.Text = "Virtual School";
             // 
+            // pbPassword
+            // 
+            this.pbPassword.Image = global::EscolaVirtual.Properties.Resources.icons8_cadeado_50;
+            this.pbPassword.Location = new System.Drawing.Point(401, 6);
+            this.pbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPassword.Name = "pbPassword";
+            this.pbPassword.Size = new System.Drawing.Size(32, 31);
+            this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPassword.TabIndex = 4;
+            this.pbPassword.TabStop = false;
+            // 
+            // pbUsername
+            // 
+            this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
+            this.pbUsername.Location = new System.Drawing.Point(401, 6);
+            this.pbUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.pbUsername.Name = "pbUsername";
+            this.pbUsername.Size = new System.Drawing.Size(32, 31);
+            this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsername.TabIndex = 4;
+            this.pbUsername.TabStop = false;
+            // 
+            // pbLogoInete
+            // 
+            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
+            this.pbLogoInete.Location = new System.Drawing.Point(125, 73);
+            this.pbLogoInete.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogoInete.Name = "pbLogoInete";
+            this.pbLogoInete.Size = new System.Drawing.Size(101, 94);
+            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoInete.TabIndex = 0;
+            this.pbLogoInete.TabStop = false;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,7 +251,7 @@
             this.ClientSize = new System.Drawing.Size(1267, 800);
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -260,9 +260,9 @@
             this.formLogin.PerformLayout();
             this.pPassword.ResumeLayout(false);
             this.pPassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             this.pUsername.ResumeLayout(false);
             this.pUsername.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoInete)).EndInit();
             this.ResumeLayout(false);
