@@ -9,9 +9,8 @@ namespace EscolaVirtual.Classes
 {
     public abstract class User
     {
-        public User(string login,string password,string name,string nif,int userType)
+        public User(string password,string name,string nif,int userType)
         {
-            this.Login = login;
             this.Password = password;
             this.Name = name;
             this.Nif = nif;

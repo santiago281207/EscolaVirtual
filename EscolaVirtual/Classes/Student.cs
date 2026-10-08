@@ -9,7 +9,7 @@ namespace EscolaVirtual.Classes
 {
     public class Student : User
     {
-        public Student(string login, string password ,string name, string nif,Class schoolClass,SchoolCard schoolCard) : base(login,password,name,nif,1)
+        public Student(string password ,string name, string nif,Class schoolClass,SchoolCard schoolCard) : base(password,name,nif,1)
         {
             this.Class = schoolClass;
             this.SchoolCard = schoolCard;

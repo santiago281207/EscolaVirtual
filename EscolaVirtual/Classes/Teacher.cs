@@ -9,7 +9,7 @@ namespace EscolaVirtual.Classes
 {
     public class Teacher : User
     {
-        public Teacher(string login,string password,string name,string nif) : base(login,password,name,nif,2)
+        public Teacher(string password,string name,string nif) : base(password,name,nif,2)
         {
 
         }

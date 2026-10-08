@@ -22,7 +22,7 @@ namespace EscolaVirtual
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User user = admin.Users.FirstOrDefault(u => u.Login == txtLogin.Text && u.Password == txtPassword.Text);
+            User user = admin.Users.FirstOrDefault(u => u.Nif == txtLogin.Text && u.Password == txtPassword.Text);
 
             if (txtPassword.Text == "0000" && txtLogin.Text == "0000")
             {
@@ -65,7 +65,7 @@ namespace EscolaVirtual
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtLogin.Text.Length == 4 && txtPassword.Text.Length == 4)
+            if (txtLogin.Text.Length > 0 && txtPassword.Text.Length == 4)
             {
                 btnLogin.Enabled = true;
             }
@@ -77,7 +77,7 @@ namespace EscolaVirtual
 
         private void txtLogin_TextChanged(object sender, EventArgs e)
         {
-            if (txtLogin.Text.Length == 4 && txtPassword.Text.Length == 4)
+            if (txtLogin.Text.Length > 0 && txtPassword.Text.Length == 4)
             {
                 btnLogin.Enabled = true;
             }
@@ -93,6 +93,11 @@ namespace EscolaVirtual
             {
                 e.Handled = true;
             }
+        }
+
+        private void Form_Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
