@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddYear.Designer.cs">
+      <DependentUpon>FormAddYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAbsencesStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddYear.resx">
+      <DependentUpon>FormAddYear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAbsencesStudent.resx">
       <DependentUpon>FormAbsencesStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Credenciais.txt" />
+    <None Include="Resources\icone-du-calendrier-des-evenements-vert.png" />
+    <None Include="Resources\google-classroom.jpg" />
+    <None Include="Resources\name-card-icon_31834.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

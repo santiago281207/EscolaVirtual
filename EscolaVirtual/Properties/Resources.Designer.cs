@@ -63,9 +63,29 @@ namespace EscolaVirtual.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap google_classroom {
+            get {
+                object obj = ResourceManager.GetObject("google-classroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_du_calendrier_des_evenements_vert {
+            get {
+                object obj = ResourceManager.GetObject("icone-du-calendrier-des-evenements-vert", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,16 @@ namespace EscolaVirtual.Properties {
         internal static System.Drawing.Bitmap icons8_pessoa_do_sexo_masculino_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-pessoa-do-sexo-masculino-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_card_icon_31834 {
+            get {
+                object obj = ResourceManager.GetObject("name-card-icon_31834", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
