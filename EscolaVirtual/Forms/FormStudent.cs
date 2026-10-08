@@ -33,5 +33,10 @@ namespace EscolaVirtual
             this.Hide();
             loginForm.Show();
         }
+
+        private void btnAbsence_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

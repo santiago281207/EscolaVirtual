@@ -51,6 +51,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="FormAbsencesStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbsencesStudent.Designer.cs">
+      <DependentUpon>FormAbsencesStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAdicionarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
 
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAbsencesStudent.resx">
+      <DependentUpon>FormAbsencesStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTeacherMessage.resx">
   <DependentUpon>FormTeacherMessage.cs</DependentUpon>
 </EmbeddedResource>
