@@ -26,5 +26,20 @@ namespace EscolaVirtual
         {
             //Faz com que o botão feche a tela de justificar faltas e volte para a tela do aluno
         }
+
+        private void pCorUsername_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tvwAbsences_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }

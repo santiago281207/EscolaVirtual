@@ -43,8 +43,8 @@
             this.pbUsername = new System.Windows.Forms.PictureBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.lbl_VirtualSchool = new System.Windows.Forms.Label();
+            this.pbLogoInete = new System.Windows.Forms.PictureBox();
             this.formLogin.SuspendLayout();
             this.pPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
@@ -64,12 +64,12 @@
             // formLogin
             // 
             this.formLogin.BackColor = System.Drawing.Color.White;
+            this.formLogin.Controls.Add(this.pbLogoInete);
             this.formLogin.Controls.Add(this.btnLogin);
             this.formLogin.Controls.Add(this.pPassword);
             this.formLogin.Controls.Add(this.lblPassword);
             this.formLogin.Controls.Add(this.pUsername);
             this.formLogin.Controls.Add(this.lblLogin);
-            this.formLogin.Controls.Add(this.pbLogoInete);
             this.formLogin.Controls.Add(this.lbl_VirtualSchool);
             this.formLogin.Location = new System.Drawing.Point(263, -1);
             this.formLogin.Name = "formLogin";
@@ -189,25 +189,25 @@
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "Login";
             // 
-            // pbLogoInete
-            // 
-            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
-            this.pbLogoInete.Location = new System.Drawing.Point(94, 59);
-            this.pbLogoInete.Name = "pbLogoInete";
-            this.pbLogoInete.Size = new System.Drawing.Size(76, 76);
-            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoInete.TabIndex = 0;
-            this.pbLogoInete.TabStop = false;
-            // 
             // lbl_VirtualSchool
             // 
             this.lbl_VirtualSchool.AutoSize = true;
             this.lbl_VirtualSchool.Font = new System.Drawing.Font("Malgun Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_VirtualSchool.Location = new System.Drawing.Point(167, 78);
+            this.lbl_VirtualSchool.Location = new System.Drawing.Point(174, 82);
             this.lbl_VirtualSchool.Name = "lbl_VirtualSchool";
             this.lbl_VirtualSchool.Size = new System.Drawing.Size(189, 37);
             this.lbl_VirtualSchool.TabIndex = 1;
             this.lbl_VirtualSchool.Text = "Virtual School";
+            // 
+            // pbLogoInete
+            // 
+            this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
+            this.pbLogoInete.Location = new System.Drawing.Point(94, 62);
+            this.pbLogoInete.Name = "pbLogoInete";
+            this.pbLogoInete.Size = new System.Drawing.Size(85, 79);
+            this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoInete.TabIndex = 7;
+            this.pbLogoInete.TabStop = false;
             // 
             // Form_Login
             // 
@@ -217,6 +217,7 @@
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -238,7 +239,6 @@
 
         private System.Windows.Forms.ImageList ilImages;
         private System.Windows.Forms.Panel formLogin;
-        private System.Windows.Forms.PictureBox pbLogoInete;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lbl_VirtualSchool;
         private System.Windows.Forms.Panel pUsername;
@@ -251,6 +251,7 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Panel pCorUsername;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pbLogoInete;
     }
 }
 

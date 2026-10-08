@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddYear = new System.Windows.Forms.Button();
             this.btnAddTeacher = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             // 
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.Location = new System.Drawing.Point(9, 10);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(278, 41);
             this.btnAddStudent.TabIndex = 1;
@@ -70,7 +71,7 @@
             // 
             this.btnAddYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddYear.Location = new System.Drawing.Point(9, 246);
-            this.btnAddYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddYear.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddYear.Name = "btnAddYear";
             this.btnAddYear.Size = new System.Drawing.Size(278, 41);
             this.btnAddYear.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTeacher.Location = new System.Drawing.Point(9, 89);
-            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTeacher.Name = "btnAddTeacher";
             this.btnAddTeacher.Size = new System.Drawing.Size(278, 41);
             this.btnAddTeacher.TabIndex = 3;
@@ -92,7 +93,7 @@
             // 
             this.btnAddClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClass.Location = new System.Drawing.Point(9, 167);
-            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(278, 41);
             this.btnAddClass.TabIndex = 4;
@@ -103,7 +104,7 @@
             // 
             this.btnSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubject.Location = new System.Drawing.Point(9, 325);
-            this.btnSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubject.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubject.Name = "btnSubject";
             this.btnSubject.Size = new System.Drawing.Size(278, 41);
             this.btnSubject.TabIndex = 5;
@@ -114,7 +115,7 @@
             // 
             this.btnLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLink.Location = new System.Drawing.Point(9, 405);
-            this.btnLink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLink.Margin = new System.Windows.Forms.Padding(2);
             this.btnLink.Name = "btnLink";
             this.btnLink.Size = new System.Drawing.Size(278, 41);
             this.btnLink.TabIndex = 6;
@@ -125,7 +126,7 @@
             // 
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Location = new System.Drawing.Point(9, 598);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(278, 41);
             this.btnLogOut.TabIndex = 8;
@@ -141,7 +142,7 @@
             this.tcCategories.Controls.Add(this.tpYear);
             this.tcCategories.Controls.Add(this.tpSubject);
             this.tcCategories.Location = new System.Drawing.Point(326, 10);
-            this.tcCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcCategories.Margin = new System.Windows.Forms.Padding(2);
             this.tcCategories.Name = "tcCategories";
             this.tcCategories.SelectedIndex = 0;
             this.tcCategories.Size = new System.Drawing.Size(602, 632);
@@ -151,9 +152,9 @@
             // 
             this.tpStudent.Controls.Add(this.lvwStudent);
             this.tpStudent.Location = new System.Drawing.Point(4, 22);
-            this.tpStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpStudent.Margin = new System.Windows.Forms.Padding(2);
             this.tpStudent.Name = "tpStudent";
-            this.tpStudent.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpStudent.Padding = new System.Windows.Forms.Padding(2);
             this.tpStudent.Size = new System.Drawing.Size(594, 606);
             this.tpStudent.TabIndex = 0;
             this.tpStudent.Text = "Aluno";
@@ -164,7 +165,7 @@
             this.lvwStudent.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lvwStudent.HideSelection = false;
             this.lvwStudent.Location = new System.Drawing.Point(4, 5);
-            this.lvwStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwStudent.Margin = new System.Windows.Forms.Padding(2);
             this.lvwStudent.Name = "lvwStudent";
             this.lvwStudent.Size = new System.Drawing.Size(587, 599);
             this.lvwStudent.TabIndex = 0;
@@ -174,9 +175,9 @@
             // 
             this.tpTeacher.Controls.Add(this.lvwTeacher);
             this.tpTeacher.Location = new System.Drawing.Point(4, 22);
-            this.tpTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.tpTeacher.Name = "tpTeacher";
-            this.tpTeacher.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpTeacher.Padding = new System.Windows.Forms.Padding(2);
             this.tpTeacher.Size = new System.Drawing.Size(594, 606);
             this.tpTeacher.TabIndex = 1;
             this.tpTeacher.Text = "Professor";
@@ -186,7 +187,7 @@
             // 
             this.lvwTeacher.HideSelection = false;
             this.lvwTeacher.Location = new System.Drawing.Point(3, 3);
-            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.lvwTeacher.Name = "lvwTeacher";
             this.lvwTeacher.Size = new System.Drawing.Size(587, 599);
             this.lvwTeacher.TabIndex = 0;
@@ -196,7 +197,7 @@
             // 
             this.tpClass.Controls.Add(this.lvwClass);
             this.tpClass.Location = new System.Drawing.Point(4, 22);
-            this.tpClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpClass.Margin = new System.Windows.Forms.Padding(2);
             this.tpClass.Name = "tpClass";
             this.tpClass.Size = new System.Drawing.Size(594, 606);
             this.tpClass.TabIndex = 2;
@@ -207,7 +208,7 @@
             // 
             this.lvwClass.HideSelection = false;
             this.lvwClass.Location = new System.Drawing.Point(5, 5);
-            this.lvwClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwClass.Margin = new System.Windows.Forms.Padding(2);
             this.lvwClass.Name = "lvwClass";
             this.lvwClass.Size = new System.Drawing.Size(587, 599);
             this.lvwClass.TabIndex = 1;
@@ -217,7 +218,7 @@
             // 
             this.tpYear.Controls.Add(this.lvwYear);
             this.tpYear.Location = new System.Drawing.Point(4, 22);
-            this.tpYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpYear.Margin = new System.Windows.Forms.Padding(2);
             this.tpYear.Name = "tpYear";
             this.tpYear.Size = new System.Drawing.Size(594, 606);
             this.tpYear.TabIndex = 3;
@@ -228,7 +229,7 @@
             // 
             this.lvwYear.HideSelection = false;
             this.lvwYear.Location = new System.Drawing.Point(5, 5);
-            this.lvwYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwYear.Margin = new System.Windows.Forms.Padding(2);
             this.lvwYear.Name = "lvwYear";
             this.lvwYear.Size = new System.Drawing.Size(587, 599);
             this.lvwYear.TabIndex = 1;
@@ -238,7 +239,7 @@
             // 
             this.tpSubject.Controls.Add(this.lvwSubject);
             this.tpSubject.Location = new System.Drawing.Point(4, 22);
-            this.tpSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpSubject.Margin = new System.Windows.Forms.Padding(2);
             this.tpSubject.Name = "tpSubject";
             this.tpSubject.Size = new System.Drawing.Size(594, 606);
             this.tpSubject.TabIndex = 4;
@@ -249,7 +250,7 @@
             // 
             this.lvwSubject.HideSelection = false;
             this.lvwSubject.Location = new System.Drawing.Point(5, 5);
-            this.lvwSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwSubject.Margin = new System.Windows.Forms.Padding(2);
             this.lvwSubject.Name = "lvwSubject";
             this.lvwSubject.Size = new System.Drawing.Size(587, 599);
             this.lvwSubject.TabIndex = 1;
@@ -259,7 +260,7 @@
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(9, 483);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(278, 41);
             this.btnEdit.TabIndex = 10;
@@ -280,7 +281,8 @@
             this.Controls.Add(this.btnAddTeacher);
             this.Controls.Add(this.btnAddYear);
             this.Controls.Add(this.btnAddStudent);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin";
             this.Text = "Admin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAdmin_FormClosed);
