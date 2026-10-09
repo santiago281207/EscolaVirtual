@@ -40,6 +40,7 @@
             this.tpStudent = new System.Windows.Forms.TabPage();
             this.lvwStudent = new System.Windows.Forms.ListView();
             this.tpTeacher = new System.Windows.Forms.TabPage();
+            this.lvwTeacher = new System.Windows.Forms.ListView();
             this.tpClass = new System.Windows.Forms.TabPage();
             this.lvwClass = new System.Windows.Forms.ListView();
             this.tpYear = new System.Windows.Forms.TabPage();
@@ -49,7 +50,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.pAdmin = new System.Windows.Forms.Panel();
             this.pAdminSair = new System.Windows.Forms.Panel();
-            this.lvwTeacher = new System.Windows.Forms.ListView();
             this.tcCategories.SuspendLayout();
             this.tpStudent.SuspendLayout();
             this.tpTeacher.SuspendLayout();
@@ -188,7 +188,6 @@
             this.lvwStudent.Size = new System.Drawing.Size(1175, 485);
             this.lvwStudent.TabIndex = 0;
             this.lvwStudent.UseCompatibleStateImageBehavior = false;
-            this.lvwStudent.SelectedIndexChanged += new System.EventHandler(this.lvwStudent_SelectedIndexChanged);
             // 
             // tpTeacher
             // 
@@ -201,6 +200,16 @@
             this.tpTeacher.TabIndex = 1;
             this.tpTeacher.Text = "Professor";
             this.tpTeacher.UseVisualStyleBackColor = true;
+            // 
+            // lvwTeacher
+            // 
+            this.lvwTeacher.HideSelection = false;
+            this.lvwTeacher.Location = new System.Drawing.Point(3, 2);
+            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvwTeacher.Name = "lvwTeacher";
+            this.lvwTeacher.Size = new System.Drawing.Size(1175, 485);
+            this.lvwTeacher.TabIndex = 2;
+            this.lvwTeacher.UseCompatibleStateImageBehavior = false;
             // 
             // tpClass
             // 
@@ -277,7 +286,6 @@
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // pAdmin
             // 
@@ -303,16 +311,6 @@
             this.pAdminSair.Name = "pAdminSair";
             this.pAdminSair.Size = new System.Drawing.Size(1233, 65);
             this.pAdminSair.TabIndex = 12;
-            // 
-            // lvwTeacher
-            // 
-            this.lvwTeacher.HideSelection = false;
-            this.lvwTeacher.Location = new System.Drawing.Point(3, 2);
-            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lvwTeacher.Name = "lvwTeacher";
-            this.lvwTeacher.Size = new System.Drawing.Size(1175, 485);
-            this.lvwTeacher.TabIndex = 2;
-            this.lvwTeacher.UseCompatibleStateImageBehavior = false;
             // 
             // FormAdmin
             // 

@@ -31,15 +31,5 @@ namespace EscolaVirtual
             this.Hide();
             loginForm.Show();
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvwStudent_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
