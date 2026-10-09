@@ -13,6 +13,8 @@ namespace EscolaVirtual.Classes
         {
             this.Name = name;
             this.SchoolYear = classYear;
+
+            classYear.Classes.Add(this);
         }
 
 
