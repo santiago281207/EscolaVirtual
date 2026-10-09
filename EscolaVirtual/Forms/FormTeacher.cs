@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EscolaVirtual
 {
@@ -54,25 +56,26 @@ namespace EscolaVirtual
         {
             lblWelcome.Text = $"Bem vindo, {teacher.Name}";
 
-            List<TeacherClassSubject> teacherClassSubjects =
-                admin.TeacherClassSubjects.FindAll(t => t.Teacher == teacher);
+            List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(t => t.Teacher == teacher);
 
             foreach (TeacherClassSubject tcs in teacherClassSubjects)
             {
+                //Turma e disciplina do registo atual
                 Class @class = tcs.Class;
                 Subject subject = tcs.Subject;
 
-                // Procurar a turma
+                // Procurar a turma na treeview
                 TreeNode classFind = tvwSubjectClass.Nodes.Cast<TreeNode>().FirstOrDefault(tn => tn.Tag == @class);
 
-                List<Grade> gradesClass = @class.Student.SelectMany(student => student.Grades).ToList();
+                //Notas dos estudantes da turma do registo atual
+                List<Grade> gradesClass = @class.Student.SelectMany(student => student.Grades).Where(grade => grade.Module.Subject == subject).ToList();
 
                 // Criar a turma se ainda não existir
                 if (classFind == null)
                 {
                     try
                     {
-                        classFind = new TreeNode($"{@class.Name} {@class.SchoolYear.YearName}: {gradesClass.Average(g => g.Value)}");
+                        classFind = new TreeNode($"{@class.Name} {@class.SchoolYear.YearName} Média da turma: {gradesClass.Average(g => g.Value)} valores");
                     }
                     catch(ArgumentNullException)    //Nao existem notas na turma
                     {
@@ -91,10 +94,8 @@ namespace EscolaVirtual
                 // Percorrer os alunos da turma
                 foreach (Student student in @class.Student)
                 {
-                    // Procurar o aluno
-                    TreeNode tnStudent = classFind.Nodes
-                        .Cast<TreeNode>()
-                        .FirstOrDefault(tn => tn.Tag == student);
+                    // Procurar o aluno na treeview
+                    TreeNode tnStudent = classFind.Nodes.Cast<TreeNode>().FirstOrDefault(tn => tn.Tag == student);
 
                     // Criar o aluno se ainda não existir
                     if (tnStudent == null)
@@ -105,24 +106,19 @@ namespace EscolaVirtual
                         classFind.Nodes.Add(tnStudent);
                     }
 
-                    // Procurar a disciplina
-                    TreeNode tnSubject = tnStudent.Nodes
-                        .Cast<TreeNode>()
-                        .FirstOrDefault(tn => tn.Tag == subject);
+                    // Procurar a disciplina nos nodes do estudante
+                    TreeNode tnSubject = tnStudent.Nodes.Cast<TreeNode>().FirstOrDefault(tn => tn.Tag == subject);
 
                     if (tnSubject == null)
                     {
-                        // Obter as notas dos módulos da disciplina
-                        List<Grade> grades = student.Grades
-                            .Where(g => g.Module.Subject == subject)
-                            .ToList();
-
+                        // Obter as notas dos módulos da disciplina do registo tcs atual
+                        List<Grade> grades = student.Grades.Where(g => g.Module.Subject == subject).ToList();
+                        
                         if (grades.Count > 0)
                         {
                             double avg = grades.Average(g => g.Value);
 
-                            tnSubject = new TreeNode(
-                                $"{subject.SubjectName}: {avg:F2} valores");
+                            tnSubject = new TreeNode($"{subject.SubjectName} Média da disciplina: {avg:F2} valores");
                         }
                         else
                         {
@@ -133,10 +129,29 @@ namespace EscolaVirtual
                         tnSubject.Tag = subject;
                         tnStudent.Nodes.Add(tnSubject);
                     }
+
+
+                    foreach(Module module in subject.Module)
+                    {
+                        Grade grade = student.Grades.FirstOrDefault(g => g.Module == module);
+
+                        TreeNode tModule;
+
+                        if (grade != null)
+                        {
+                            tModule = new TreeNode($"{module.ModuleName}: {grade.Value:F2} valores");
+                        }
+                        else
+                        {
+                            tModule = new TreeNode($"{module.ModuleName}: Sem nota");
+                        }
+
+                        
+                        tModule.Tag = module;
+                        tnSubject.Nodes.Add(tModule);
+                    }
                 }
             }
-
-            tvwSubjectClass.ExpandAll();
         }
     }
 }
