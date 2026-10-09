@@ -65,7 +65,7 @@
             this.btnAddStudent.BackColor = System.Drawing.Color.Green;
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddStudent.Location = new System.Drawing.Point(425, 629);
+            this.btnAddStudent.Location = new System.Drawing.Point(436, 629);
             this.btnAddStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(371, 50);
@@ -78,7 +78,7 @@
             this.btnAddYear.BackColor = System.Drawing.Color.Green;
             this.btnAddYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddYear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddYear.Location = new System.Drawing.Point(425, 552);
+            this.btnAddYear.Location = new System.Drawing.Point(436, 552);
             this.btnAddYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddYear.Name = "btnAddYear";
             this.btnAddYear.Size = new System.Drawing.Size(371, 50);
@@ -91,7 +91,7 @@
             this.btnAddTeacher.BackColor = System.Drawing.Color.Green;
             this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTeacher.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddTeacher.Location = new System.Drawing.Point(832, 629);
+            this.btnAddTeacher.Location = new System.Drawing.Point(849, 629);
             this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTeacher.Name = "btnAddTeacher";
             this.btnAddTeacher.Size = new System.Drawing.Size(371, 50);
@@ -117,7 +117,7 @@
             this.btnSubject.BackColor = System.Drawing.Color.Green;
             this.btnSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubject.Location = new System.Drawing.Point(832, 552);
+            this.btnSubject.Location = new System.Drawing.Point(849, 552);
             this.btnSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubject.Name = "btnSubject";
             this.btnSubject.Size = new System.Drawing.Size(371, 50);
