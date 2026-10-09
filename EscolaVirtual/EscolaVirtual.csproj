@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Credenciais.txt" />
+    <None Include="Resources\245204.png" />
     <None Include="Resources\icone-du-calendrier-des-evenements-vert.png" />
     <None Include="Resources\google-classroom.jpg" />
     <None Include="Resources\name-card-icon_31834.png" />
