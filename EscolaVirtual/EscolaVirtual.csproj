@@ -90,6 +90,12 @@
     <Compile Include="Classes\Subject.cs" />
     <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\FormCreateSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCreateSubject.Designer.cs">
+      <DependentUpon>FormCreateSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormSchoolCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAbsencesStudent.resx">
       <DependentUpon>FormAbsencesStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCreateSubject.resx">
+      <DependentUpon>FormCreateSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSchoolCard.resx">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
