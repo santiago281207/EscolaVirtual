@@ -11,13 +11,14 @@ namespace EscolaVirtual.Classes
 
         public Transaction(int id,int transactionType,decimal amount,decimal resultingBalance,DateTime movementDate,SchoolCard schoolCard)
         {
+            this.SchoolCard = schoolCard;
             this.Id = id;
             this.TransactionType = transactionType;
             this.Amount = amount;
             this.ResultingBalance = resultingBalance;
             this.MovementDate = movementDate;
 
-            this.SchoolCard = schoolCard;
+            
         }
 
         #region Properties and Members
@@ -52,11 +53,17 @@ namespace EscolaVirtual.Classes
             get { return m_amount; }
             set 
                 {
-                    if (value <= 0 || value > SchoolCard.Balance)
+                    if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2)
                     {
                         throw new Exception("Montante inválido!");
-                    }
+                    }else if(TransactionType == 1 && value <= 0)
+                {
+                    throw new Exception("Montante inválido!");
+                }else
+                {
                     m_amount = value;
+                }
+                    
                 }
         }
 

@@ -15,7 +15,6 @@ namespace EscolaVirtual.Classes
             this.Student = student;
             this.Module = module;
             this.Value = value;
-            this.Student = student;
             this.GradingPeriod = gradingPeriod;
 
             student.Grades.Add(this);

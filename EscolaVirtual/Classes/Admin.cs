@@ -160,16 +160,17 @@ namespace EscolaVirtual.Classes
             TeacherClassSubject teacherClassSubject2 = new TeacherClassSubject(teacher1, subject2, class1);
             TeacherClassSubject teacherClassSubject3 = new TeacherClassSubject(teacher1, subject3, class1);
             TeacherClassSubject teacherClassSubject4 = new TeacherClassSubject(teacher1, subject4, class1);
-
+            TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher1, subject5, class1);
             this.TeacherClassSubjects.Add(teacherClassSubject1);
             this.TeacherClassSubjects.Add(teacherClassSubject2);
             this.TeacherClassSubjects.Add(teacherClassSubject3);
             this.TeacherClassSubjects.Add(teacherClassSubject4);
 
-            TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher2, subject5, class2);
             TeacherClassSubject teacherClassSubject6 = new TeacherClassSubject(teacher2, subject6, class2);
             TeacherClassSubject teacherClassSubject7 = new TeacherClassSubject(teacher2, subject7, class2);
             TeacherClassSubject teacherClassSubject8 = new TeacherClassSubject(teacher2, subject8, class2);
+            TeacherClassSubject teacherClassSubject9 = new TeacherClassSubject(teacher2, subject9, class2);
+            TeacherClassSubject teacherClassSubject10 = new TeacherClassSubject(teacher2, subject10, class2);
 
             this.TeacherClassSubjects.Add(teacherClassSubject5);
             this.TeacherClassSubjects.Add(teacherClassSubject6);

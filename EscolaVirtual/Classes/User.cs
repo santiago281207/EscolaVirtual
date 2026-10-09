@@ -18,12 +18,11 @@ namespace EscolaVirtual.Classes
         }
 
         #region Properties and Members
-        private string m_login;
-
-        public string Login
+        private string m_nif;
+        public string Nif
         {
-            get { return m_login; }
-            set { m_login = value; }
+            get { return m_nif; }
+            set { m_nif = value; }
         }
 
         private string m_password;
@@ -50,12 +49,7 @@ namespace EscolaVirtual.Classes
             set { m_userType = value; }
         }
 
-        private string m_nif;
-        public string Nif
-        {
-            get { return m_nif; }
-            set { m_nif = value; }
-        }
+        
         #endregion
 
 
