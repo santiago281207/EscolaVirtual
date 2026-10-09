@@ -1,4 +1,5 @@
 ﻿using EscolaVirtual.Classes;
+using EscolaVirtual.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,18 @@ namespace EscolaVirtual
             Form_Login loginForm = new Form_Login(admin);
             this.Hide();
             loginForm.Show();
+        }
+
+        private void btnAddYear_Click(object sender, EventArgs e)
+        {
+            FormAddYear form = new FormAddYear();
+            form.Show();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            FormAddStudent form = new FormAddStudent();
+            form.Show();
         }
     }
 }

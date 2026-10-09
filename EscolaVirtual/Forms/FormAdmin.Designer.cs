@@ -72,6 +72,7 @@
             this.btnAddStudent.TabIndex = 1;
             this.btnAddStudent.Text = "Adicionar Aluno";
             this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnAddYear
             // 
@@ -85,6 +86,7 @@
             this.btnAddYear.TabIndex = 2;
             this.btnAddYear.Text = "Adicionar Ano";
             this.btnAddYear.UseVisualStyleBackColor = false;
+            this.btnAddYear.Click += new System.EventHandler(this.btnAddYear_Click);
             // 
             // btnAddTeacher
             // 
