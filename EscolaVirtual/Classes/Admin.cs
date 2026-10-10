@@ -143,17 +143,18 @@ namespace EscolaVirtual.Classes
             #region MODULOS TESTE
 
             Module module1 = new Module("Módulo 1",subject1);
+            Module module2 = new Module("Módulo 2", subject2);
+            Module module3 = new Module("Módulo 3", subject1);
 
             #endregion
 
             #region NOTAS TESTE
 
-            Grade grade = new Grade(teacher1, module1, 15, student1, DateTime.Now);
-
+            Grade grade1 = new Grade(teacher1, module1, 15, student1, DateTime.Now);
+            Grade grade2 = new Grade(teacher1, module2, 10, student1, DateTime.Now);
 
 
             #endregion
-
 
             #region REGISTOS TESTE
             TeacherClassSubject teacherClassSubject1 = new TeacherClassSubject(teacher1, subject1, class1);
@@ -161,6 +162,7 @@ namespace EscolaVirtual.Classes
             TeacherClassSubject teacherClassSubject3 = new TeacherClassSubject(teacher1, subject3, class1);
             TeacherClassSubject teacherClassSubject4 = new TeacherClassSubject(teacher1, subject4, class1);
             TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher1, subject5, class1);
+
             this.TeacherClassSubjects.Add(teacherClassSubject1);
             this.TeacherClassSubjects.Add(teacherClassSubject2);
             this.TeacherClassSubjects.Add(teacherClassSubject3);
