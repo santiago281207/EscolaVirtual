@@ -119,31 +119,58 @@ namespace EscolaVirtual.Classes
             #endregion
 
             #region PROFESSORES TESTE
-            Teacher teacher = new Teacher("1111", "Santiago", "123456789");
-            this.Teachers.Add(teacher);
-            this.Users.Add(teacher);
+
+            Teacher teacher1 = new Teacher("1111", "Santiago", "111111111");
+            this.Teachers.Add(teacher1);
+            this.Users.Add(teacher1);
+
+            Teacher teacher2 = new Teacher("2222", "Vicente", "222222222");
+            this.Teachers.Add(teacher2);
+            this.Users.Add(teacher2);
+
             #endregion
 
             #region ALUNOS TESTE
 
+            Student student1 = new Student("3333", "João", "333333333",class1,null);
+            SchoolCard schoolCard1 = new SchoolCard(0, student1);
+
+            class1.Student.Add(student1);
+            this.Users.Add(student1);
 
             #endregion
 
-            #region REGISTOS TESTE
-            TeacherClassSubject teacherClassSubject1 = new TeacherClassSubject(teacher, subject1, class1);
-            TeacherClassSubject teacherClassSubject2 = new TeacherClassSubject(teacher, subject2, class1);
-            TeacherClassSubject teacherClassSubject3 = new TeacherClassSubject(teacher, subject3, class1);
-            TeacherClassSubject teacherClassSubject4 = new TeacherClassSubject(teacher, subject4, class1);
+            #region MODULOS TESTE
 
+            Module module1 = new Module("Módulo 1",subject1);
+
+            #endregion
+
+            #region NOTAS TESTE
+
+            Grade grade = new Grade(teacher1, module1, 15, student1, DateTime.Now);
+
+
+
+            #endregion
+
+
+            #region REGISTOS TESTE
+            TeacherClassSubject teacherClassSubject1 = new TeacherClassSubject(teacher1, subject1, class1);
+            TeacherClassSubject teacherClassSubject2 = new TeacherClassSubject(teacher1, subject2, class1);
+            TeacherClassSubject teacherClassSubject3 = new TeacherClassSubject(teacher1, subject3, class1);
+            TeacherClassSubject teacherClassSubject4 = new TeacherClassSubject(teacher1, subject4, class1);
+            TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher1, subject5, class1);
             this.TeacherClassSubjects.Add(teacherClassSubject1);
             this.TeacherClassSubjects.Add(teacherClassSubject2);
             this.TeacherClassSubjects.Add(teacherClassSubject3);
             this.TeacherClassSubjects.Add(teacherClassSubject4);
 
-            TeacherClassSubject teacherClassSubject5 = new TeacherClassSubject(teacher, subject5, class2);
-            TeacherClassSubject teacherClassSubject6 = new TeacherClassSubject(teacher, subject6, class2);
-            TeacherClassSubject teacherClassSubject7 = new TeacherClassSubject(teacher, subject7, class2);
-            TeacherClassSubject teacherClassSubject8 = new TeacherClassSubject(teacher, subject8, class2);
+            TeacherClassSubject teacherClassSubject6 = new TeacherClassSubject(teacher2, subject6, class2);
+            TeacherClassSubject teacherClassSubject7 = new TeacherClassSubject(teacher2, subject7, class2);
+            TeacherClassSubject teacherClassSubject8 = new TeacherClassSubject(teacher2, subject8, class2);
+            TeacherClassSubject teacherClassSubject9 = new TeacherClassSubject(teacher2, subject9, class2);
+            TeacherClassSubject teacherClassSubject10 = new TeacherClassSubject(teacher2, subject10, class2);
 
             this.TeacherClassSubjects.Add(teacherClassSubject5);
             this.TeacherClassSubjects.Add(teacherClassSubject6);

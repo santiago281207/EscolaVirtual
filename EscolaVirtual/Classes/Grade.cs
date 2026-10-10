@@ -9,22 +9,24 @@ namespace EscolaVirtual.Classes
     public class Grade
     {
 
-        public Grade(TeacherClassSubject teacherClassSubject,Module module,double value,Student student,DateTime gradingPeriod)
+        public Grade(Teacher teacher,Module module,double value,Student student,DateTime gradingPeriod)
         {
-            this.TeacherClassSubject = teacherClassSubject;
+            this.Teacher = teacher;
+            this.Student = student;
             this.Module = module;
             this.Value = value;
-            this.Student = student;
             this.GradingPeriod = gradingPeriod;
+
+            student.Grades.Add(this);
         }
 
         #region Properties and Members
 
-        private TeacherClassSubject m_teacherClassSubject;
-        public TeacherClassSubject TeacherClassSubject
+        private Teacher m_teacher;
+        public Teacher Teacher
         {
-            get { return m_teacherClassSubject; }
-            set { m_teacherClassSubject = value; }
+            get { return m_teacher; }
+            set { m_teacher = value; }
         }
 
         private Module m_module;
@@ -58,22 +60,6 @@ namespace EscolaVirtual.Classes
             get { return m_gradingPeriod; }
             set { m_gradingPeriod = value; }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

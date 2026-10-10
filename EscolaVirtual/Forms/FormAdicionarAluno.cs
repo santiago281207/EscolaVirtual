@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EscolaVirtual.Forms
 {
-    public partial class FormAdicionarAluno : Form
+    public partial class FormAddStudent : Form
     {
-        public FormAdicionarAluno()
+        public FormAddStudent()
         {
             InitializeComponent();
         }

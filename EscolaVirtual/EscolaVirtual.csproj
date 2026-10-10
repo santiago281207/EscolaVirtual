@@ -102,6 +102,12 @@
     <Compile Include="Forms\FormSchoolCard.Designer.cs">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormStudentMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStudentMessage.Designer.cs">
+      <DependentUpon>FormStudentMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormTeacherMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSchoolCard.resx">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStudentMessage.resx">
+      <DependentUpon>FormStudentMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTeacherMessage.resx">
       <DependentUpon>FormTeacherMessage.cs</DependentUpon>
@@ -195,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Credenciais.txt" />
+    <None Include="Resources\245204.png" />
     <None Include="Resources\icone-du-calendrier-des-evenements-vert.png" />
     <None Include="Resources\google-classroom.jpg" />
     <None Include="Resources\name-card-icon_31834.png" />

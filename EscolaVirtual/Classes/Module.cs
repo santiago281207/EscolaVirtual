@@ -12,6 +12,8 @@ namespace EscolaVirtual.Classes
         {
             this.ModuleName = moduleName;
             this.Subject = subject;
+
+            subject.Module.Add(this);
         }
 
         #region Properties and Members
