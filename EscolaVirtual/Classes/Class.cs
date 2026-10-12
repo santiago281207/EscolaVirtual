@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
@@ -42,6 +43,21 @@ namespace EscolaVirtual.Classes
         }
 
         #endregion
+
+        public ListViewItem ToListViewItem(Class @class)
+        {
+            ListViewItem listViewItem = new ListViewItem(@class.Name);
+            ListViewItem.ListViewSubItem lisiStudentQtt = new ListViewItem.ListViewSubItem(listViewItem, @class.Student.Count.ToString());
+            ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, @class.SchoolYear.ToString());
+
+            listViewItem.SubItems.Add(lisiStudentQtt);
+            listViewItem.SubItems.Add(lisiClassYear);
+
+            return listViewItem;
+
+        }
+
+
 
 
     }
