@@ -37,7 +37,7 @@ namespace EscolaVirtual
 
         private void btnAbsence_Click(object sender, EventArgs e)
         {
-            FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(admin, student);
+            FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(student, admin);
             this.Hide();
             AbsencesStudentForm.Show();
         }
