@@ -95,7 +95,13 @@
     </Compile>
     <Compile Include="Forms\FormAssociate.Designer.cs">
       <DependentUpon>FormAssociate.cs</DependentUpon>
-  </Compile>
+    </Compile>
+    <Compile Include="Forms\FormChangeDataStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChangeDataStudent.Designer.cs">
+      <DependentUpon>FormChangeDataStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormCreateSubject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +113,7 @@
     </Compile>
     <Compile Include="Forms\FormSchoolCard.Designer.cs">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
-  </Compile>
-    
+    </Compile>
     <Compile Include="Forms\FormStudentMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,14 +154,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAssociate.resx">
       <DependentUpon>FormAssociate.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormChangeDataStudent.resx">
+      <DependentUpon>FormChangeDataStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCreateSubject.resx">
       <DependentUpon>FormCreateSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSchoolCard.resx">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
-</EmbeddedResource>
-    
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormStudentMessage.resx">
       <DependentUpon>FormStudentMessage.cs</DependentUpon>
     </EmbeddedResource>

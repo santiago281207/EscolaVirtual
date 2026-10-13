@@ -1,4 +1,5 @@
 ﻿using EscolaVirtual.Classes;
+using EscolaVirtual.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,9 @@ namespace EscolaVirtual
 
         private void btnAbsence_Click(object sender, EventArgs e)
         {
-
+            FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(admin, student);
+            this.Hide();
+            AbsencesStudentForm.Show();
         }
 
         private void FormStudent_Load(object sender, EventArgs e)
@@ -122,6 +125,27 @@ namespace EscolaVirtual
                     tvwGradesAndAverage.Nodes.Add(tnSubject);
                 }
             }
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(admin, student);
+            this.Hide();
+            ChangeDataStudentForm.Show();
+        }
+
+        private void btnSchoolCard_Click(object sender, EventArgs e)
+        {
+            FormSchoolCard SchoolCardForm = new FormSchoolCard(student);
+            this.Hide();
+            SchoolCardForm.Show();
+        }
+
+        private void btnMessages_Click(object sender, EventArgs e)
+        {
+            FormStudentMessage StudentMessagesForm = new FormStudentMessage(student);
+            this.Hide();
+            StudentMessagesForm.Show();
         }
     }
 }
