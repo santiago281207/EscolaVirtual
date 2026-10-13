@@ -26,22 +26,29 @@ namespace EscolaVirtual
 
         private void btnGrades_Click(object sender, EventArgs e)
         {
-            // criar um form novo para poder editar e por notas 
+            
+            FormGradesTeacher formgradesteacher = new FormGradesTeacher(teacher);
+            formgradesteacher.Show();
         }
 
         private void btnAbsences_Click(object sender, EventArgs e)
         {
-            // criar um form novo para poder marcar faltas
+          
+            FormAbsencesTeacher formAbsencesTeacher = new FormAbsencesTeacher(teacher);
+            formAbsencesTeacher.Show();
         }
 
         private void btnChangeData_Click(object sender, EventArgs e)
         {
-            // criar form para poder mudar os dados do professor
+            
+            FormChangeDataTeacher formchangedatateacher = new FormChangeData(teacher);
+            formchangedatateacher.Show();
         }
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
-            // criar form para poder mandar mensagens para os alunos
+            FormTeacherMessage formteachermessage = new FormTeacherMessage(teacher);
+            formteachermessage.Show();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
