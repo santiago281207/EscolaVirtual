@@ -34,7 +34,7 @@ namespace EscolaVirtual
         private void btnAbsences_Click(object sender, EventArgs e)
         {
           
-            FormAbsencesTeacher formAbsencesTeacher = new FormAbsencesTeacher(teacher);
+            FormAbsencesTeacher formAbsencesTeacher = new FormAbsencesTeacher(teacher, admin);
             formAbsencesTeacher.ShowDialog();
         }
 
