@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace EscolaVirtual
 {
     public partial class FormAbsencesStudent : Form
     {
-        public FormAbsencesStudent()
+        Student student;
+        Admin admin;
+        public FormAbsencesStudent(Student student,Admin admin)
         {
             InitializeComponent();
+            this.student = student;
+            this.admin = admin;
         }
 
         private void btnJustification_Click(object sender, EventArgs e)
