@@ -108,7 +108,7 @@
     <Compile Include="Forms\FormSchoolCard.Designer.cs">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
   </Compile>
-    </Compile>
+    
     <Compile Include="Forms\FormStudentMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,7 +156,7 @@
     <EmbeddedResource Include="Forms\FormSchoolCard.resx">
       <DependentUpon>FormSchoolCard.cs</DependentUpon>
 </EmbeddedResource>
-    </EmbeddedResource>
+    
     <EmbeddedResource Include="Forms\FormStudentMessage.resx">
       <DependentUpon>FormStudentMessage.cs</DependentUpon>
     </EmbeddedResource>
