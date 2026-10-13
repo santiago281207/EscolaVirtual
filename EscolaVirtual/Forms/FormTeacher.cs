@@ -27,8 +27,8 @@ namespace EscolaVirtual
         private void btnGrades_Click(object sender, EventArgs e)
         {
             
-            FormGradesTeacher formgradesteacher = new FormGradesTeacher(teacher);
-            formgradesteacher.ShowDialog();
+        //    FormGradesTeacher formgradesteacher = new FormGradesTeacher(teacher);
+         //   formgradesteacher.ShowDialog();
         }
 
         private void btnAbsences_Click(object sender, EventArgs e)
@@ -41,8 +41,8 @@ namespace EscolaVirtual
         private void btnChangeData_Click(object sender, EventArgs e)
         {
             
-            FormChangeDataTeacher formchangedatateacher = new FormChangeData(teacher);
-            formchangedatateacher.ShowDialog();
+        //    FormChangeDataTeacher formchangedatateacher = new FormChangeData(teacher);
+         //   formchangedatateacher.ShowDialog();
         }
 
         private void btnMessages_Click(object sender, EventArgs e)

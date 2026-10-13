@@ -35,13 +35,13 @@ namespace EscolaVirtual
 
         private void btnAddYear_Click(object sender, EventArgs e)
         {
-            FormAddYear form = new FormAddYear();
+            FormAddYear form = new FormAddYear(admin);
             form.Show();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            FormAddStudent form = new FormAddStudent();
+            FormAddStudent form = new FormAddStudent(admin);
             form.Show();
         }
 
@@ -89,7 +89,7 @@ namespace EscolaVirtual
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            FormCreateSubject form = new FormCreateSubject();
+            FormCreateSubject form = new FormCreateSubject(admin);
             form.Show();
         }
 
