@@ -44,5 +44,47 @@ namespace EscolaVirtual
             FormAddStudent form = new FormAddStudent();
             form.Show();
         }
+
+        private void tcCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            switch (tcCategories.SelectedIndex)
+            {
+                case 0: //Aluno
+                    lvwStudent.Items.Clear();
+                    List<ListViewItem> listViewItems1 = admin.Users.Where(u => u.UserType == 1).Select(u => u.ToListViewItem(u,admin)).ToList();
+                    listViewItems1.ForEach(li => lvwStudent.Items.Add(li));
+
+                    break;
+                case 1: //Professor
+                    lvwTeacher.Items.Clear();
+                    List<ListViewItem> listViewItems2 = admin.Users.Where(u => u.UserType == 2).Select(u => u.ToListViewItem(u,admin)).ToList();
+                    listViewItems2.ForEach(li => lvwTeacher.Items.Add(li));
+
+                    break;
+                case 2: //Turma
+                    lvwClass.Items.Clear();
+                    List<ListViewItem> listViewItems3 = admin.ClassYears.SelectMany(cy => cy.Classes).Select(c => c.ToListViewItem(c)).ToList();
+                    listViewItems3.ForEach(li => lvwClass.Items.Add(li));
+                    break;
+                case 3: //Ano
+                    lvwYear.Items.Clear();
+
+                    break;
+                case 4: //Disciplina
+                    lvwSubject.Items.Clear();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            //Para ativar evento - "tcCategories_SelectedIndexChanged"
+            tcCategories.SelectedIndex = 1;
+            tcCategories.SelectedIndex = 0;
+
+        }
     }
 }

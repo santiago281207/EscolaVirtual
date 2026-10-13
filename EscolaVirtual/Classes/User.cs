@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
@@ -49,9 +51,61 @@ namespace EscolaVirtual.Classes
             set { m_userType = value; }
         }
 
-        
+
         #endregion
 
+
+        public ListViewItem ToListViewItem(User user,Admin admin)
+        {
+            ListViewItem listViewItem = new ListViewItem(user.Name);
+
+
+            if(user.UserType == 1) //Aluno
+            {
+                Student student = (Student)user;
+                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, student.Nif);
+                ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, student.Class.SchoolYear.YearName);
+                ListViewItem.ListViewSubItem lisiClass = new ListViewItem.ListViewSubItem(listViewItem, student.Class.Name);
+                ListViewItem.ListViewSubItem lisiMessageCount = new ListViewItem.ListViewSubItem(listViewItem, student.Messages.Count.ToString());
+
+                List<Grade> grades = student.Grades.FindAll(g => g.Student == student).ToList();
+                string text;
+                if (grades.Count > 0)
+                {
+                    // Média geral
+                    double average = grades.Average(g => g.Value);
+                    text = average.ToString();
+                }
+                else
+                {
+                    // Não existem notas
+                    text = "Sem notas";
+                }
+
+                ListViewItem.ListViewSubItem lisiAvg = new ListViewItem.ListViewSubItem(listViewItem, text);
+
+                listViewItem.SubItems.Add(lisiNif);
+                listViewItem.SubItems.Add(lisiClassYear);
+                listViewItem.SubItems.Add(lisiClass);
+                listViewItem.SubItems.Add(lisiMessageCount);
+                listViewItem.SubItems.Add(lisiAvg);
+
+            }
+            else  //Professor
+            {
+                Teacher teacher = (Teacher)user;
+
+                List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(tcs => tcs.Teacher == teacher);
+                string differentClasses = teacherClassSubjects.Select(tcs => tcs.Class).Distinct().Count().ToString();
+
+                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, teacher.Nif);
+                ListViewItem.ListViewSubItem lisiQttClass = new ListViewItem.ListViewSubItem(listViewItem, differentClasses);
+
+            }
+            
+
+            return listViewItem;
+        }
 
     }
 }
