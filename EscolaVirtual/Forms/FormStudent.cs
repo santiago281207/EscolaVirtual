@@ -31,15 +31,13 @@ namespace EscolaVirtual
         private void btnExit_Click(object sender, EventArgs e)
         {
             Form_Login loginForm = new Form_Login(admin);
-            this.Hide();
-            loginForm.Show();
+            loginForm.ShowDialog();
         }
 
         private void btnAbsence_Click(object sender, EventArgs e)
         {
             FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(student, admin);
-            this.Hide();
-            AbsencesStudentForm.Show();
+            AbsencesStudentForm.ShowDialog();
         }
 
         private void FormStudent_Load(object sender, EventArgs e)
@@ -129,23 +127,20 @@ namespace EscolaVirtual
 
         private void btnData_Click(object sender, EventArgs e)
         {
-            FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(admin, student);
-            this.Hide();
-            ChangeDataStudentForm.Show();
+           // FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(admin, student);
+           //  ChangeDataStudentForm.ShowDialog();
         }
 
         private void btnSchoolCard_Click(object sender, EventArgs e)
         {
             FormSchoolCard SchoolCardForm = new FormSchoolCard(student);
-            this.Hide();
-            SchoolCardForm.Show();
+            SchoolCardForm.ShowDialog();
         }
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
             FormStudentMessage StudentMessagesForm = new FormStudentMessage(student);
-            this.Hide();
-            StudentMessagesForm.Show();
+            StudentMessagesForm.ShowDialog();
         }
     }
 }
