@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataChange.cs" />
     <Compile Include="Forms\FormAddYear.cs">
       <SubType>Form</SubType>
     </Compile>
