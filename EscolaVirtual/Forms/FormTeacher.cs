@@ -28,27 +28,27 @@ namespace EscolaVirtual
         {
             
             FormGradesTeacher formgradesteacher = new FormGradesTeacher(teacher);
-            formgradesteacher.Show();
+            formgradesteacher.ShowDialog();
         }
 
         private void btnAbsences_Click(object sender, EventArgs e)
         {
           
             FormAbsencesTeacher formAbsencesTeacher = new FormAbsencesTeacher(teacher);
-            formAbsencesTeacher.Show();
+            formAbsencesTeacher.ShowDialog();
         }
 
         private void btnChangeData_Click(object sender, EventArgs e)
         {
             
             FormChangeDataTeacher formchangedatateacher = new FormChangeData(teacher);
-            formchangedatateacher.Show();
+            formchangedatateacher.ShowDialog();
         }
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
             FormTeacherMessage formteachermessage = new FormTeacherMessage(teacher);
-            formteachermessage.Show();
+            formteachermessage.ShowDialog();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
