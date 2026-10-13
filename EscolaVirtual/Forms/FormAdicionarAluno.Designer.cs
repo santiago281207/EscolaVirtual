@@ -1,6 +1,6 @@
 ﻿namespace EscolaVirtual.Forms
 {
-    partial class FormAdicionarAluno
+    partial class FormAddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdicionarAluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddStudent));
             this.pnlCreate = new System.Windows.Forms.Panel();
             this.pClass = new System.Windows.Forms.Panel();
             this.cbClass = new System.Windows.Forms.ComboBox();
             this.pColorClass = new System.Windows.Forms.Panel();
+            this.pbClass = new System.Windows.Forms.PictureBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.pNIF = new System.Windows.Forms.Panel();
             this.pColorNIF = new System.Windows.Forms.Panel();
+            this.pbNIF = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lblNIF = new System.Windows.Forms.Label();
             this.pName = new System.Windows.Forms.Panel();
             this.pColorName = new System.Windows.Forms.Panel();
+            this.pbUsername = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCreateStudent = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
-            this.pbClass = new System.Windows.Forms.PictureBox();
-            this.pbNIF = new System.Windows.Forms.PictureBox();
-            this.pbUsername = new System.Windows.Forms.PictureBox();
             this.pnlCreate.SuspendLayout();
             this.pClass.SuspendLayout();
-            this.pNIF.SuspendLayout();
-            this.pName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClass)).BeginInit();
+            this.pNIF.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNIF)).BeginInit();
+            this.pName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,17 @@
             this.pColorClass.Size = new System.Drawing.Size(439, 5);
             this.pColorClass.TabIndex = 9;
             // 
+            // pbClass
+            // 
+            this.pbClass.Image = global::EscolaVirtual.Properties.Resources.google_classroom;
+            this.pbClass.Location = new System.Drawing.Point(399, 2);
+            this.pbClass.Margin = new System.Windows.Forms.Padding(4);
+            this.pbClass.Name = "pbClass";
+            this.pbClass.Size = new System.Drawing.Size(32, 31);
+            this.pbClass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClass.TabIndex = 5;
+            this.pbClass.TabStop = false;
+            // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
@@ -130,6 +141,17 @@
             this.pColorNIF.Name = "pColorNIF";
             this.pColorNIF.Size = new System.Drawing.Size(439, 5);
             this.pColorNIF.TabIndex = 9;
+            // 
+            // pbNIF
+            // 
+            this.pbNIF.Image = global::EscolaVirtual.Properties.Resources._245204;
+            this.pbNIF.Location = new System.Drawing.Point(399, 2);
+            this.pbNIF.Margin = new System.Windows.Forms.Padding(4);
+            this.pbNIF.Name = "pbNIF";
+            this.pbNIF.Size = new System.Drawing.Size(32, 31);
+            this.pbNIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNIF.TabIndex = 5;
+            this.pbNIF.TabStop = false;
             // 
             // textBox4
             // 
@@ -167,6 +189,17 @@
             this.pColorName.Name = "pColorName";
             this.pColorName.Size = new System.Drawing.Size(439, 5);
             this.pColorName.TabIndex = 9;
+            // 
+            // pbUsername
+            // 
+            this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
+            this.pbUsername.Location = new System.Drawing.Point(399, 2);
+            this.pbUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.pbUsername.Name = "pbUsername";
+            this.pbUsername.Size = new System.Drawing.Size(32, 31);
+            this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsername.TabIndex = 5;
+            this.pbUsername.TabStop = false;
             // 
             // textBox3
             // 
@@ -209,40 +242,7 @@
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Nome";
             // 
-            // pbClass
-            // 
-            this.pbClass.Image = global::EscolaVirtual.Properties.Resources.google_classroom;
-            this.pbClass.Location = new System.Drawing.Point(399, 2);
-            this.pbClass.Margin = new System.Windows.Forms.Padding(4);
-            this.pbClass.Name = "pbClass";
-            this.pbClass.Size = new System.Drawing.Size(32, 31);
-            this.pbClass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClass.TabIndex = 5;
-            this.pbClass.TabStop = false;
-            // 
-            // pbNIF
-            // 
-            this.pbNIF.Image = global::EscolaVirtual.Properties.Resources._245204;
-            this.pbNIF.Location = new System.Drawing.Point(399, 2);
-            this.pbNIF.Margin = new System.Windows.Forms.Padding(4);
-            this.pbNIF.Name = "pbNIF";
-            this.pbNIF.Size = new System.Drawing.Size(32, 31);
-            this.pbNIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbNIF.TabIndex = 5;
-            this.pbNIF.TabStop = false;
-            // 
-            // pbUsername
-            // 
-            this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
-            this.pbUsername.Location = new System.Drawing.Point(399, 2);
-            this.pbUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.pbUsername.Name = "pbUsername";
-            this.pbUsername.Size = new System.Drawing.Size(32, 31);
-            this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsername.TabIndex = 5;
-            this.pbUsername.TabStop = false;
-            // 
-            // FormAdicionarAluno
+            // FormAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,17 +253,17 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.Name = "FormAdicionarAluno";
+            this.Name = "FormAddStudent";
             this.Text = "FormAdicionarAluno";
             this.pnlCreate.ResumeLayout(false);
             this.pnlCreate.PerformLayout();
             this.pClass.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClass)).EndInit();
             this.pNIF.ResumeLayout(false);
             this.pNIF.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNIF)).EndInit();
             this.pName.ResumeLayout(false);
             this.pName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNIF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
             this.ResumeLayout(false);
 

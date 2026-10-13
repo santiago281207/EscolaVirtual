@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace EscolaVirtual
 {
     public partial class FormAddYear : Form
     {
+        Admin admin;
         public FormAddYear()
         {
             InitializeComponent();
+        }
+
+        private void FormAddYear_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

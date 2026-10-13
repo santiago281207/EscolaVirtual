@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace EscolaVirtual.Classes
@@ -41,6 +42,18 @@ namespace EscolaVirtual.Classes
 
 
         #endregion
+
+        public ListViewItem ToListViewItem(ClassYear classYear)
+        {
+            ListViewItem listViewItem = new ListViewItem(classYear.YearName);
+            ListViewItem.ListViewSubItem lisiClassQtt = new ListViewItem.ListViewSubItem(listViewItem, classYear.Classes.Count.ToString());
+            ListViewItem.ListViewSubItem lisiSubjectQtt = new ListViewItem.ListViewSubItem(listViewItem, classYear.Subject.Count.ToString());
+
+            listViewItem.SubItems.Add(lisiClassQtt);
+            listViewItem.SubItems.Add(lisiSubjectQtt);
+
+            return listViewItem;
+        }
 
     }
 }

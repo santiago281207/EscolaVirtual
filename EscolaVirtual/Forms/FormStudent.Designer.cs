@@ -146,6 +146,7 @@
             this.Name = "FormStudent";
             this.Text = "FormStudent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormStudent_FormClosed);
+            this.Load += new System.EventHandler(this.FormStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,8 @@ namespace EscolaVirtual.Classes
         {
             this.Balance = balance;
             this.Student = student;
+
+            student.SchoolCard = this;
         }
 
 
