@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace EscolaVirtual
 {
     public partial class FormTeacherMessage : Form
     {
-        public FormTeacherMessage()
+        Teacher teacher;
+        public FormTeacherMessage(Teacher teacher)
         {
             InitializeComponent();
+            this.teacher = teacher;
         }
 
         private void cbClass_SelectedIndexChanged(object sender, EventArgs e)

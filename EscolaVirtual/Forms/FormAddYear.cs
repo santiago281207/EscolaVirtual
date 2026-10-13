@@ -14,9 +14,10 @@ namespace EscolaVirtual
     public partial class FormAddYear : Form
     {
         Admin admin;
-        public FormAddYear()
+        public FormAddYear(Admin admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
 
         private void FormAddYear_Load(object sender, EventArgs e)
