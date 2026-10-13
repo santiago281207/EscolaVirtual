@@ -47,24 +47,24 @@
             this.chAverage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpTeacher = new System.Windows.Forms.TabPage();
             this.lvwTeacher = new System.Windows.Forms.ListView();
+            this.chNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chClasses = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpClass = new System.Windows.Forms.TabPage();
             this.lvwClass = new System.Windows.Forms.ListView();
+            this.chClass = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chStudentQtt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSchoolYear = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpYear = new System.Windows.Forms.TabPage();
             this.lvwYear = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpSubject = new System.Windows.Forms.TabPage();
             this.lvwSubject = new System.Windows.Forms.ListView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.pAdmin = new System.Windows.Forms.Panel();
             this.pAdminSair = new System.Windows.Forms.Panel();
-            this.chNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chClasses = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chClass = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chStudentQtt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chSchoolYear = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcCategories.SuspendLayout();
             this.tpStudent.SuspendLayout();
             this.tpTeacher.SuspendLayout();
@@ -80,10 +80,10 @@
             this.btnAddStudent.BackColor = System.Drawing.Color.Green;
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddStudent.Location = new System.Drawing.Point(327, 511);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddStudent.Location = new System.Drawing.Point(436, 629);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(278, 41);
+            this.btnAddStudent.Size = new System.Drawing.Size(371, 50);
             this.btnAddStudent.TabIndex = 1;
             this.btnAddStudent.Text = "Adicionar Aluno";
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -94,10 +94,10 @@
             this.btnAddYear.BackColor = System.Drawing.Color.Green;
             this.btnAddYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddYear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddYear.Location = new System.Drawing.Point(327, 448);
-            this.btnAddYear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddYear.Location = new System.Drawing.Point(436, 551);
+            this.btnAddYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddYear.Name = "btnAddYear";
-            this.btnAddYear.Size = new System.Drawing.Size(278, 41);
+            this.btnAddYear.Size = new System.Drawing.Size(371, 50);
             this.btnAddYear.TabIndex = 2;
             this.btnAddYear.Text = "Adicionar Ano";
             this.btnAddYear.UseVisualStyleBackColor = false;
@@ -108,49 +108,52 @@
             this.btnAddTeacher.BackColor = System.Drawing.Color.Green;
             this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTeacher.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddTeacher.Location = new System.Drawing.Point(637, 511);
-            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddTeacher.Location = new System.Drawing.Point(849, 629);
+            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTeacher.Name = "btnAddTeacher";
-            this.btnAddTeacher.Size = new System.Drawing.Size(278, 41);
+            this.btnAddTeacher.Size = new System.Drawing.Size(371, 50);
             this.btnAddTeacher.TabIndex = 3;
             this.btnAddTeacher.Text = "Adicionar Professor";
             this.btnAddTeacher.UseVisualStyleBackColor = false;
+            this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
             // 
             // btnAddClass
             // 
             this.btnAddClass.BackColor = System.Drawing.Color.Green;
             this.btnAddClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddClass.Location = new System.Drawing.Point(14, 511);
-            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddClass.Location = new System.Drawing.Point(19, 629);
+            this.btnAddClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddClass.Name = "btnAddClass";
-            this.btnAddClass.Size = new System.Drawing.Size(278, 41);
+            this.btnAddClass.Size = new System.Drawing.Size(371, 50);
             this.btnAddClass.TabIndex = 4;
             this.btnAddClass.Text = "Adicionar Turma";
             this.btnAddClass.UseVisualStyleBackColor = false;
+            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
             // 
             // btnSubject
             // 
             this.btnSubject.BackColor = System.Drawing.Color.Green;
             this.btnSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubject.Location = new System.Drawing.Point(637, 448);
-            this.btnSubject.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubject.Location = new System.Drawing.Point(849, 551);
+            this.btnSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubject.Name = "btnSubject";
-            this.btnSubject.Size = new System.Drawing.Size(278, 41);
+            this.btnSubject.Size = new System.Drawing.Size(371, 50);
             this.btnSubject.TabIndex = 5;
             this.btnSubject.Text = "Adicionar Disciplina";
             this.btnSubject.UseVisualStyleBackColor = false;
+            this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
             // 
             // btnLink
             // 
             this.btnLink.BackColor = System.Drawing.Color.Green;
             this.btnLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLink.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLink.Location = new System.Drawing.Point(637, 8);
-            this.btnLink.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLink.Location = new System.Drawing.Point(849, 10);
+            this.btnLink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(278, 41);
+            this.btnLink.Size = new System.Drawing.Size(371, 50);
             this.btnLink.TabIndex = 6;
             this.btnLink.Text = "Associar Professores/Turma/Disciplina";
             this.btnLink.UseVisualStyleBackColor = false;
@@ -160,10 +163,10 @@
             this.btnLogOut.BackColor = System.Drawing.Color.Green;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogOut.Location = new System.Drawing.Point(10, 8);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Location = new System.Drawing.Point(13, 10);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(278, 41);
+            this.btnLogOut.Size = new System.Drawing.Size(371, 50);
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Sair";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -176,22 +179,22 @@
             this.tcCategories.Controls.Add(this.tpClass);
             this.tcCategories.Controls.Add(this.tpYear);
             this.tcCategories.Controls.Add(this.tpSubject);
-            this.tcCategories.Location = new System.Drawing.Point(10, 11);
-            this.tcCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.tcCategories.Location = new System.Drawing.Point(13, 14);
+            this.tcCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tcCategories.Name = "tcCategories";
             this.tcCategories.SelectedIndex = 0;
-            this.tcCategories.Size = new System.Drawing.Size(892, 421);
+            this.tcCategories.Size = new System.Drawing.Size(1189, 518);
             this.tcCategories.TabIndex = 9;
             this.tcCategories.SelectedIndexChanged += new System.EventHandler(this.tcCategories_SelectedIndexChanged);
             // 
             // tpStudent
             // 
             this.tpStudent.Controls.Add(this.lvwStudent);
-            this.tpStudent.Location = new System.Drawing.Point(4, 22);
-            this.tpStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.tpStudent.Location = new System.Drawing.Point(4, 25);
+            this.tpStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpStudent.Name = "tpStudent";
-            this.tpStudent.Padding = new System.Windows.Forms.Padding(2);
-            this.tpStudent.Size = new System.Drawing.Size(884, 395);
+            this.tpStudent.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpStudent.Size = new System.Drawing.Size(1181, 489);
             this.tpStudent.TabIndex = 0;
             this.tpStudent.Text = "Aluno";
             this.tpStudent.UseVisualStyleBackColor = true;
@@ -207,10 +210,10 @@
             this.chAverage});
             this.lvwStudent.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lvwStudent.HideSelection = false;
-            this.lvwStudent.Location = new System.Drawing.Point(2, 3);
-            this.lvwStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwStudent.Location = new System.Drawing.Point(3, 4);
+            this.lvwStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwStudent.Name = "lvwStudent";
-            this.lvwStudent.Size = new System.Drawing.Size(882, 395);
+            this.lvwStudent.Size = new System.Drawing.Size(1175, 485);
             this.lvwStudent.TabIndex = 0;
             this.lvwStudent.UseCompatibleStateImageBehavior = false;
             this.lvwStudent.View = System.Windows.Forms.View.Details;
@@ -253,11 +256,11 @@
             // tpTeacher
             // 
             this.tpTeacher.Controls.Add(this.lvwTeacher);
-            this.tpTeacher.Location = new System.Drawing.Point(4, 22);
-            this.tpTeacher.Margin = new System.Windows.Forms.Padding(2);
+            this.tpTeacher.Location = new System.Drawing.Point(4, 25);
+            this.tpTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpTeacher.Name = "tpTeacher";
-            this.tpTeacher.Padding = new System.Windows.Forms.Padding(2);
-            this.tpTeacher.Size = new System.Drawing.Size(884, 395);
+            this.tpTeacher.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpTeacher.Size = new System.Drawing.Size(1181, 489);
             this.tpTeacher.TabIndex = 1;
             this.tpTeacher.Text = "Professor";
             this.tpTeacher.UseVisualStyleBackColor = true;
@@ -268,21 +271,31 @@
             this.chNome,
             this.chClasses});
             this.lvwTeacher.HideSelection = false;
-            this.lvwTeacher.Location = new System.Drawing.Point(2, 2);
-            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwTeacher.Location = new System.Drawing.Point(3, 2);
+            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwTeacher.Name = "lvwTeacher";
-            this.lvwTeacher.Size = new System.Drawing.Size(882, 395);
+            this.lvwTeacher.Size = new System.Drawing.Size(1175, 485);
             this.lvwTeacher.TabIndex = 2;
             this.lvwTeacher.UseCompatibleStateImageBehavior = false;
             this.lvwTeacher.View = System.Windows.Forms.View.Details;
             // 
+            // chNome
+            // 
+            this.chNome.Text = "Nome";
+            this.chNome.Width = 130;
+            // 
+            // chClasses
+            // 
+            this.chClasses.Text = "Quantidade de turmas";
+            this.chClasses.Width = 130;
+            // 
             // tpClass
             // 
             this.tpClass.Controls.Add(this.lvwClass);
-            this.tpClass.Location = new System.Drawing.Point(4, 22);
-            this.tpClass.Margin = new System.Windows.Forms.Padding(2);
+            this.tpClass.Location = new System.Drawing.Point(4, 25);
+            this.tpClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpClass.Name = "tpClass";
-            this.tpClass.Size = new System.Drawing.Size(884, 395);
+            this.tpClass.Size = new System.Drawing.Size(1181, 489);
             this.tpClass.TabIndex = 2;
             this.tpClass.Text = "Turma";
             this.tpClass.UseVisualStyleBackColor = true;
@@ -295,110 +308,12 @@
             this.chSchoolYear});
             this.lvwClass.HideSelection = false;
             this.lvwClass.Location = new System.Drawing.Point(0, 0);
-            this.lvwClass.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwClass.Name = "lvwClass";
-            this.lvwClass.Size = new System.Drawing.Size(882, 395);
+            this.lvwClass.Size = new System.Drawing.Size(1175, 485);
             this.lvwClass.TabIndex = 1;
             this.lvwClass.UseCompatibleStateImageBehavior = false;
             this.lvwClass.View = System.Windows.Forms.View.Details;
-            // 
-            // tpYear
-            // 
-            this.tpYear.Controls.Add(this.lvwYear);
-            this.tpYear.Location = new System.Drawing.Point(4, 22);
-            this.tpYear.Margin = new System.Windows.Forms.Padding(2);
-            this.tpYear.Name = "tpYear";
-            this.tpYear.Size = new System.Drawing.Size(884, 395);
-            this.tpYear.TabIndex = 3;
-            this.tpYear.Text = "Ano";
-            this.tpYear.UseVisualStyleBackColor = true;
-            // 
-            // lvwYear
-            // 
-            this.lvwYear.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lvwYear.HideSelection = false;
-            this.lvwYear.Location = new System.Drawing.Point(2, 2);
-            this.lvwYear.Margin = new System.Windows.Forms.Padding(2);
-            this.lvwYear.Name = "lvwYear";
-            this.lvwYear.Size = new System.Drawing.Size(882, 395);
-            this.lvwYear.TabIndex = 1;
-            this.lvwYear.UseCompatibleStateImageBehavior = false;
-            this.lvwYear.View = System.Windows.Forms.View.Details;
-            // 
-            // tpSubject
-            // 
-            this.tpSubject.Controls.Add(this.lvwSubject);
-            this.tpSubject.Location = new System.Drawing.Point(4, 22);
-            this.tpSubject.Margin = new System.Windows.Forms.Padding(2);
-            this.tpSubject.Name = "tpSubject";
-            this.tpSubject.Size = new System.Drawing.Size(884, 395);
-            this.tpSubject.TabIndex = 4;
-            this.tpSubject.Text = "Disciplina";
-            this.tpSubject.UseVisualStyleBackColor = true;
-            // 
-            // lvwSubject
-            // 
-            this.lvwSubject.HideSelection = false;
-            this.lvwSubject.Location = new System.Drawing.Point(2, 0);
-            this.lvwSubject.Margin = new System.Windows.Forms.Padding(2);
-            this.lvwSubject.Name = "lvwSubject";
-            this.lvwSubject.Size = new System.Drawing.Size(882, 395);
-            this.lvwSubject.TabIndex = 1;
-            this.lvwSubject.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Green;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEdit.Location = new System.Drawing.Point(14, 448);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(278, 41);
-            this.btnEdit.TabIndex = 10;
-            this.btnEdit.Text = "Editar";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // pAdmin
-            // 
-            this.pAdmin.BackColor = System.Drawing.Color.Silver;
-            this.pAdmin.Controls.Add(this.tcCategories);
-            this.pAdmin.Controls.Add(this.btnEdit);
-            this.pAdmin.Controls.Add(this.btnSubject);
-            this.pAdmin.Controls.Add(this.btnAddTeacher);
-            this.pAdmin.Controls.Add(this.btnAddClass);
-            this.pAdmin.Controls.Add(this.btnAddYear);
-            this.pAdmin.Controls.Add(this.btnAddStudent);
-            this.pAdmin.Location = new System.Drawing.Point(9, 11);
-            this.pAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.pAdmin.Name = "pAdmin";
-            this.pAdmin.Size = new System.Drawing.Size(925, 570);
-            this.pAdmin.TabIndex = 11;
-            // 
-            // pAdminSair
-            // 
-            this.pAdminSair.BackColor = System.Drawing.Color.Silver;
-            this.pAdminSair.Controls.Add(this.btnLogOut);
-            this.pAdminSair.Controls.Add(this.btnLink);
-            this.pAdminSair.Location = new System.Drawing.Point(9, 587);
-            this.pAdminSair.Margin = new System.Windows.Forms.Padding(2);
-            this.pAdminSair.Name = "pAdminSair";
-            this.pAdminSair.Size = new System.Drawing.Size(925, 53);
-            this.pAdminSair.TabIndex = 12;
-            // 
-            // chNome
-            // 
-            this.chNome.Text = "Nome";
-            this.chNome.Width = 130;
-            // 
-            // chClasses
-            // 
-            this.chClasses.Text = "Quantidade de turmas";
-            this.chClasses.Width = 130;
             // 
             // chClass
             // 
@@ -417,16 +332,104 @@
             this.chSchoolYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chSchoolYear.Width = 130;
             // 
+            // tpYear
+            // 
+            this.tpYear.Controls.Add(this.lvwYear);
+            this.tpYear.Location = new System.Drawing.Point(4, 25);
+            this.tpYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpYear.Name = "tpYear";
+            this.tpYear.Size = new System.Drawing.Size(1181, 489);
+            this.tpYear.TabIndex = 3;
+            this.tpYear.Text = "Ano";
+            this.tpYear.UseVisualStyleBackColor = true;
+            // 
+            // lvwYear
+            // 
+            this.lvwYear.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lvwYear.HideSelection = false;
+            this.lvwYear.Location = new System.Drawing.Point(3, 2);
+            this.lvwYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvwYear.Name = "lvwYear";
+            this.lvwYear.Size = new System.Drawing.Size(1175, 485);
+            this.lvwYear.TabIndex = 1;
+            this.lvwYear.UseCompatibleStateImageBehavior = false;
+            this.lvwYear.View = System.Windows.Forms.View.Details;
+            // 
+            // tpSubject
+            // 
+            this.tpSubject.Controls.Add(this.lvwSubject);
+            this.tpSubject.Location = new System.Drawing.Point(4, 25);
+            this.tpSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpSubject.Name = "tpSubject";
+            this.tpSubject.Size = new System.Drawing.Size(1181, 489);
+            this.tpSubject.TabIndex = 4;
+            this.tpSubject.Text = "Disciplina";
+            this.tpSubject.UseVisualStyleBackColor = true;
+            // 
+            // lvwSubject
+            // 
+            this.lvwSubject.HideSelection = false;
+            this.lvwSubject.Location = new System.Drawing.Point(3, 0);
+            this.lvwSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvwSubject.Name = "lvwSubject";
+            this.lvwSubject.Size = new System.Drawing.Size(1175, 485);
+            this.lvwSubject.TabIndex = 1;
+            this.lvwSubject.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Green;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEdit.Location = new System.Drawing.Point(19, 551);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(371, 50);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // pAdmin
+            // 
+            this.pAdmin.BackColor = System.Drawing.Color.Silver;
+            this.pAdmin.Controls.Add(this.tcCategories);
+            this.pAdmin.Controls.Add(this.btnEdit);
+            this.pAdmin.Controls.Add(this.btnSubject);
+            this.pAdmin.Controls.Add(this.btnAddTeacher);
+            this.pAdmin.Controls.Add(this.btnAddClass);
+            this.pAdmin.Controls.Add(this.btnAddYear);
+            this.pAdmin.Controls.Add(this.btnAddStudent);
+            this.pAdmin.Location = new System.Drawing.Point(12, 14);
+            this.pAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAdmin.Name = "pAdmin";
+            this.pAdmin.Size = new System.Drawing.Size(1233, 702);
+            this.pAdmin.TabIndex = 11;
+            // 
+            // pAdminSair
+            // 
+            this.pAdminSair.BackColor = System.Drawing.Color.Silver;
+            this.pAdminSair.Controls.Add(this.btnLogOut);
+            this.pAdminSair.Controls.Add(this.btnLink);
+            this.pAdminSair.Location = new System.Drawing.Point(12, 722);
+            this.pAdminSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAdminSair.Name = "pAdminSair";
+            this.pAdminSair.Size = new System.Drawing.Size(1233, 65);
+            this.pAdminSair.TabIndex = 12;
+            // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 650);
+            this.ClientSize = new System.Drawing.Size(1267, 800);
             this.Controls.Add(this.pAdminSair);
             this.Controls.Add(this.pAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormAdmin";
             this.Text = "Admin";

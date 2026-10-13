@@ -86,5 +86,23 @@ namespace EscolaVirtual
             tcCategories.SelectedIndex = 0;
 
         }
+
+        private void btnSubject_Click(object sender, EventArgs e)
+        {
+            FormCreateSubject form = new FormCreateSubject();
+            form.Show();
+        }
+
+        private void btnAddTeacher_Click(object sender, EventArgs e)
+        {
+            Form form = new Form();
+            form.Show();
+        }
+
+        private void btnAddClass_Click(object sender, EventArgs e)
+        {
+            Form form = new Form();
+            form.Show();
+        }
     }
 }
