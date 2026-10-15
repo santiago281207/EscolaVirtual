@@ -133,6 +133,12 @@
     <Compile Include="Forms\FormStudentMessage.Designer.cs">
       <DependentUpon>FormStudentMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTeacherGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTeacherGrades.Designer.cs">
+      <DependentUpon>FormTeacherGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormTeacherMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormStudentMessage.resx">
       <DependentUpon>FormStudentMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTeacherGrades.resx">
+      <DependentUpon>FormTeacherGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTeacherMessage.resx">
       <DependentUpon>FormTeacherMessage.cs</DependentUpon>
