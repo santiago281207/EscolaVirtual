@@ -40,7 +40,7 @@
             this.tpStudent = new System.Windows.Forms.TabPage();
             this.lvwStudent = new System.Windows.Forms.ListView();
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chNif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chNifStudent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chClassYear = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chClassName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chMessageCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,6 +65,10 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.pAdmin = new System.Windows.Forms.Panel();
             this.pAdminSair = new System.Windows.Forms.Panel();
+            this.chEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chNifTeacher = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcCategories.SuspendLayout();
             this.tpStudent.SuspendLayout();
             this.tpTeacher.SuspendLayout();
@@ -203,7 +207,10 @@
             // 
             this.lvwStudent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
-            this.chNif,
+            this.chNifStudent,
+            this.chEmail,
+            this.chPhoneNumber,
+            this.chAddress,
             this.chClassYear,
             this.chClassName,
             this.chMessageCount,
@@ -223,32 +230,36 @@
             this.chName.Text = "Nome";
             this.chName.Width = 130;
             // 
-            // chNif
+            // chNifStudent
             // 
-            this.chNif.Text = "NIF";
-            this.chNif.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chNif.Width = 130;
+            this.chNifStudent.Text = "NIF";
+            this.chNifStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chNifStudent.Width = 100;
             // 
             // chClassYear
             // 
+            this.chClassYear.DisplayIndex = 2;
             this.chClassYear.Text = "Ano";
             this.chClassYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chClassYear.Width = 130;
             // 
             // chClassName
             // 
+            this.chClassName.DisplayIndex = 3;
             this.chClassName.Text = "Turma";
             this.chClassName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chClassName.Width = 130;
             // 
             // chMessageCount
             // 
+            this.chMessageCount.DisplayIndex = 4;
             this.chMessageCount.Text = "Quantidade de mensagens";
             this.chMessageCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chMessageCount.Width = 160;
             // 
             // chAverage
             // 
+            this.chAverage.DisplayIndex = 5;
             this.chAverage.Text = "Média";
             this.chAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chAverage.Width = 130;
@@ -269,7 +280,8 @@
             // 
             this.lvwTeacher.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNome,
-            this.chClasses});
+            this.chClasses,
+            this.chNifTeacher});
             this.lvwTeacher.HideSelection = false;
             this.lvwTeacher.Location = new System.Drawing.Point(3, 2);
             this.lvwTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -420,6 +432,33 @@
             this.pAdminSair.Size = new System.Drawing.Size(1233, 65);
             this.pAdminSair.TabIndex = 12;
             // 
+            // chEmail
+            // 
+            this.chEmail.DisplayIndex = 6;
+            this.chEmail.Text = "Email";
+            this.chEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chEmail.Width = 120;
+            // 
+            // chPhoneNumber
+            // 
+            this.chPhoneNumber.DisplayIndex = 7;
+            this.chPhoneNumber.Text = "Contacto";
+            this.chPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chPhoneNumber.Width = 90;
+            // 
+            // chAddress
+            // 
+            this.chAddress.DisplayIndex = 8;
+            this.chAddress.Text = "Morada";
+            this.chAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chAddress.Width = 130;
+            // 
+            // chNifTeacher
+            // 
+            this.chNifTeacher.Text = "NIF";
+            this.chNifTeacher.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chNifTeacher.Width = 80;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,7 +509,7 @@
         private System.Windows.Forms.Panel pAdminSair;
         private System.Windows.Forms.ListView lvwTeacher;
         private System.Windows.Forms.ColumnHeader chName;
-        private System.Windows.Forms.ColumnHeader chNif;
+        private System.Windows.Forms.ColumnHeader chNifStudent;
         private System.Windows.Forms.ColumnHeader chClassYear;
         private System.Windows.Forms.ColumnHeader chClassName;
         private System.Windows.Forms.ColumnHeader chMessageCount;
@@ -484,5 +523,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader chEmail;
+        private System.Windows.Forms.ColumnHeader chPhoneNumber;
+        private System.Windows.Forms.ColumnHeader chAddress;
+        private System.Windows.Forms.ColumnHeader chNifTeacher;
     }
 }
