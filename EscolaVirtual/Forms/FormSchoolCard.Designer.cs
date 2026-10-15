@@ -34,101 +34,112 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lblDeposit = new System.Windows.Forms.Label();
             this.lvMovementsHistory = new System.Windows.Forms.ListView();
-            this.lblMovementsHistory = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(26, 32);
-            this.lblBalance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBalance.Location = new System.Drawing.Point(12, 19);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(105, 24);
+            this.lblBalance.Size = new System.Drawing.Size(135, 29);
             this.lblBalance.TabIndex = 0;
             this.lblBalance.Text = "Saldo Atual";
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(124, 539);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAmount.Location = new System.Drawing.Point(160, 635);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAmount.MaxLength = 5;
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(150, 20);
+            this.txtAmount.Size = new System.Drawing.Size(199, 22);
             this.txtAmount.TabIndex = 1;
             // 
             // btnDeposit
             // 
-            this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeposit.Location = new System.Drawing.Point(23, 581);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeposit.BackColor = System.Drawing.Color.Green;
+            this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDeposit.Location = new System.Drawing.Point(18, 22);
+            this.btnDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(140, 46);
+            this.btnDeposit.Size = new System.Drawing.Size(187, 57);
             this.btnDeposit.TabIndex = 2;
             this.btnDeposit.Text = "Efetuar Depósito";
-            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(781, 581);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.BackColor = System.Drawing.Color.Green;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.Location = new System.Drawing.Point(1010, 22);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(140, 46);
+            this.btnExit.Size = new System.Drawing.Size(187, 57);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // lblDeposit
             // 
             this.lblDeposit.AutoSize = true;
             this.lblDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeposit.Location = new System.Drawing.Point(23, 533);
-            this.lblDeposit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeposit.Location = new System.Drawing.Point(26, 628);
             this.lblDeposit.Name = "lblDeposit";
-            this.lblDeposit.Size = new System.Drawing.Size(99, 24);
+            this.lblDeposit.Size = new System.Drawing.Size(128, 29);
             this.lblDeposit.TabIndex = 4;
             this.lblDeposit.Text = "Depósito : ";
             // 
             // lvMovementsHistory
             // 
             this.lvMovementsHistory.HideSelection = false;
-            this.lvMovementsHistory.Location = new System.Drawing.Point(23, 115);
-            this.lvMovementsHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvMovementsHistory.Location = new System.Drawing.Point(31, 64);
+            this.lvMovementsHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvMovementsHistory.Name = "lvMovementsHistory";
-            this.lvMovementsHistory.Size = new System.Drawing.Size(899, 377);
+            this.lvMovementsHistory.Size = new System.Drawing.Size(1197, 543);
             this.lvMovementsHistory.TabIndex = 5;
             this.lvMovementsHistory.UseCompatibleStateImageBehavior = false;
             this.lvMovementsHistory.View = System.Windows.Forms.View.Details;
             // 
-            // lblMovementsHistory
+            // panel1
             // 
-            this.lblMovementsHistory.AutoSize = true;
-            this.lblMovementsHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovementsHistory.Location = new System.Drawing.Point(33, 124);
-            this.lblMovementsHistory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMovementsHistory.Name = "lblMovementsHistory";
-            this.lblMovementsHistory.Size = new System.Drawing.Size(217, 24);
-            this.lblMovementsHistory.TabIndex = 6;
-            this.lblMovementsHistory.Text = "Histórico de Movimentos";
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.btnDeposit);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Location = new System.Drawing.Point(31, 678);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1213, 100);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.Location = new System.Drawing.Point(31, 603);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1197, 4);
+            this.panel2.TabIndex = 8;
             // 
             // FormSchoolCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.lblMovementsHistory);
+            this.ClientSize = new System.Drawing.Size(1267, 800);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvMovementsHistory);
             this.Controls.Add(this.lblDeposit);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.lblBalance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormSchoolCard";
             this.Text = "Cartão da Escola";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +153,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblDeposit;
         private System.Windows.Forms.ListView lvMovementsHistory;
-        private System.Windows.Forms.Label lblMovementsHistory;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
