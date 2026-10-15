@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataChange.cs" />
+    <Compile Include="Forms\FormAddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddTeacher.Designer.cs">
+      <DependentUpon>FormAddTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddYear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAddTeacher.resx">
+      <DependentUpon>FormAddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddYear.resx">
       <DependentUpon>FormAddYear.cs</DependentUpon>
     </EmbeddedResource>
