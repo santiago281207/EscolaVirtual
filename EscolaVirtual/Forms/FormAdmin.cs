@@ -36,13 +36,13 @@ namespace EscolaVirtual
         private void btnAddYear_Click(object sender, EventArgs e)
         {
             FormAddYear form = new FormAddYear(admin);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
             FormAddStudent form = new FormAddStudent(admin);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void tcCategories_SelectedIndexChanged(object sender, EventArgs e)
