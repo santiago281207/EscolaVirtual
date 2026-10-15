@@ -49,5 +49,35 @@ namespace EscolaVirtual
             listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
 
         }
+
+        private void rbJustified_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 1).Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
+
+        private void rbUnjustified_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 2).Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
+
+        private void rbAllAbsences_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
     }
 }

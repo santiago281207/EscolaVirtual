@@ -42,12 +42,12 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvwAbsences = new System.Windows.Forms.ListView();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chJustification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.grbAbsenceState.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -110,6 +110,7 @@
             this.rbAllAbsences.TabStop = true;
             this.rbAllAbsences.Text = "Todas as Faltas";
             this.rbAllAbsences.UseVisualStyleBackColor = true;
+            this.rbAllAbsences.CheckedChanged += new System.EventHandler(this.rbAllAbsences_CheckedChanged);
             // 
             // rbUnjustified
             // 
@@ -123,6 +124,7 @@
             this.rbUnjustified.TabStop = true;
             this.rbUnjustified.Text = "Injustificada";
             this.rbUnjustified.UseVisualStyleBackColor = true;
+            this.rbUnjustified.CheckedChanged += new System.EventHandler(this.rbUnjustified_CheckedChanged);
             // 
             // rbJustified
             // 
@@ -136,6 +138,7 @@
             this.rbJustified.TabStop = true;
             this.rbJustified.Text = "Justificada";
             this.rbJustified.UseVisualStyleBackColor = true;
+            this.rbJustified.CheckedChanged += new System.EventHandler(this.rbJustified_CheckedChanged);
             // 
             // pCorUsername
             // 
@@ -212,27 +215,6 @@
             this.lvwAbsences.UseCompatibleStateImageBehavior = false;
             this.lvwAbsences.View = System.Windows.Forms.View.Details;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Green;
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(15, 647);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(647, 44);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(15, 629);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(647, 5);
-            this.panel4.TabIndex = 11;
-            // 
             // chDate
             // 
             this.chDate.Text = "Data";
@@ -255,6 +237,27 @@
             this.chJustification.Text = "Justificação";
             this.chJustification.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chJustification.Width = 130;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Green;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.Location = new System.Drawing.Point(15, 647);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(647, 44);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Sair";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Green;
+            this.panel4.Location = new System.Drawing.Point(15, 629);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(647, 5);
+            this.panel4.TabIndex = 11;
             // 
             // FormAbsencesStudent
             // 

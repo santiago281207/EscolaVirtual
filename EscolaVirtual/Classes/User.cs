@@ -11,7 +11,7 @@ namespace EscolaVirtual.Classes
 {
     public abstract class User
     {
-        public User(string password,string name,string nif,int userType)
+        public User(string password,string name,string nif,string email,string phoneNumber,string address,int userType)
         {
             this.Password = password;
             this.Name = name;
@@ -51,6 +51,26 @@ namespace EscolaVirtual.Classes
             set { m_userType = value; }
         }
 
+        private string m_email;
+        public string Email
+        {
+            get { return m_email; }
+            set { m_email = value; }
+        }
+
+        private string m_phoneNumber;
+        public string PhoneNumber
+        {
+            get { return m_phoneNumber; }
+            set { m_phoneNumber = value; }
+        }
+        
+        private string m_address;
+        public string Address
+        {
+            get { return m_address; }
+            set { m_address = value; }
+        }
 
         #endregion
 
