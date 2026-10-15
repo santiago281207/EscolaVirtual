@@ -70,7 +70,6 @@
             this.btnDeposit.TabIndex = 2;
             this.btnDeposit.Text = "Efetuar Depósito";
             this.btnDeposit.UseVisualStyleBackColor = false;
-            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnExit
             // 
@@ -84,7 +83,6 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblDeposit
             // 
