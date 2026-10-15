@@ -31,13 +31,22 @@ namespace EscolaVirtual
         private void btnExit_Click(object sender, EventArgs e)
         {
             Form_Login loginForm = new Form_Login(admin);
-            loginForm.ShowDialog();
+            this.Hide();
+            loginForm.Show();
         }
 
         private void btnAbsence_Click(object sender, EventArgs e)
         {
-            FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(student, admin);
-            AbsencesStudentForm.ShowDialog();
+            if(student.Absence.Count == 0)
+            {
+                MessageBox.Show("Não existem faltas registadas para este aluno.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else
+            {
+                FormAbsencesStudent AbsencesStudentForm = new FormAbsencesStudent(student, admin);
+                this.Hide();
+                AbsencesStudentForm.Show();
+            }
+                
         }
 
         private void FormStudent_Load(object sender, EventArgs e)
@@ -127,8 +136,8 @@ namespace EscolaVirtual
 
         private void btnData_Click(object sender, EventArgs e)
         {
-           // FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(admin, student);
-           //  ChangeDataStudentForm.ShowDialog();
+            FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(student);
+            ChangeDataStudentForm.ShowDialog();
         }
 
         private void btnSchoolCard_Click(object sender, EventArgs e)
@@ -139,8 +148,15 @@ namespace EscolaVirtual
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
-            FormStudentMessage StudentMessagesForm = new FormStudentMessage(student);
-            StudentMessagesForm.ShowDialog();
+            if(student.Messages.Count == 0)
+            {
+                MessageBox.Show("Não existem mensagens para ler.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else
+            {
+                FormStudentMessage StudentMessagesForm = new FormStudentMessage(student);
+                StudentMessagesForm.ShowDialog();
+            }
+                
         }
     }
 }
