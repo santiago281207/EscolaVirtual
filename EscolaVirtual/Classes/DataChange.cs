@@ -16,8 +16,7 @@ namespace EscolaVirtual.Classes
         public DataChange(Student student, string changeTitle, string description)
         {
 
-        }
-
+        } 
 
 
     }
