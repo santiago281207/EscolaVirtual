@@ -48,6 +48,7 @@
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Green;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogOut.Location = new System.Drawing.Point(14, 13);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(512, 46);
