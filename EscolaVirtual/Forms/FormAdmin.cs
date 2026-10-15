@@ -90,19 +90,19 @@ namespace EscolaVirtual
         private void btnSubject_Click(object sender, EventArgs e)
         {
             FormCreateSubject form = new FormCreateSubject(admin);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
-            form.Show();
+            FormAddTeacher formaddteacher = new FormAddTeacher();
+            formaddteacher.ShowDialog();
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
-            form.Show();
+            FormCreateClass formcreateclass  = new FormCreateClass();
+            formcreateclass.ShowDialog();
         }
     }
 }
