@@ -139,9 +139,9 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Location = new System.Drawing.Point(15, 303);
+            this.panel1.Location = new System.Drawing.Point(12, 303);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 79);
+            this.panel1.Size = new System.Drawing.Size(514, 79);
             this.panel1.TabIndex = 10;
             // 
             // panel2
