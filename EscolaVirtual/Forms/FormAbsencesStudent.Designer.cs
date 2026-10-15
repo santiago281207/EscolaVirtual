@@ -44,6 +44,10 @@
             this.lvwAbsences = new System.Windows.Forms.ListView();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chJustification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grbAbsenceState.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -195,6 +199,11 @@
             // 
             // lvwAbsences
             // 
+            this.lvwAbsences.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chDate,
+            this.chSubject,
+            this.chState,
+            this.chJustification});
             this.lvwAbsences.HideSelection = false;
             this.lvwAbsences.Location = new System.Drawing.Point(20, 158);
             this.lvwAbsences.Name = "lvwAbsences";
@@ -223,6 +232,29 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(647, 5);
             this.panel4.TabIndex = 11;
+            // 
+            // chDate
+            // 
+            this.chDate.Text = "Data";
+            this.chDate.Width = 130;
+            // 
+            // chSubject
+            // 
+            this.chSubject.Text = "Disciplina";
+            this.chSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chSubject.Width = 130;
+            // 
+            // chState
+            // 
+            this.chState.Text = "Estado";
+            this.chState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chState.Width = 130;
+            // 
+            // chJustification
+            // 
+            this.chJustification.Text = "Justificação";
+            this.chJustification.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chJustification.Width = 130;
             // 
             // FormAbsencesStudent
             // 
@@ -265,5 +297,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListView lvwAbsences;
+        private System.Windows.Forms.ColumnHeader chDate;
+        private System.Windows.Forms.ColumnHeader chSubject;
+        private System.Windows.Forms.ColumnHeader chState;
+        private System.Windows.Forms.ColumnHeader chJustification;
     }
 }

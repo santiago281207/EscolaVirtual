@@ -44,6 +44,9 @@ namespace EscolaVirtual
         {
             rbAllAbsences.Checked = true;
 
+            List<ListViewItem> listViewAbsences = student.Absence.Select(ab => ab.ToListViewItem(ab)).ToList();
+
+            listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
 
         }
     }
