@@ -1,4 +1,5 @@
 ﻿using EscolaVirtual.Classes;
+using EscolaVirtual.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,9 +27,8 @@ namespace EscolaVirtual
 
         private void btnGrades_Click(object sender, EventArgs e)
         {
-            
-        //    FormGradesTeacher formgradesteacher = new FormGradesTeacher(teacher);
-         //   formgradesteacher.ShowDialog();
+            FormTeacherGrades formTeacherGrades = new FormTeacherGrades();
+            formTeacherGrades.ShowDialog();
         }
 
         private void btnAbsences_Click(object sender, EventArgs e)
