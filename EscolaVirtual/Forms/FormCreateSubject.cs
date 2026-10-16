@@ -19,5 +19,34 @@ namespace EscolaVirtual.Forms
             InitializeComponent();
             this.admin = admin;
         }
+
+        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbClassYear == null || txtSubjectName.Text == "")
+            {
+                btnCreateSubject.Enabled = false;
+            }
+            else
+            {
+                btnCreateSubject.Enabled = true;
+            }
+        }
+
+        private void txtSubjectName_TextChanged(object sender, EventArgs e)
+        {
+            if (cbClassYear == null || txtSubjectName.Text == "")
+            {
+                btnCreateSubject.Enabled = false;
+            }
+            else
+            {
+                btnCreateSubject.Enabled = true;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
