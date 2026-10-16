@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,11 @@ using System.Windows.Forms;
 
 namespace EscolaVirtual.Forms
 {
+
     public partial class FormAddTeacher : Form
     {
-        public FormAddTeacher()
+        Admin admin;
+        public FormAddTeacher(Admin admin)
         {
             InitializeComponent();
         }

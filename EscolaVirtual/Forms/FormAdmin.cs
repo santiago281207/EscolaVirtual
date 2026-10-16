@@ -35,14 +35,14 @@ namespace EscolaVirtual
 
         private void btnAddYear_Click(object sender, EventArgs e)
         {
-            FormAddYear form = new FormAddYear(admin);
-            form.ShowDialog();
+            FormAddYear formaddyear = new FormAddYear(admin);
+            formaddyear.ShowDialog();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            FormAddStudent form = new FormAddStudent(admin);
-            form.ShowDialog();
+            FormAddStudent formaddstudent = new FormAddStudent(admin);
+            formaddstudent.ShowDialog();
         }
 
         private void tcCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,20 +89,26 @@ namespace EscolaVirtual
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            FormCreateSubject form = new FormCreateSubject(admin);
-            form.ShowDialog();
+            FormCreateSubject formaddsubject = new FormCreateSubject(admin);
+            formaddsubject.ShowDialog();
         }
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-            FormAddTeacher formaddteacher = new FormAddTeacher();
+            FormAddTeacher formaddteacher = new FormAddTeacher(admin);
             formaddteacher.ShowDialog();
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            FormCreateClass formcreateclass  = new FormCreateClass();
+            FormCreateClass formcreateclass  = new FormCreateClass(admin);
             formcreateclass.ShowDialog();
+        }
+
+        private void btnLink_Click(object sender, EventArgs e)
+        {
+            FormAssociate formassociate = new FormAssociate(admin);
+            formassociate.ShowDialog();
         }
     }
 }
