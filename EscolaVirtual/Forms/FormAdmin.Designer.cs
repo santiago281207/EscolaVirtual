@@ -71,9 +71,9 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.pAdmin = new System.Windows.Forms.Panel();
             this.pAdminSair = new System.Windows.Forms.Panel();
-            this.chSubjectName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chClassYearSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chModules = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeacherEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeacherContact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeacherAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcCategories.SuspendLayout();
             this.tpStudent.SuspendLayout();
             this.tpTeacher.SuspendLayout();
@@ -166,6 +166,7 @@
             this.btnLink.TabIndex = 6;
             this.btnLink.Text = "Associar Professores/Turma/Disciplina";
             this.btnLink.UseVisualStyleBackColor = false;
+            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
             // 
             // btnLogOut
             // 
@@ -499,21 +500,23 @@
             this.pAdminSair.Size = new System.Drawing.Size(1233, 65);
             this.pAdminSair.TabIndex = 12;
             // 
-            // chSubjectName
+            // chTeacherEmail
             // 
-            this.chSubjectName.Text = "Nome da Disciplina";
-            this.chSubjectName.Width = 130;
+            this.chTeacherEmail.Text = "Email";
+            this.chTeacherEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chTeacherEmail.Width = 120;
             // 
-            // chClassYearSubject
+            // chTeacherContact
             // 
-            this.chClassYearSubject.Text = "Ano da Disciplina";
-            this.chClassYearSubject.Width = 120;
+            this.chTeacherContact.Text = "Contacto";
+            this.chTeacherContact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chTeacherContact.Width = 100;
             // 
-            // chModules
+            // chTeacherAddress
             // 
-            this.chModules.Text = "Quantidade de Modulos";
-            this.chModules.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chModules.Width = 160;
+            this.chTeacherAddress.Text = "Morada";
+            this.chTeacherAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chTeacherAddress.Width = 140;
             // 
             // FormAdmin
             // 
