@@ -72,6 +72,7 @@
             this.btnCreateSubject.TabIndex = 3;
             this.btnCreateSubject.Text = "Criar Disciplina";
             this.btnCreateSubject.UseVisualStyleBackColor = false;
+            this.btnCreateSubject.Click += new System.EventHandler(this.btnCreateSubject_Click);
             // 
             // btnExit
             // 
@@ -120,7 +121,7 @@
             this.pnlCreate.Controls.Add(this.lblClassYear);
             this.pnlCreate.Controls.Add(this.lblSubjectName);
             this.pnlCreate.Location = new System.Drawing.Point(120, 0);
-            this.pnlCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCreate.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCreate.Name = "pnlCreate";
             this.pnlCreate.Size = new System.Drawing.Size(677, 411);
             this.pnlCreate.TabIndex = 7;
