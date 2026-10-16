@@ -52,6 +52,7 @@
             // 
             // cbClass
             // 
+            this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClass.FormattingEnabled = true;
             this.cbClass.Location = new System.Drawing.Point(281, 41);
             this.cbClass.Name = "cbClass";
@@ -89,6 +90,7 @@
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
@@ -112,6 +114,7 @@
             // 
             // cbStudent
             // 
+            this.cbStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStudent.FormattingEnabled = true;
             this.cbStudent.Location = new System.Drawing.Point(12, 41);
             this.cbStudent.Name = "cbStudent";
@@ -129,6 +132,7 @@
             // 
             // cbSubject
             // 
+            this.cbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSubject.FormattingEnabled = true;
             this.cbSubject.Location = new System.Drawing.Point(16, 145);
             this.cbSubject.Name = "cbSubject";
@@ -155,6 +159,7 @@
             // 
             // cbModule
             // 
+            this.cbModule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModule.FormattingEnabled = true;
             this.cbModule.Location = new System.Drawing.Point(281, 145);
             this.cbModule.Name = "cbModule";
@@ -237,6 +242,7 @@
             this.Name = "FormTeacherGrades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Professor Notas";
+            this.Load += new System.EventHandler(this.FormTeacherGrades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudGrade)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
