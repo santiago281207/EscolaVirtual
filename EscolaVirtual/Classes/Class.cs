@@ -48,7 +48,7 @@ namespace EscolaVirtual.Classes
         {
             ListViewItem listViewItem = new ListViewItem(@class.Name);
             ListViewItem.ListViewSubItem lisiStudentQtt = new ListViewItem.ListViewSubItem(listViewItem, @class.Student.Count.ToString());
-            ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, @class.SchoolYear.ToString());
+            ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, @class.SchoolYear.YearName);
 
             listViewItem.SubItems.Add(lisiStudentQtt);
             listViewItem.SubItems.Add(lisiClassYear);

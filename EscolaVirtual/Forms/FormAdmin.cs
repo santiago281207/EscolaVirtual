@@ -35,14 +35,14 @@ namespace EscolaVirtual
 
         private void btnAddYear_Click(object sender, EventArgs e)
         {
-            FormAddYear form = new FormAddYear(admin);
-            form.Show();
+            FormAddYear formaddyear = new FormAddYear(admin);
+            formaddyear.ShowDialog();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            FormAddStudent form = new FormAddStudent(admin);
-            form.Show();
+            FormAddStudent formaddstudent = new FormAddStudent(admin);
+            formaddstudent.ShowDialog();
         }
 
         private void tcCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,10 +69,13 @@ namespace EscolaVirtual
                     break;
                 case 3: //Ano
                     lvwYear.Items.Clear();
-
+                    List<ListViewItem> listViewItems4 = admin.ClassYears.Select(cy => cy.ToListViewItem(cy)).ToList();
+                    listViewItems4.ForEach(li => lvwYear.Items.Add(li));
                     break;
                 case 4: //Disciplina
                     lvwSubject.Items.Clear();
+                    List<ListViewItem> listViewItems5 = admin.ClassYears.SelectMany(cy => cy.Subject.Select(s => s.ToListViewItem(s))).ToList();
+                    listViewItems5.ForEach(li => lvwSubject.Items.Add(li)); 
                     break;
                 default:
                     break;
@@ -89,20 +92,26 @@ namespace EscolaVirtual
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            FormCreateSubject form = new FormCreateSubject(admin);
-            form.Show();
+            FormCreateSubject formaddsubject = new FormCreateSubject(admin);
+            formaddsubject.ShowDialog();
         }
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
-            form.Show();
+            FormAddTeacher formaddteacher = new FormAddTeacher(admin);
+            formaddteacher.ShowDialog();
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
-            form.Show();
+            FormCreateClass formcreateclass  = new FormCreateClass(admin);
+            formcreateclass.ShowDialog();
+        }
+
+        private void btnLink_Click(object sender, EventArgs e)
+        {
+            FormAssociate formassociate = new FormAssociate(admin);
+            formassociate.ShowDialog();
         }
     }
 }

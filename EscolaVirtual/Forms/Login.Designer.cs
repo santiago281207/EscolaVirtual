@@ -71,17 +71,19 @@
             this.formLogin.Controls.Add(this.pUsername);
             this.formLogin.Controls.Add(this.lblLogin);
             this.formLogin.Controls.Add(this.lbl_VirtualSchool);
-            this.formLogin.Location = new System.Drawing.Point(263, -1);
+            this.formLogin.Location = new System.Drawing.Point(351, -1);
+            this.formLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.formLogin.Name = "formLogin";
-            this.formLogin.Size = new System.Drawing.Size(431, 652);
+            this.formLogin.Size = new System.Drawing.Size(575, 802);
             this.formLogin.TabIndex = 0;
             // 
             // pbLogoInete
             // 
             this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
-            this.pbLogoInete.Location = new System.Drawing.Point(94, 62);
+            this.pbLogoInete.Location = new System.Drawing.Point(125, 76);
+            this.pbLogoInete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogoInete.Name = "pbLogoInete";
-            this.pbLogoInete.Size = new System.Drawing.Size(85, 79);
+            this.pbLogoInete.Size = new System.Drawing.Size(113, 97);
             this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogoInete.TabIndex = 7;
             this.pbLogoInete.TabStop = false;
@@ -94,9 +96,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogin.Location = new System.Drawing.Point(52, 482);
+            this.btnLogin.Location = new System.Drawing.Point(69, 593);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(329, 37);
+            this.btnLogin.Size = new System.Drawing.Size(439, 46);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -107,36 +110,40 @@
             this.pPassword.Controls.Add(this.pCorPassword);
             this.pPassword.Controls.Add(this.pbPassword);
             this.pPassword.Controls.Add(this.txtPassword);
-            this.pPassword.Location = new System.Drawing.Point(52, 326);
+            this.pPassword.Location = new System.Drawing.Point(69, 401);
+            this.pPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pPassword.Name = "pPassword";
-            this.pPassword.Size = new System.Drawing.Size(329, 36);
+            this.pPassword.Size = new System.Drawing.Size(439, 44);
             this.pPassword.TabIndex = 5;
             // 
             // pCorPassword
             // 
             this.pCorPassword.BackColor = System.Drawing.Color.Green;
-            this.pCorPassword.Location = new System.Drawing.Point(0, 31);
+            this.pCorPassword.Location = new System.Drawing.Point(0, 38);
+            this.pCorPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pCorPassword.Name = "pCorPassword";
-            this.pCorPassword.Size = new System.Drawing.Size(329, 4);
+            this.pCorPassword.Size = new System.Drawing.Size(439, 5);
             this.pCorPassword.TabIndex = 4;
             // 
             // pbPassword
             // 
             this.pbPassword.Image = global::EscolaVirtual.Properties.Resources.icons8_cadeado_50;
-            this.pbPassword.Location = new System.Drawing.Point(301, 5);
+            this.pbPassword.Location = new System.Drawing.Point(401, 6);
+            this.pbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbPassword.Name = "pbPassword";
-            this.pbPassword.Size = new System.Drawing.Size(24, 25);
+            this.pbPassword.Size = new System.Drawing.Size(32, 31);
             this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPassword.TabIndex = 4;
             this.pbPassword.TabStop = false;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(2, 10);
+            this.txtPassword.Location = new System.Drawing.Point(3, 12);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.MaxLength = 4;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(293, 20);
+            this.txtPassword.Size = new System.Drawing.Size(389, 22);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -145,9 +152,10 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(52, 305);
+            this.lblPassword.Location = new System.Drawing.Point(69, 375);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 20);
+            this.lblPassword.Size = new System.Drawing.Size(92, 25);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
             // 
@@ -156,35 +164,39 @@
             this.pUsername.Controls.Add(this.pCorUsername);
             this.pUsername.Controls.Add(this.pbUsername);
             this.pUsername.Controls.Add(this.txtLogin);
-            this.pUsername.Location = new System.Drawing.Point(52, 256);
+            this.pUsername.Location = new System.Drawing.Point(69, 315);
+            this.pUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pUsername.Name = "pUsername";
-            this.pUsername.Size = new System.Drawing.Size(329, 36);
+            this.pUsername.Size = new System.Drawing.Size(439, 44);
             this.pUsername.TabIndex = 3;
             // 
             // pCorUsername
             // 
             this.pCorUsername.BackColor = System.Drawing.Color.Green;
-            this.pCorUsername.Location = new System.Drawing.Point(0, 31);
+            this.pCorUsername.Location = new System.Drawing.Point(0, 38);
+            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pCorUsername.Name = "pCorUsername";
-            this.pCorUsername.Size = new System.Drawing.Size(329, 4);
+            this.pCorUsername.Size = new System.Drawing.Size(439, 5);
             this.pCorUsername.TabIndex = 4;
             // 
             // pbUsername
             // 
             this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
-            this.pbUsername.Location = new System.Drawing.Point(301, 5);
+            this.pbUsername.Location = new System.Drawing.Point(401, 6);
+            this.pbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbUsername.Name = "pbUsername";
-            this.pbUsername.Size = new System.Drawing.Size(24, 25);
+            this.pbUsername.Size = new System.Drawing.Size(32, 31);
             this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbUsername.TabIndex = 4;
             this.pbUsername.TabStop = false;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(2, 10);
+            this.txtLogin.Location = new System.Drawing.Point(3, 12);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLogin.MaxLength = 9;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(293, 20);
+            this.txtLogin.Size = new System.Drawing.Size(389, 22);
             this.txtLogin.TabIndex = 4;
             this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             this.txtLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogin_KeyPress);
@@ -193,9 +205,10 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(52, 235);
+            this.lblLogin.Location = new System.Drawing.Point(69, 289);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(44, 20);
+            this.lblLogin.Size = new System.Drawing.Size(57, 25);
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "Login";
             // 
@@ -203,21 +216,24 @@
             // 
             this.lbl_VirtualSchool.AutoSize = true;
             this.lbl_VirtualSchool.Font = new System.Drawing.Font("Malgun Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_VirtualSchool.Location = new System.Drawing.Point(174, 82);
+            this.lbl_VirtualSchool.Location = new System.Drawing.Point(232, 101);
+            this.lbl_VirtualSchool.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_VirtualSchool.Name = "lbl_VirtualSchool";
-            this.lbl_VirtualSchool.Size = new System.Drawing.Size(189, 37);
+            this.lbl_VirtualSchool.Size = new System.Drawing.Size(234, 46);
             this.lbl_VirtualSchool.TabIndex = 1;
             this.lbl_VirtualSchool.Text = "Virtual School";
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(950, 650);
+            this.ClientSize = new System.Drawing.Size(1267, 800);
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

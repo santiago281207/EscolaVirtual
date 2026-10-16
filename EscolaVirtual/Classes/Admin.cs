@@ -120,11 +120,11 @@ namespace EscolaVirtual.Classes
 
             #region PROFESSORES TESTE
 
-            Teacher teacher1 = new Teacher("1111", "Santiago", "111111111");
+            Teacher teacher1 = new Teacher("1111", "Santiago", "111111111","santiagodias238@gmail.com","932514290","Rua Santo Tiago n9 10A");
             this.Teachers.Add(teacher1);
             this.Users.Add(teacher1);
 
-            Teacher teacher2 = new Teacher("2222", "Vicente", "222222222");
+            Teacher teacher2 = new Teacher("2222", "Vicente", "222222222","vicentemsalves@gmail.com","933396899","Rua Vicentino n77 7C");
             this.Teachers.Add(teacher2);
             this.Users.Add(teacher2);
 
@@ -132,7 +132,7 @@ namespace EscolaVirtual.Classes
 
             #region ALUNOS TESTE
 
-            Student student1 = new Student("3333", "João", "333333333",class1,null);
+            Student student1 = new Student("3333", "João", "333333333","joazinhofixe143@gmail.com","9829102381","Avenida dos aliados 38 2735",class1,null);
             SchoolCard schoolCard1 = new SchoolCard(0, student1);
 
             class1.Student.Add(student1);

@@ -37,20 +37,20 @@
             this.rbUnjustified = new System.Windows.Forms.RadioButton();
             this.rbJustified = new System.Windows.Forms.RadioButton();
             this.pCorUsername = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pDescricao = new System.Windows.Forms.Panel();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pEstado = new System.Windows.Forms.Panel();
             this.lvwAbsences = new System.Windows.Forms.ListView();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chJustification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.grbAbsenceState.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pDescricao.SuspendLayout();
+            this.pEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblJustification
@@ -80,11 +80,11 @@
             this.grbAbsenceState.Controls.Add(this.rbUnjustified);
             this.grbAbsenceState.Controls.Add(this.rbJustified);
             this.grbAbsenceState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbAbsenceState.Location = new System.Drawing.Point(15, 14);
+            this.grbAbsenceState.Location = new System.Drawing.Point(20, 14);
             this.grbAbsenceState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbAbsenceState.Name = "grbAbsenceState";
             this.grbAbsenceState.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbAbsenceState.Size = new System.Drawing.Size(647, 135);
+            this.grbAbsenceState.Size = new System.Drawing.Size(642, 135);
             this.grbAbsenceState.TabIndex = 6;
             this.grbAbsenceState.TabStop = false;
             this.grbAbsenceState.Text = "Estado de Falta";
@@ -110,6 +110,7 @@
             this.rbAllAbsences.TabStop = true;
             this.rbAllAbsences.Text = "Todas as Faltas";
             this.rbAllAbsences.UseVisualStyleBackColor = true;
+            this.rbAllAbsences.CheckedChanged += new System.EventHandler(this.rbAllAbsences_CheckedChanged);
             // 
             // rbUnjustified
             // 
@@ -123,6 +124,7 @@
             this.rbUnjustified.TabStop = true;
             this.rbUnjustified.Text = "Injustificada";
             this.rbUnjustified.UseVisualStyleBackColor = true;
+            this.rbUnjustified.CheckedChanged += new System.EventHandler(this.rbUnjustified_CheckedChanged);
             // 
             // rbJustified
             // 
@@ -136,6 +138,7 @@
             this.rbJustified.TabStop = true;
             this.rbJustified.Text = "Justificada";
             this.rbJustified.UseVisualStyleBackColor = true;
+            this.rbJustified.CheckedChanged += new System.EventHandler(this.rbJustified_CheckedChanged);
             // 
             // pCorUsername
             // 
@@ -146,20 +149,19 @@
             this.pCorUsername.Size = new System.Drawing.Size(424, 5);
             this.pCorUsername.TabIndex = 7;
             // 
-            // panel1
+            // pDescricao
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.btnConfirm);
-            this.panel1.Controls.Add(this.lblDescription);
-            this.panel1.Controls.Add(this.txtJustification);
-            this.panel1.Controls.Add(this.pCorUsername);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(33, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 700);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pDescricao.BackColor = System.Drawing.Color.Silver;
+            this.pDescricao.Controls.Add(this.btnConfirm);
+            this.pDescricao.Controls.Add(this.lblDescription);
+            this.pDescricao.Controls.Add(this.txtJustification);
+            this.pDescricao.Controls.Add(this.pCorUsername);
+            this.pDescricao.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pDescricao.Location = new System.Drawing.Point(33, 68);
+            this.pDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.pDescricao.Name = "pDescricao";
+            this.pDescricao.Size = new System.Drawing.Size(463, 700);
+            this.pDescricao.TabIndex = 8;
             // 
             // btnConfirm
             // 
@@ -184,18 +186,18 @@
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Descrição";
             // 
-            // panel2
+            // pEstado
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.lvwAbsences);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.grbAbsenceState);
-            this.panel2.Location = new System.Drawing.Point(547, 68);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(679, 700);
-            this.panel2.TabIndex = 9;
+            this.pEstado.BackColor = System.Drawing.Color.Silver;
+            this.pEstado.Controls.Add(this.lvwAbsences);
+            this.pEstado.Controls.Add(this.btnExit);
+            this.pEstado.Controls.Add(this.panel4);
+            this.pEstado.Controls.Add(this.grbAbsenceState);
+            this.pEstado.Location = new System.Drawing.Point(547, 68);
+            this.pEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.pEstado.Name = "pEstado";
+            this.pEstado.Size = new System.Drawing.Size(679, 700);
+            this.pEstado.TabIndex = 9;
             // 
             // lvwAbsences
             // 
@@ -211,27 +213,6 @@
             this.lvwAbsences.TabIndex = 12;
             this.lvwAbsences.UseCompatibleStateImageBehavior = false;
             this.lvwAbsences.View = System.Windows.Forms.View.Details;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Green;
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(15, 647);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(647, 44);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(15, 629);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(647, 5);
-            this.panel4.TabIndex = 11;
             // 
             // chDate
             // 
@@ -256,13 +237,35 @@
             this.chJustification.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chJustification.Width = 130;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Green;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.Location = new System.Drawing.Point(15, 647);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(647, 44);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Sair";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Green;
+            this.panel4.Location = new System.Drawing.Point(15, 629);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(647, 5);
+            this.panel4.TabIndex = 11;
+            // 
             // FormAbsencesStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 800);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pEstado);
+            this.Controls.Add(this.pDescricao);
             this.Controls.Add(this.lblJustification);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -273,9 +276,9 @@
             this.Load += new System.EventHandler(this.FormAbsencesStudent_Load);
             this.grbAbsenceState.ResumeLayout(false);
             this.grbAbsenceState.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.pDescricao.ResumeLayout(false);
+            this.pDescricao.PerformLayout();
+            this.pEstado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,10 +292,10 @@
         private System.Windows.Forms.RadioButton rbUnjustified;
         private System.Windows.Forms.RadioButton rbJustified;
         private System.Windows.Forms.Panel pCorUsername;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pDescricao;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pEstado;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel4;

@@ -11,12 +11,16 @@ namespace EscolaVirtual.Classes
 {
     public abstract class User
     {
-        public User(string password,string name,string nif,int userType)
+        public User(string password,string name,string nif,string email,string phoneNumber,string address,int userType)
         {
             this.Password = password;
             this.Name = name;
             this.Nif = nif;
+            this.Email = email;
+            this.Address = address;
+            this.PhoneNumber = phoneNumber;
             this.UserType = userType;
+           
         }
 
         #region Properties and Members
@@ -51,22 +55,42 @@ namespace EscolaVirtual.Classes
             set { m_userType = value; }
         }
 
+        private string m_email;
+        public string Email
+        {
+            get { return m_email; }
+            set { m_email = value; }
+        }
+
+        private string m_phoneNumber;
+        public string PhoneNumber
+        {
+            get { return m_phoneNumber; }
+            set { m_phoneNumber = value; }
+        }
+        
+        private string m_address;
+        public string Address
+        {
+            get { return m_address; }
+            set { m_address = value; }
+        }
 
         #endregion
 
 
         public ListViewItem ToListViewItem(User user,Admin admin)
         {
-            ListViewItem listViewItem = new ListViewItem(user.Name);
+            ListViewItem listViewItem = new ListViewItem(user.Name);    //Nome do user
 
 
             if(user.UserType == 1) //Aluno
             {
                 Student student = (Student)user;
-                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, student.Nif);
-                ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, student.Class.SchoolYear.YearName);
-                ListViewItem.ListViewSubItem lisiClass = new ListViewItem.ListViewSubItem(listViewItem, student.Class.Name);
-                ListViewItem.ListViewSubItem lisiMessageCount = new ListViewItem.ListViewSubItem(listViewItem, student.Messages.Count.ToString());
+                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, student.Nif); //Nif
+                ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, student.Class.SchoolYear.YearName); //Ano
+                ListViewItem.ListViewSubItem lisiClass = new ListViewItem.ListViewSubItem(listViewItem, student.Class.Name); //Turma
+                ListViewItem.ListViewSubItem lisiMessageCount = new ListViewItem.ListViewSubItem(listViewItem, student.Messages.Count.ToString()); //Quantidade de mensagem
 
                 List<Grade> grades = student.Grades.FindAll(g => g.Student == student).ToList();
                 string text;
@@ -82,13 +106,19 @@ namespace EscolaVirtual.Classes
                     text = "Sem notas";
                 }
 
-                ListViewItem.ListViewSubItem lisiAvg = new ListViewItem.ListViewSubItem(listViewItem, text);
+                ListViewItem.ListViewSubItem lisiAvg = new ListViewItem.ListViewSubItem(listViewItem, text);    //Media
+                ListViewItem.ListViewSubItem lisiEmail = new ListViewItem.ListViewSubItem(listViewItem, user.Email); //Email
+                ListViewItem.ListViewSubItem lisiContact = new ListViewItem.ListViewSubItem(listViewItem, user.PhoneNumber); //Numero
+                ListViewItem.ListViewSubItem lisiAddr = new ListViewItem.ListViewSubItem(listViewItem,user.Address); //Morada
 
                 listViewItem.SubItems.Add(lisiNif);
                 listViewItem.SubItems.Add(lisiClassYear);
                 listViewItem.SubItems.Add(lisiClass);
                 listViewItem.SubItems.Add(lisiMessageCount);
                 listViewItem.SubItems.Add(lisiAvg);
+                listViewItem.SubItems.Add(lisiEmail);
+                listViewItem.SubItems.Add(lisiContact);
+                listViewItem.SubItems.Add(lisiAddr);
 
             }
             else  //Professor
@@ -98,8 +128,19 @@ namespace EscolaVirtual.Classes
                 List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(tcs => tcs.Teacher == teacher);
                 string differentClasses = teacherClassSubjects.Select(tcs => tcs.Class).Distinct().Count().ToString();
 
-                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, teacher.Nif);
-                ListViewItem.ListViewSubItem lisiQttClass = new ListViewItem.ListViewSubItem(listViewItem, differentClasses);
+                ListViewItem.ListViewSubItem lisiQttClass = new ListViewItem.ListViewSubItem(listViewItem, differentClasses); //Qtd turmas diferentes
+                ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, teacher.Nif); //Nif
+                ListViewItem.ListViewSubItem lisiEmail = new ListViewItem.ListViewSubItem(listViewItem, user.Email); //Email
+                ListViewItem.ListViewSubItem lisiContact = new ListViewItem.ListViewSubItem(listViewItem, user.PhoneNumber); //Numero
+                ListViewItem.ListViewSubItem lisiAddr = new ListViewItem.ListViewSubItem(listViewItem, user.Address); //Morada
+
+
+                listViewItem.SubItems.Add(lisiQttClass);
+                listViewItem.SubItems.Add(lisiNif);
+                listViewItem.SubItems.Add(lisiEmail);
+                listViewItem.SubItems.Add(lisiContact);
+                listViewItem.SubItems.Add(lisiAddr);
+
 
             }
             

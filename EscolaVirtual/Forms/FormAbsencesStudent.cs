@@ -21,25 +21,6 @@ namespace EscolaVirtual
             this.student = student;
             this.admin = admin;
         }
-
-        private void btnJustification_Click(object sender, EventArgs e)
-        {
-            //Faz com que o botão armazene a justificativa do aluno na falta que ele justificou
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            //Faz com que o botão feche a tela de justificar faltas e volte para a tela do aluno
-        }
-
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
         private void FormAbsencesStudent_Load(object sender, EventArgs e)
         {
             rbAllAbsences.Checked = true;
@@ -47,6 +28,42 @@ namespace EscolaVirtual
             List<ListViewItem> listViewAbsences = student.Absence.Select(ab => ab.ToListViewItem(ab)).ToList();
 
             listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+
+        }
+
+        private void rbJustified_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 1).Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
+
+        private void rbUnjustified_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 2).Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
+
+        private void rbAllAbsences_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbJustified.Checked == true)
+            {
+                lvwAbsences.Items.Clear();
+                List<ListViewItem> listViewAbsences = student.Absence.Select(ab => ab.ToListViewItem(ab)).ToList();
+                listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

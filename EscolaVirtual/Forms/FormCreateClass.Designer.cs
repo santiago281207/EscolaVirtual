@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pCreate = new System.Windows.Forms.Panel();
-            this.btnCreateClass = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.lblClassYear = new System.Windows.Forms.Label();
-            this.cbClassYear = new System.Windows.Forms.ComboBox();
             this.txtClassName = new System.Windows.Forms.TextBox();
+            this.cbClassYear = new System.Windows.Forms.ComboBox();
+            this.lblClassYear = new System.Windows.Forms.Label();
+            this.lblClassName = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCreateClass = new System.Windows.Forms.Button();
             this.pCreate.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,18 +52,38 @@
             this.pCreate.Size = new System.Drawing.Size(605, 376);
             this.pCreate.TabIndex = 0;
             // 
-            // btnCreateClass
+            // txtClassName
             // 
-            this.btnCreateClass.BackColor = System.Drawing.Color.Green;
-            this.btnCreateClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClass.ForeColor = System.Drawing.Color.White;
-            this.btnCreateClass.Location = new System.Drawing.Point(57, 270);
-            this.btnCreateClass.Name = "btnCreateClass";
-            this.btnCreateClass.Size = new System.Drawing.Size(159, 57);
-            this.btnCreateClass.TabIndex = 0;
-            this.btnCreateClass.Text = "Criar Turma";
-            this.btnCreateClass.UseVisualStyleBackColor = false;
+            this.txtClassName.Location = new System.Drawing.Point(57, 184);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(481, 22);
+            this.txtClassName.TabIndex = 5;
+            // 
+            // cbClassYear
+            // 
+            this.cbClassYear.FormattingEnabled = true;
+            this.cbClassYear.Location = new System.Drawing.Point(57, 91);
+            this.cbClassYear.Name = "cbClassYear";
+            this.cbClassYear.Size = new System.Drawing.Size(481, 24);
+            this.cbClassYear.TabIndex = 4;
+            // 
+            // lblClassYear
+            // 
+            this.lblClassYear.AutoSize = true;
+            this.lblClassYear.Location = new System.Drawing.Point(54, 72);
+            this.lblClassYear.Name = "lblClassYear";
+            this.lblClassYear.Size = new System.Drawing.Size(92, 16);
+            this.lblClassYear.TabIndex = 3;
+            this.lblClassYear.Text = "Ano da Turma";
+            // 
+            // lblClassName
+            // 
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.Location = new System.Drawing.Point(54, 165);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(105, 16);
+            this.lblClassName.TabIndex = 2;
+            this.lblClassName.Text = "Nome da Turma";
             // 
             // btnExit
             // 
@@ -77,39 +97,20 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblClassName
+            // btnCreateClass
             // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Location = new System.Drawing.Point(54, 165);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(105, 16);
-            this.lblClassName.TabIndex = 2;
-            this.lblClassName.Text = "Nome da Turma";
-            // 
-            // lblClassYear
-            // 
-            this.lblClassYear.AutoSize = true;
-            this.lblClassYear.Location = new System.Drawing.Point(54, 72);
-            this.lblClassYear.Name = "lblClassYear";
-            this.lblClassYear.Size = new System.Drawing.Size(92, 16);
-            this.lblClassYear.TabIndex = 3;
-            this.lblClassYear.Text = "Ano da Turma";
-            // 
-            // cbClassYear
-            // 
-            this.cbClassYear.FormattingEnabled = true;
-            this.cbClassYear.Location = new System.Drawing.Point(57, 91);
-            this.cbClassYear.Name = "cbClassYear";
-            this.cbClassYear.Size = new System.Drawing.Size(481, 24);
-            this.cbClassYear.TabIndex = 4;
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Location = new System.Drawing.Point(57, 184);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(481, 22);
-            this.txtClassName.TabIndex = 5;
+            this.btnCreateClass.BackColor = System.Drawing.Color.Green;
+            this.btnCreateClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateClass.ForeColor = System.Drawing.Color.White;
+            this.btnCreateClass.Location = new System.Drawing.Point(57, 270);
+            this.btnCreateClass.Name = "btnCreateClass";
+            this.btnCreateClass.Size = new System.Drawing.Size(159, 57);
+            this.btnCreateClass.TabIndex = 0;
+            this.btnCreateClass.Text = "Criar Turma";
+            this.btnCreateClass.UseVisualStyleBackColor = false;
             // 
             // FormCreateClass
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace EscolaVirtual.Forms
 {
     public partial class FormCreateClass : Form
     {
-        public FormCreateClass()
+        Admin admin;
+        public FormCreateClass(Admin admin)
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
