@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
@@ -38,6 +39,19 @@ namespace EscolaVirtual.Classes
         }
 
         #endregion
+
+        public ListViewItem ToListViewItem(Subject subject)
+        {
+            ListViewItem listViewItem = new ListViewItem(subject.SubjectName);
+            ListViewItem.ListViewSubItem lisiSubjectYear = new ListViewItem.ListViewSubItem(listViewItem, subject.ClassYear.YearName);
+            ListViewItem.ListViewSubItem lisiModuleQtt = new ListViewItem.ListViewSubItem(listViewItem, subject.Module.Count.ToString());
+
+            listViewItem.SubItems.Add(lisiSubjectYear);
+            listViewItem.SubItems.Add(lisiModuleQtt);
+
+            return listViewItem;
+        }
+
 
     }
 }

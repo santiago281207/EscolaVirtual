@@ -137,10 +137,10 @@ namespace EscolaVirtual.Classes
 
                 listViewItem.SubItems.Add(lisiQttClass);
                 listViewItem.SubItems.Add(lisiNif);
-                listViewItem.SubItems.Add(lisiNif);
                 listViewItem.SubItems.Add(lisiEmail);
                 listViewItem.SubItems.Add(lisiContact);
                 listViewItem.SubItems.Add(lisiAddr);
+
 
             }
             

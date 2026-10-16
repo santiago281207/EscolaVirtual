@@ -69,10 +69,13 @@ namespace EscolaVirtual
                     break;
                 case 3: //Ano
                     lvwYear.Items.Clear();
-
+                    List<ListViewItem> listViewItems4 = admin.ClassYears.Select(cy => cy.ToListViewItem(cy)).ToList();
+                    listViewItems4.ForEach(li => lvwYear.Items.Add(li));
                     break;
                 case 4: //Disciplina
                     lvwSubject.Items.Clear();
+                    List<ListViewItem> listViewItems5 = admin.ClassYears.SelectMany(cy => cy.Subject.Select(s => s.ToListViewItem(s))).ToList();
+                    listViewItems5.ForEach(li => lvwSubject.Items.Add(li)); 
                     break;
                 default:
                     break;
