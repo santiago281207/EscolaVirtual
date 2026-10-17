@@ -69,17 +69,18 @@ namespace EscolaVirtual.Classes
             get { return m_amount; }
             set 
             {
-                if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2) //Levantamento
-                {
-                    throw new Exception("Montante inválido!");
-                }else if(TransactionType == 1 && value <= 0)    //Deposito
-                {
+                    if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2)
+                    {
+                        throw new Exception("Montante inválido!");
+                    }else if(TransactionType == 1 && value <= 0)
+                    {
                     throw new Exception("Montante inválido!");
                 }else
                 {
                     m_amount = value;
-                }  
-            }
+                }
+                    
+             }
         }
 
         private decimal m_resultingBalance;

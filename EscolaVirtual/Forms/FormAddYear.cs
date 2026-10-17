@@ -24,5 +24,22 @@ namespace EscolaVirtual
         {
 
         }
+
+        private void txtAddYear_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAddYear.Text == "")
+            {
+                btnCreate.Enabled = false;
+            }
+            else
+            {
+                btnCreate.Enabled = true;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.pUsername = new System.Windows.Forms.Panel();
             this.pCorUsername = new System.Windows.Forms.Panel();
             this.pbYearName = new System.Windows.Forms.PictureBox();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtAddYear = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.formLogin.SuspendLayout();
             this.pUsername.SuspendLayout();
@@ -50,7 +50,7 @@
             this.formLogin.Controls.Add(this.pUsername);
             this.formLogin.Controls.Add(this.lblName);
             this.formLogin.Location = new System.Drawing.Point(124, 0);
-            this.formLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formLogin.Margin = new System.Windows.Forms.Padding(4);
             this.formLogin.Name = "formLogin";
             this.formLogin.Size = new System.Drawing.Size(575, 298);
             this.formLogin.TabIndex = 1;
@@ -58,18 +58,18 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Green;
-            this.btnExit.Enabled = false;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnExit.Location = new System.Drawing.Point(59, 198);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(439, 46);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnCreate
             // 
@@ -80,7 +80,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCreate.Location = new System.Drawing.Point(59, 145);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(439, 46);
             this.btnCreate.TabIndex = 6;
@@ -91,9 +91,9 @@
             // 
             this.pUsername.Controls.Add(this.pCorUsername);
             this.pUsername.Controls.Add(this.pbYearName);
-            this.pUsername.Controls.Add(this.txt);
+            this.pUsername.Controls.Add(this.txtAddYear);
             this.pUsername.Location = new System.Drawing.Point(59, 63);
-            this.pUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(439, 44);
             this.pUsername.TabIndex = 3;
@@ -102,7 +102,7 @@
             // 
             this.pCorUsername.BackColor = System.Drawing.Color.Green;
             this.pCorUsername.Location = new System.Drawing.Point(0, 38);
-            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pCorUsername.Name = "pCorUsername";
             this.pCorUsername.Size = new System.Drawing.Size(439, 5);
             this.pCorUsername.TabIndex = 4;
@@ -111,22 +111,23 @@
             // 
             this.pbYearName.Image = global::EscolaVirtual.Properties.Resources.icone_du_calendrier_des_evenements_vert;
             this.pbYearName.Location = new System.Drawing.Point(401, 6);
-            this.pbYearName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbYearName.Margin = new System.Windows.Forms.Padding(4);
             this.pbYearName.Name = "pbYearName";
             this.pbYearName.Size = new System.Drawing.Size(32, 31);
             this.pbYearName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbYearName.TabIndex = 4;
             this.pbYearName.TabStop = false;
             // 
-            // txt
+            // txtAddYear
             // 
-            this.txt.Location = new System.Drawing.Point(5, 12);
-            this.txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt.MaxLength = 4;
-            this.txt.Name = "txt";
-            this.txt.PasswordChar = '*';
-            this.txt.Size = new System.Drawing.Size(387, 22);
-            this.txt.TabIndex = 4;
+            this.txtAddYear.Location = new System.Drawing.Point(5, 12);
+            this.txtAddYear.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddYear.MaxLength = 4;
+            this.txtAddYear.Name = "txtAddYear";
+            this.txtAddYear.PasswordChar = '*';
+            this.txtAddYear.Size = new System.Drawing.Size(387, 22);
+            this.txtAddYear.TabIndex = 4;
+            this.txtAddYear.TextChanged += new System.EventHandler(this.txtAddYear_TextChanged);
             // 
             // lblName
             // 
@@ -148,7 +149,7 @@
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormAddYear";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -171,7 +172,7 @@
         private System.Windows.Forms.Panel pCorUsername;
         private System.Windows.Forms.PictureBox pbYearName;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtAddYear;
         private System.Windows.Forms.Label lblName;
     }
 }

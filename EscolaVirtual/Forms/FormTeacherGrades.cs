@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EscolaVirtual.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,22 @@ namespace EscolaVirtual.Forms
 {
     public partial class FormTeacherGrades : Form
     {
+        Teacher teacher;
+        Admin admin;
         public FormTeacherGrades()
         {
             InitializeComponent();
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormTeacherGrades_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
