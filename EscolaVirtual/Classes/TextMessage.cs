@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
@@ -15,10 +16,14 @@ namespace EscolaVirtual.Classes
             this.Title = title;
             this.Body = body;
             this.EmissionDate = emissionDate;
+
+            sender.Messages.Add(this);
+            recipient.Messages.Add(this);
         }
 
         #region Properties and Members
 
+        
         private User m_sender;
         public User Sender
         {
@@ -58,6 +63,20 @@ namespace EscolaVirtual.Classes
 
         #endregion
 
+
+        public ListViewItem ToListViewItem(TextMessage txtMessage)
+        {
+            ListViewItem listViewItem = new ListViewItem(txtMessage.Sender.Name);
+            ListViewItem.ListViewSubItem lisiDate = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.EmissionDate.Date.ToString("G"));
+            ListViewItem.ListViewSubItem lisiTitle = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.Title);
+            ListViewItem.ListViewSubItem lisiBody = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.Body);
+
+            listViewItem.SubItems.Add(lisiDate);
+            listViewItem.SubItems.Add(lisiTitle);
+            listViewItem.SubItems.Add(lisiBody);
+
+            return listViewItem;
+        }
 
     }
 }
