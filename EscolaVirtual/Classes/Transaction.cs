@@ -10,7 +10,7 @@ namespace EscolaVirtual.Classes
     public class Transaction
     {
 
-        public Transaction(int id,int transactionType,decimal amount,DateTime movementDate,SchoolCard schoolCard)
+        public Transaction(int transactionType,decimal amount,DateTime movementDate,SchoolCard schoolCard)
         {
             this.SchoolCard = schoolCard;
             this.TransactionType = transactionType;
@@ -22,7 +22,7 @@ namespace EscolaVirtual.Classes
                 MessageBox.Show("Montante inválido para operação selecionada!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
-            this.Id = id;
+            this.Id = SchoolCard.Id++;
             
             if(transactionType == 1) //Deposito
             {
