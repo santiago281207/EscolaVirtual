@@ -136,7 +136,7 @@ namespace EscolaVirtual
 
         private void btnData_Click(object sender, EventArgs e)
         {
-            FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(student);
+            FormChangeDataStudent ChangeDataStudentForm = new FormChangeDataStudent(student,admin);
             ChangeDataStudentForm.ShowDialog();
         }
 

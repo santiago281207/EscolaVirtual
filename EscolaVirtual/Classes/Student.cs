@@ -32,13 +32,6 @@ namespace EscolaVirtual.Classes
             set { m_class = value; }
         }
 
-        private List<TextMessage> m_messages = new List<TextMessage>();
-        public List<TextMessage> Messages
-        {
-            get { return m_messages; }
-            set { m_messages = value; }
-        }
-
         private List<Grade> m_grades = new List<Grade>();
         public List<Grade> Grades
         {
