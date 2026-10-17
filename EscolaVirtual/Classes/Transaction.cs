@@ -3,22 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
     public class Transaction
     {
 
-        public Transaction(int id,int transactionType,decimal amount,decimal resultingBalance,DateTime movementDate,SchoolCard schoolCard)
+        public Transaction(int id,int transactionType,decimal amount,DateTime movementDate,SchoolCard schoolCard)
         {
             this.SchoolCard = schoolCard;
-            this.Id = id;
             this.TransactionType = transactionType;
-            this.Amount = amount;
-            this.ResultingBalance = resultingBalance;
+            try
+            {
+                this.Amount = amount;
+            }catch(Exception)
+            {
+                MessageBox.Show("Montante inválido para operação selecionada!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            this.Id = id;
+            
+            if(transactionType == 1) //Deposito
+            {
+                this.ResultingBalance = Amount + schoolCard.Balance;
+            }else   //Levantamento
+            {
+                this.ResultingBalance = SchoolCard.Balance - amount;
+            }
+
+            schoolCard.Balance = this.ResultingBalance;
             this.MovementDate = movementDate;
 
-            
         }
 
         #region Properties and Members
@@ -52,19 +68,18 @@ namespace EscolaVirtual.Classes
         {
             get { return m_amount; }
             set 
+            {
+                if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2) //Levantamento
                 {
-                    if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2)
-                    {
-                        throw new Exception("Montante inválido!");
-                    }else if(TransactionType == 1 && value <= 0)
+                    throw new Exception("Montante inválido!");
+                }else if(TransactionType == 1 && value <= 0)    //Deposito
                 {
                     throw new Exception("Montante inválido!");
                 }else
                 {
                     m_amount = value;
-                }
-                    
-                }
+                }  
+            }
         }
 
         private decimal m_resultingBalance;

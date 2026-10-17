@@ -41,11 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,30 +55,31 @@
             // lvwMessages
             // 
             this.lvwMessages.HideSelection = false;
-            this.lvwMessages.Location = new System.Drawing.Point(12, 22);
-            this.lvwMessages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvwMessages.Location = new System.Drawing.Point(9, 18);
+            this.lvwMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lvwMessages.Name = "lvwMessages";
-            this.lvwMessages.Size = new System.Drawing.Size(607, 701);
+            this.lvwMessages.Size = new System.Drawing.Size(456, 570);
             this.lvwMessages.TabIndex = 0;
             this.lvwMessages.UseCompatibleStateImageBehavior = false;
             this.lvwMessages.View = System.Windows.Forms.View.Details;
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(11, 38);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMessage.Location = new System.Drawing.Point(8, 31);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMessage.MaxLength = 70;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(316, 22);
+            this.txtMessage.Size = new System.Drawing.Size(238, 20);
             this.txtMessage.TabIndex = 1;
             // 
             // btnSend
             // 
             this.btnSend.BackColor = System.Drawing.Color.Green;
             this.btnSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSend.Location = new System.Drawing.Point(786, 6);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSend.Location = new System.Drawing.Point(590, 5);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(175, 46);
+            this.btnSend.Size = new System.Drawing.Size(131, 37);
             this.btnSend.TabIndex = 2;
             this.btnSend.Text = "Enviar";
             this.btnSend.UseVisualStyleBackColor = false;
@@ -88,75 +89,82 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(10, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(8, 5);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(175, 46);
+            this.btnBack.Size = new System.Drawing.Size(131, 37);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
             // 
             // cbClass
             // 
+            this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(11, 76);
-            this.cbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbClass.Location = new System.Drawing.Point(8, 62);
+            this.cbClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbClass.Name = "cbClass";
-            this.cbClass.Size = new System.Drawing.Size(316, 24);
+            this.cbClass.Size = new System.Drawing.Size(238, 21);
             this.cbClass.TabIndex = 4;
             this.cbClass.SelectedIndexChanged += new System.EventHandler(this.cbClass_SelectedIndexChanged);
             // 
             // cbStudent
             // 
+            this.cbStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStudent.FormattingEnabled = true;
-            this.cbStudent.Location = new System.Drawing.Point(10, 24);
-            this.cbStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStudent.Location = new System.Drawing.Point(8, 20);
+            this.cbStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStudent.Name = "cbStudent";
-            this.cbStudent.Size = new System.Drawing.Size(317, 24);
+            this.cbStudent.Size = new System.Drawing.Size(239, 21);
             this.cbStudent.TabIndex = 5;
             // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(8, 60);
+            this.lblClass.Location = new System.Drawing.Point(6, 49);
+            this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(49, 16);
+            this.lblClass.Size = new System.Drawing.Size(40, 13);
             this.lblClass.TabIndex = 6;
             this.lblClass.Text = "Turma:";
             // 
             // lblStudent
             // 
             this.lblStudent.AutoSize = true;
-            this.lblStudent.Location = new System.Drawing.Point(8, 6);
+            this.lblStudent.Location = new System.Drawing.Point(6, 5);
+            this.lblStudent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(44, 16);
+            this.lblStudent.Size = new System.Drawing.Size(37, 13);
             this.lblStudent.TabIndex = 7;
             this.lblStudent.Text = "Aluno:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 107);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(8, 87);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.MaxLength = 2000;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 446);
+            this.textBox1.Size = new System.Drawing.Size(238, 363);
             this.textBox1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Assunto:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 89);
+            this.label2.Location = new System.Drawing.Point(6, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Mensagem:";
             // 
@@ -169,10 +177,29 @@
             this.panel1.Controls.Add(this.cbStudent);
             this.panel1.Controls.Add(this.lblStudent);
             this.panel1.Controls.Add(this.lblClass);
-            this.panel1.Location = new System.Drawing.Point(648, 22);
+            this.panel1.Location = new System.Drawing.Point(486, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 112);
+            this.panel1.Size = new System.Drawing.Size(251, 91);
             this.panel1.TabIndex = 11;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Green;
+            this.panel6.Location = new System.Drawing.Point(8, 39);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(237, 3);
+            this.panel6.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Green;
+            this.panel5.Location = new System.Drawing.Point(8, 78);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(237, 3);
+            this.panel5.TabIndex = 14;
             // 
             // panel2
             // 
@@ -183,65 +210,53 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(648, 160);
+            this.panel2.Location = new System.Drawing.Point(486, 130);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(335, 563);
+            this.panel2.Size = new System.Drawing.Size(251, 457);
             this.panel2.TabIndex = 12;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(11, 56);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 4);
-            this.panel3.TabIndex = 13;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(11, 549);
+            this.panel4.Location = new System.Drawing.Point(8, 446);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(316, 4);
+            this.panel4.Size = new System.Drawing.Size(237, 3);
             this.panel4.TabIndex = 14;
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.BackColor = System.Drawing.Color.Green;
-            this.panel5.Location = new System.Drawing.Point(11, 96);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(316, 4);
-            this.panel5.TabIndex = 14;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Green;
-            this.panel6.Location = new System.Drawing.Point(10, 48);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(316, 4);
-            this.panel6.TabIndex = 14;
+            this.panel3.BackColor = System.Drawing.Color.Green;
+            this.panel3.Location = new System.Drawing.Point(8, 46);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(237, 3);
+            this.panel3.TabIndex = 13;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Silver;
             this.panel7.Controls.Add(this.btnBack);
             this.panel7.Controls.Add(this.btnSend);
-            this.panel7.Location = new System.Drawing.Point(12, 729);
+            this.panel7.Location = new System.Drawing.Point(9, 592);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(971, 60);
+            this.panel7.Size = new System.Drawing.Size(728, 49);
             this.panel7.TabIndex = 13;
             // 
             // FormTeacherMessage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 800);
+            this.ClientSize = new System.Drawing.Size(746, 650);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvwMessages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormTeacherMessage";
             this.Text = "FormTeacherMessage";

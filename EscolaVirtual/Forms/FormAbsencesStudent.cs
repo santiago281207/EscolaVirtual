@@ -23,7 +23,6 @@ namespace EscolaVirtual
         }
         private void FormAbsencesStudent_Load(object sender, EventArgs e)
         {
-            rbAllAbsences.Checked = true;
 
             List<ListViewItem> listViewAbsences = student.Absence.Select(ab => ab.ToListViewItem(ab)).ToList();
 

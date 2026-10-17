@@ -47,9 +47,10 @@
             this.pChange.Controls.Add(this.lblNif);
             this.pChange.Controls.Add(this.txtNif);
             this.pChange.Controls.Add(this.txtName);
-            this.pChange.Location = new System.Drawing.Point(225, 0);
+            this.pChange.Location = new System.Drawing.Point(169, 0);
+            this.pChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pChange.Name = "pChange";
-            this.pChange.Size = new System.Drawing.Size(543, 376);
+            this.pChange.Size = new System.Drawing.Size(407, 306);
             this.pChange.TabIndex = 1;
             // 
             // btnExit
@@ -57,9 +58,10 @@
             this.btnExit.BackColor = System.Drawing.Color.Green;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(293, 289);
+            this.btnExit.Location = new System.Drawing.Point(220, 235);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(166, 53);
+            this.btnExit.Size = new System.Drawing.Size(124, 43);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -67,11 +69,13 @@
             // btnChangeData
             // 
             this.btnChangeData.BackColor = System.Drawing.Color.Green;
+            this.btnChangeData.Enabled = false;
             this.btnChangeData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeData.ForeColor = System.Drawing.Color.White;
-            this.btnChangeData.Location = new System.Drawing.Point(67, 289);
+            this.btnChangeData.Location = new System.Drawing.Point(50, 235);
+            this.btnChangeData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangeData.Name = "btnChangeData";
-            this.btnChangeData.Size = new System.Drawing.Size(166, 53);
+            this.btnChangeData.Size = new System.Drawing.Size(124, 43);
             this.btnChangeData.TabIndex = 6;
             this.btnChangeData.Text = "Alterar Dados";
             this.btnChangeData.UseVisualStyleBackColor = false;
@@ -79,42 +83,47 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(64, 73);
+            this.lblName.Location = new System.Drawing.Point(48, 8);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Nome";
             // 
             // lblNif
             // 
             this.lblNif.AutoSize = true;
-            this.lblNif.Location = new System.Drawing.Point(64, 171);
+            this.lblNif.Location = new System.Drawing.Point(48, 61);
+            this.lblNif.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNif.Name = "lblNif";
-            this.lblNif.Size = new System.Drawing.Size(28, 16);
+            this.lblNif.Size = new System.Drawing.Size(24, 13);
             this.lblNif.TabIndex = 3;
             this.lblNif.Text = "NIF";
             // 
             // txtNif
             // 
-            this.txtNif.Location = new System.Drawing.Point(67, 190);
+            this.txtNif.Location = new System.Drawing.Point(50, 76);
+            this.txtNif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNif.Name = "txtNif";
-            this.txtNif.Size = new System.Drawing.Size(392, 22);
+            this.txtNif.Size = new System.Drawing.Size(295, 20);
             this.txtNif.TabIndex = 2;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(67, 92);
+            this.txtName.Location = new System.Drawing.Point(50, 24);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(392, 22);
+            this.txtName.Size = new System.Drawing.Size(295, 20);
             this.txtName.TabIndex = 1;
             // 
             // FormChangeDataStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1002, 375);
+            this.ClientSize = new System.Drawing.Size(752, 305);
             this.Controls.Add(this.pChange);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormChangeDataStudent";
             this.Text = "Alterar Dados do Aluno";
             this.pChange.ResumeLayout(false);

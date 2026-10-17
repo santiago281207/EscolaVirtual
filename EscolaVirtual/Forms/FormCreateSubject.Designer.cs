@@ -63,11 +63,12 @@
             // btnCreateSubject
             // 
             this.btnCreateSubject.BackColor = System.Drawing.Color.Green;
+            this.btnCreateSubject.Enabled = false;
             this.btnCreateSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateSubject.ForeColor = System.Drawing.Color.White;
             this.btnCreateSubject.Location = new System.Drawing.Point(92, 233);
-            this.btnCreateSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateSubject.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateSubject.Name = "btnCreateSubject";
             this.btnCreateSubject.Size = new System.Drawing.Size(133, 36);
             this.btnCreateSubject.TabIndex = 3;
@@ -81,7 +82,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(259, 233);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(133, 36);
             this.btnExit.TabIndex = 4;
@@ -90,12 +91,13 @@
             // 
             // cbClassYear
             // 
+            this.cbClassYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClassYear.FormattingEnabled = true;
             this.cbClassYear.Items.AddRange(new object[] {
             "10º Ano",
             "11ª Ano"});
             this.cbClassYear.Location = new System.Drawing.Point(92, 96);
-            this.cbClassYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClassYear.Margin = new System.Windows.Forms.Padding(2);
             this.cbClassYear.Name = "cbClassYear";
             this.cbClassYear.Size = new System.Drawing.Size(300, 21);
             this.cbClassYear.TabIndex = 5;
@@ -103,7 +105,7 @@
             // txtSubjectName
             // 
             this.txtSubjectName.Location = new System.Drawing.Point(92, 178);
-            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.Size = new System.Drawing.Size(300, 20);
             this.txtSubjectName.TabIndex = 6;
@@ -131,7 +133,7 @@
             this.ClientSize = new System.Drawing.Size(689, 334);
             this.Controls.Add(this.pnlCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormCreateSubject";
             this.Text = "Criar Disciplina";

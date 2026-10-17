@@ -46,51 +46,57 @@
             // cbTeacher
             // 
             this.cbTeacher.FormattingEnabled = true;
-            this.cbTeacher.Location = new System.Drawing.Point(12, 47);
+            this.cbTeacher.Location = new System.Drawing.Point(9, 38);
+            this.cbTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbTeacher.Name = "cbTeacher";
-            this.cbTeacher.Size = new System.Drawing.Size(458, 24);
+            this.cbTeacher.Size = new System.Drawing.Size(344, 21);
             this.cbTeacher.TabIndex = 0;
             // 
             // cbSubject
             // 
             this.cbSubject.FormattingEnabled = true;
-            this.cbSubject.Location = new System.Drawing.Point(12, 110);
+            this.cbSubject.Location = new System.Drawing.Point(9, 89);
+            this.cbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbSubject.Name = "cbSubject";
-            this.cbSubject.Size = new System.Drawing.Size(458, 24);
+            this.cbSubject.Size = new System.Drawing.Size(344, 21);
             this.cbSubject.TabIndex = 1;
             // 
             // cbClass
             // 
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(12, 179);
+            this.cbClass.Location = new System.Drawing.Point(9, 145);
+            this.cbClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbClass.Name = "cbClass";
-            this.cbClass.Size = new System.Drawing.Size(458, 24);
+            this.cbClass.Size = new System.Drawing.Size(344, 21);
             this.cbClass.TabIndex = 2;
             // 
             // lblTeacher
             // 
             this.lblTeacher.AutoSize = true;
-            this.lblTeacher.Location = new System.Drawing.Point(12, 28);
+            this.lblTeacher.Location = new System.Drawing.Point(9, 23);
+            this.lblTeacher.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTeacher.Name = "lblTeacher";
-            this.lblTeacher.Size = new System.Drawing.Size(65, 16);
+            this.lblTeacher.Size = new System.Drawing.Size(51, 13);
             this.lblTeacher.TabIndex = 3;
             this.lblTeacher.Text = "Professor";
             // 
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(12, 91);
+            this.lblSubject.Location = new System.Drawing.Point(9, 74);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(66, 16);
+            this.lblSubject.Size = new System.Drawing.Size(52, 13);
             this.lblSubject.TabIndex = 4;
             this.lblSubject.Text = "Disciplina";
             // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(12, 160);
+            this.lblClass.Location = new System.Drawing.Point(9, 130);
+            this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(53, 16);
+            this.lblClass.Size = new System.Drawing.Size(42, 13);
             this.lblClass.TabIndex = 5;
             this.lblClass.Text = "Turmas";
             // 
@@ -98,9 +104,10 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Green;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogOut.Location = new System.Drawing.Point(20, 13);
+            this.btnLogOut.Location = new System.Drawing.Point(15, 11);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(125, 49);
+            this.btnLogOut.Size = new System.Drawing.Size(94, 40);
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Sair";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -108,10 +115,12 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.Enabled = false;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(329, 13);
+            this.btnAdd.Location = new System.Drawing.Point(247, 11);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(111, 49);
+            this.btnAdd.Size = new System.Drawing.Size(83, 40);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Associar";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -121,43 +130,47 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnLogOut);
-            this.panel1.Location = new System.Drawing.Point(15, 221);
+            this.panel1.Location = new System.Drawing.Point(11, 180);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 72);
+            this.panel1.Size = new System.Drawing.Size(341, 58);
             this.panel1.TabIndex = 8;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.ForeColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(12, 199);
+            this.panel2.Location = new System.Drawing.Point(9, 162);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(458, 4);
+            this.panel2.Size = new System.Drawing.Size(344, 3);
             this.panel2.TabIndex = 9;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.ForeColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(12, 130);
+            this.panel3.Location = new System.Drawing.Point(9, 106);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(458, 4);
+            this.panel3.Size = new System.Drawing.Size(344, 3);
             this.panel3.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.ForeColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(12, 67);
+            this.panel4.Location = new System.Drawing.Point(9, 54);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(458, 4);
+            this.panel4.Size = new System.Drawing.Size(344, 3);
             this.panel4.TabIndex = 11;
             // 
             // FormAssociate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 305);
+            this.ClientSize = new System.Drawing.Size(362, 248);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -169,6 +182,7 @@
             this.Controls.Add(this.cbSubject);
             this.Controls.Add(this.cbTeacher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormAssociate";
             this.Text = "Associar";
