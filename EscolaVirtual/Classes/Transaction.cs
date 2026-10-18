@@ -10,21 +10,19 @@ namespace EscolaVirtual.Classes
     public class Transaction
     {
 
-        public Transaction(int transactionType,decimal amount,DateTime movementDate,SchoolCard schoolCard)
+        public Transaction(TransactionType transactionType,decimal amount,DateTime movementDate,SchoolCard schoolCard)
         {
             this.SchoolCard = schoolCard;
             this.TransactionType = transactionType;
             try
             {
                 this.Amount = amount;
-            }catch(Exception)
+            }catch(Exception ex)
             {
-                MessageBox.Show("Montante inválido para operação selecionada!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
+                throw ex;
             }
-            this.Id = SchoolCard.Id++;
             
-            if(transactionType == 1) //Deposito
+            if(transactionType == TransactionType.Deposit) //Deposito
             {
                 this.ResultingBalance = Amount + schoolCard.Balance;
             }else   //Levantamento
@@ -35,6 +33,7 @@ namespace EscolaVirtual.Classes
             schoolCard.Balance = this.ResultingBalance;
             this.MovementDate = movementDate;
 
+            schoolCard.Movements.Add(this);
         }
 
         #region Properties and Members
@@ -46,17 +45,9 @@ namespace EscolaVirtual.Classes
             set { m_schoolCard = value; }
         }
 
-        private int m_id;
-        public int Id
-        {
-            get { return m_id; }
-            set { m_id = value; }
-        }
 
-        //Valor 1 = Deposit
-        //Valor 2 = Withdraw
-        private int m_transactionType;
-        public int TransactionType
+        private TransactionType m_transactionType;
+        public TransactionType TransactionType
         {
             get { return m_transactionType; }
             set { m_transactionType = value; }
@@ -67,20 +58,22 @@ namespace EscolaVirtual.Classes
         public decimal Amount
         {
             get { return m_amount; }
-            set 
+            set
             {
-                    if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == 2)
-                    {
-                        throw new Exception("Montante inválido!");
-                    }else if(TransactionType == 1 && value <= 0)
-                    {
+                if ((value <= 0 || value > SchoolCard.Balance) && TransactionType == TransactionType.Withdraw)
+                {
                     throw new Exception("Montante inválido!");
-                }else
+                }
+                else if (TransactionType == TransactionType.Deposit && value <= 0)
+                {
+                    throw new Exception("Montante inválido!");
+                }
+                else
                 {
                     m_amount = value;
                 }
-                    
-             }
+
+            }
         }
 
         private decimal m_resultingBalance;
@@ -97,6 +90,24 @@ namespace EscolaVirtual.Classes
             set { m_movementDate = value; }
         }
         #endregion
+
+
+        public ListViewItem ToListViewitem(Transaction transaction)
+        {
+            ListViewItem listViewItem = new ListViewItem(transaction.TransactionType == TransactionType.Deposit ? "Depósito" : "Levantamento");
+
+            ListViewItem.ListViewSubItem lisiDate = new ListViewItem.ListViewSubItem(listViewItem, transaction.MovementDate.ToString("G"));
+            ListViewItem.ListViewSubItem lisiAmount = new ListViewItem.ListViewSubItem(listViewItem, transaction.Amount.ToString());
+            ListViewItem.ListViewSubItem lisiResultingBalance = new ListViewItem.ListViewSubItem(listViewItem, transaction.ResultingBalance.ToString());
+
+            listViewItem.SubItems.Add(lisiDate);
+            listViewItem.SubItems.Add(lisiAmount);
+            listViewItem.SubItems.Add(lisiResultingBalance);
+
+            listViewItem.Tag = transaction.TransactionType;
+            return listViewItem;
+        }
+
 
     }
 }

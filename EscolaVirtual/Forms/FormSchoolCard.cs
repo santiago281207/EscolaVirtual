@@ -14,7 +14,6 @@ namespace EscolaVirtual.Forms
     public partial class FormSchoolCard : Form
     {
         Student student;
-        SchoolCard schoolCard => student.SchoolCard;
         public FormSchoolCard(Student student)
         {
             InitializeComponent();
@@ -28,26 +27,33 @@ namespace EscolaVirtual.Forms
 
         private void btnDeposit_Click(object sender, EventArgs e)
         {
-            decimal amount;
+            Transaction transaction;
 
-            if(decimal.TryParse(txtAmount.Text, out amount))
+            if (rbDeposit.Checked)
             {
-                try { Transaction transaction = new Transaction(1, amount, DateTime.Now, schoolCard); }
+                try
+                {
+                    transaction = new Transaction(TransactionType.Deposit, nudAmount.Value, DateTime.Now, student.SchoolCard);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message,"Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
+            }else
+            {
+                try
+                {
+                    transaction = new Transaction(TransactionType.Withdraw, nudAmount.Value, DateTime.Now, student.SchoolCard);
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                MessageBox.Show($"Depósito de {amount} € realizado com sucesso!", "Depósito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtAmount.Clear();
-                lblBalance.Text = $"Saldo Atual: {amount} €";
-                lvMovementsHistory.Items.Add(new ListViewItem(new string[] { DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), "Depósito", amount.ToString("F2"), schoolCard.Balance.ToString("F2") }));
+            }
 
-            }
-            else
-            {
-                MessageBox.Show("Por favor, insira um valor válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            lvwMovementsHistory.Items.Add(transaction.ToListViewitem(transaction));
+            lblBalance.Text = $"Saldo atual: {student.SchoolCard.Balance.ToString()}€";
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -55,15 +61,58 @@ namespace EscolaVirtual.Forms
             e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != 8;
         }
 
-        private void txtAmount_TextChanged(object sender, EventArgs e)
+        
+
+        private void FormSchoolCard_Load(object sender, EventArgs e)
         {
-            if (txtAmount.Text.Length > 0)
+            lblBalance.Text = $"Saldo atual: {student.SchoolCard.Balance.ToString()}€";
+            if(student.SchoolCard.Movements.Count > 0)
             {
-                btnDeposit.Enabled = true;
+                List<ListViewItem> listViewItems = student.SchoolCard.Movements.Select(mov => mov.ToListViewitem(mov)).ToList();
+                listViewItems.ForEach(lvi => lvwMovementsHistory.Items.Add(lvi));
             }
-            else
+            
+            
+
+        }
+
+        private void rdbSortDeposit_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdbSortDeposit.Checked)
             {
-                btnDeposit.Enabled = false;
+                lvwMovementsHistory.Items.Clear();
+                List<ListViewItem> movementDeposit = student.SchoolCard.Movements.FindAll(mov => mov.TransactionType == TransactionType.Deposit).Select(tra => tra.ToListViewitem(tra)).ToList();
+                movementDeposit.ForEach(mov => lvwMovementsHistory.Items.Add(mov));
+                List<ListViewItem> movementWithdraw = student.SchoolCard.Movements.FindAll(mov => mov.TransactionType == TransactionType.Withdraw).Select(tra => tra.ToListViewitem(tra)).ToList();
+                movementWithdraw.ForEach(mov => lvwMovementsHistory.Items.Add(mov));
+                
+                
+            }
+            
+
+        }
+
+        private void rdbDontSort_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdbDontSort.Checked)
+            {
+                lvwMovementsHistory.Items.Clear();
+                List<ListViewItem> listViewItems = student.SchoolCard.Movements.Select(mov => mov.ToListViewitem(mov)).ToList();
+                listViewItems.ForEach(lvi => lvwMovementsHistory.Items.Add(lvi));
+            }
+        }
+
+        private void rdbSortWithdraw_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdbSortWithdraw.Checked)
+            {
+                lvwMovementsHistory.Items.Clear();
+                List<ListViewItem> movementWithdraw = student.SchoolCard.Movements.FindAll(mov => mov.TransactionType == TransactionType.Withdraw).Select(tra => tra.ToListViewitem(tra)).ToList();
+                movementWithdraw.ForEach(mov => lvwMovementsHistory.Items.Add(mov));
+                List<ListViewItem> movementDeposit = student.SchoolCard.Movements.FindAll(mov => mov.TransactionType == TransactionType.Deposit).Select(tra => tra.ToListViewitem(tra)).ToList();
+                movementDeposit.ForEach(mov => lvwMovementsHistory.Items.Add(mov));
+                
+                
             }
         }
     }

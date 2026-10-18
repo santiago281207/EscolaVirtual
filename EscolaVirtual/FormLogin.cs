@@ -34,7 +34,7 @@ namespace EscolaVirtual
                 if (user != null)
                 {
                     //User
-                    if(user.UserType == 1)
+                    if(user.UserType == UserRole.Student)
                     {
                         FormStudent studentForm = new FormStudent(admin);
                         this.Hide();

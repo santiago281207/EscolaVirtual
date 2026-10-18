@@ -29,18 +29,28 @@
         private void InitializeComponent()
         {
             this.lblBalance = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnDeposit = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblDeposit = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.lvwMovementsHistory = new System.Windows.Forms.ListView();
+            this.chMovementType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chMovementDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chResultingBalance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbTransactionType = new System.Windows.Forms.GroupBox();
-            this.rbWithdraw = new System.Windows.Forms.RadioButton();
             this.rbDeposit = new System.Windows.Forms.RadioButton();
+            this.rbWithdraw = new System.Windows.Forms.RadioButton();
+            this.grbSortBy = new System.Windows.Forms.GroupBox();
+            this.rdbDontSort = new System.Windows.Forms.RadioButton();
+            this.rdbSortDeposit = new System.Windows.Forms.RadioButton();
+            this.rdbSortWithdraw = new System.Windows.Forms.RadioButton();
+            this.nudAmount = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.grbTransactionType.SuspendLayout();
+            this.grbSortBy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBalance
@@ -54,21 +64,9 @@
             this.lblBalance.TabIndex = 0;
             this.lblBalance.Text = "Saldo Atual";
             // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(120, 516);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAmount.MaxLength = 5;
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(150, 20);
-            this.txtAmount.TabIndex = 1;
-            this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
-            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
-            // 
             // btnDeposit
             // 
             this.btnDeposit.BackColor = System.Drawing.Color.Green;
-            this.btnDeposit.Enabled = false;
             this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeposit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeposit.Location = new System.Drawing.Point(14, 18);
@@ -94,27 +92,56 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblDeposit
+            // lblAmount
             // 
-            this.lblDeposit.AutoSize = true;
-            this.lblDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeposit.Location = new System.Drawing.Point(20, 510);
-            this.lblDeposit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDeposit.Name = "lblDeposit";
-            this.lblDeposit.Size = new System.Drawing.Size(99, 24);
-            this.lblDeposit.TabIndex = 4;
-            this.lblDeposit.Text = "Depósito : ";
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(20, 510);
+            this.lblAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(85, 24);
+            this.lblAmount.TabIndex = 4;
+            this.lblAmount.Text = "Quantia :";
             // 
             // lvwMovementsHistory
             // 
+            this.lvwMovementsHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chMovementType,
+            this.chMovementDate,
+            this.chAmount,
+            this.chResultingBalance});
             this.lvwMovementsHistory.HideSelection = false;
             this.lvwMovementsHistory.Location = new System.Drawing.Point(23, 52);
             this.lvwMovementsHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwMovementsHistory.MultiSelect = false;
             this.lvwMovementsHistory.Name = "lvwMovementsHistory";
             this.lvwMovementsHistory.Size = new System.Drawing.Size(899, 442);
             this.lvwMovementsHistory.TabIndex = 5;
             this.lvwMovementsHistory.UseCompatibleStateImageBehavior = false;
             this.lvwMovementsHistory.View = System.Windows.Forms.View.Details;
+            // 
+            // chMovementType
+            // 
+            this.chMovementType.Text = "Tipo de Movimento";
+            this.chMovementType.Width = 130;
+            // 
+            // chMovementDate
+            // 
+            this.chMovementDate.Text = "Data do Movimento";
+            this.chMovementDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chMovementDate.Width = 140;
+            // 
+            // chAmount
+            // 
+            this.chAmount.Text = "Quantia";
+            this.chAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chAmount.Width = 100;
+            // 
+            // chResultingBalance
+            // 
+            this.chResultingBalance.Text = "Saldo Resultante";
+            this.chResultingBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chResultingBalance.Width = 130;
             // 
             // panel1
             // 
@@ -140,28 +167,18 @@
             // 
             this.grbTransactionType.Controls.Add(this.rbDeposit);
             this.grbTransactionType.Controls.Add(this.rbWithdraw);
-            this.grbTransactionType.Location = new System.Drawing.Point(287, 510);
+            this.grbTransactionType.Location = new System.Drawing.Point(287, 498);
             this.grbTransactionType.Name = "grbTransactionType";
-            this.grbTransactionType.Size = new System.Drawing.Size(258, 36);
+            this.grbTransactionType.Size = new System.Drawing.Size(258, 48);
             this.grbTransactionType.TabIndex = 10;
             this.grbTransactionType.TabStop = false;
             this.grbTransactionType.Text = "Tipo";
             // 
-            // rbWithdraw
-            // 
-            this.rbWithdraw.AutoSize = true;
-            this.rbWithdraw.Location = new System.Drawing.Point(6, 13);
-            this.rbWithdraw.Name = "rbWithdraw";
-            this.rbWithdraw.Size = new System.Drawing.Size(93, 17);
-            this.rbWithdraw.TabIndex = 0;
-            this.rbWithdraw.TabStop = true;
-            this.rbWithdraw.Text = "Levantamento";
-            this.rbWithdraw.UseVisualStyleBackColor = true;
-            // 
             // rbDeposit
             // 
             this.rbDeposit.AutoSize = true;
-            this.rbDeposit.Location = new System.Drawing.Point(153, 13);
+            this.rbDeposit.Checked = true;
+            this.rbDeposit.Location = new System.Drawing.Point(152, 17);
             this.rbDeposit.Name = "rbDeposit";
             this.rbDeposit.Size = new System.Drawing.Size(67, 17);
             this.rbDeposit.TabIndex = 1;
@@ -169,26 +186,118 @@
             this.rbDeposit.Text = "Depósito";
             this.rbDeposit.UseVisualStyleBackColor = true;
             // 
+            // rbWithdraw
+            // 
+            this.rbWithdraw.AutoSize = true;
+            this.rbWithdraw.Location = new System.Drawing.Point(18, 19);
+            this.rbWithdraw.Name = "rbWithdraw";
+            this.rbWithdraw.Size = new System.Drawing.Size(93, 17);
+            this.rbWithdraw.TabIndex = 0;
+            this.rbWithdraw.TabStop = true;
+            this.rbWithdraw.Text = "Levantamento";
+            this.rbWithdraw.UseVisualStyleBackColor = true;
+            // 
+            // grbSortBy
+            // 
+            this.grbSortBy.Controls.Add(this.rdbDontSort);
+            this.grbSortBy.Controls.Add(this.rdbSortDeposit);
+            this.grbSortBy.Controls.Add(this.rdbSortWithdraw);
+            this.grbSortBy.Location = new System.Drawing.Point(602, 498);
+            this.grbSortBy.Name = "grbSortBy";
+            this.grbSortBy.Size = new System.Drawing.Size(320, 48);
+            this.grbSortBy.TabIndex = 11;
+            this.grbSortBy.TabStop = false;
+            this.grbSortBy.Text = "Ordenar por tipo";
+            // 
+            // rdbDontSort
+            // 
+            this.rdbDontSort.AutoSize = true;
+            this.rdbDontSort.Checked = true;
+            this.rdbDontSort.Location = new System.Drawing.Point(247, 17);
+            this.rdbDontSort.Name = "rdbDontSort";
+            this.rdbDontSort.Size = new System.Drawing.Size(65, 17);
+            this.rdbDontSort.TabIndex = 2;
+            this.rdbDontSort.TabStop = true;
+            this.rdbDontSort.Text = "Nenhum";
+            this.rdbDontSort.UseVisualStyleBackColor = true;
+            this.rdbDontSort.CheckedChanged += new System.EventHandler(this.rdbDontSort_CheckedChanged);
+            // 
+            // rdbSortDeposit
+            // 
+            this.rdbSortDeposit.AutoSize = true;
+            this.rdbSortDeposit.Location = new System.Drawing.Point(152, 17);
+            this.rdbSortDeposit.Name = "rdbSortDeposit";
+            this.rdbSortDeposit.Size = new System.Drawing.Size(67, 17);
+            this.rdbSortDeposit.TabIndex = 1;
+            this.rdbSortDeposit.Text = "Depósito";
+            this.rdbSortDeposit.UseVisualStyleBackColor = true;
+            this.rdbSortDeposit.CheckedChanged += new System.EventHandler(this.rdbSortDeposit_CheckedChanged);
+            // 
+            // rdbSortWithdraw
+            // 
+            this.rdbSortWithdraw.AutoSize = true;
+            this.rdbSortWithdraw.Location = new System.Drawing.Point(18, 19);
+            this.rdbSortWithdraw.Name = "rdbSortWithdraw";
+            this.rdbSortWithdraw.Size = new System.Drawing.Size(93, 17);
+            this.rdbSortWithdraw.TabIndex = 0;
+            this.rdbSortWithdraw.Text = "Levantamento";
+            this.rdbSortWithdraw.UseVisualStyleBackColor = true;
+            this.rdbSortWithdraw.CheckedChanged += new System.EventHandler(this.rdbSortWithdraw_CheckedChanged);
+            // 
+            // nudAmount
+            // 
+            this.nudAmount.DecimalPlaces = 2;
+            this.nudAmount.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudAmount.Location = new System.Drawing.Point(113, 514);
+            this.nudAmount.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAmount.Name = "nudAmount";
+            this.nudAmount.Size = new System.Drawing.Size(120, 20);
+            this.nudAmount.TabIndex = 3;
+            this.nudAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FormSchoolCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.nudAmount);
+            this.Controls.Add(this.grbSortBy);
             this.Controls.Add(this.grbTransactionType);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvwMovementsHistory);
-            this.Controls.Add(this.lblDeposit);
-            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lblBalance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormSchoolCard";
             this.Text = "Cartão da Escola";
+            this.Load += new System.EventHandler(this.FormSchoolCard_Load);
             this.panel1.ResumeLayout(false);
             this.grbTransactionType.ResumeLayout(false);
             this.grbTransactionType.PerformLayout();
+            this.grbSortBy.ResumeLayout(false);
+            this.grbSortBy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,15 +306,23 @@
         #endregion
 
         private System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label lblDeposit;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.ListView lvwMovementsHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox grbTransactionType;
         private System.Windows.Forms.RadioButton rbDeposit;
         private System.Windows.Forms.RadioButton rbWithdraw;
+        private System.Windows.Forms.ColumnHeader chMovementType;
+        private System.Windows.Forms.ColumnHeader chMovementDate;
+        private System.Windows.Forms.ColumnHeader chAmount;
+        private System.Windows.Forms.ColumnHeader chResultingBalance;
+        private System.Windows.Forms.GroupBox grbSortBy;
+        private System.Windows.Forms.RadioButton rdbSortDeposit;
+        private System.Windows.Forms.RadioButton rdbSortWithdraw;
+        private System.Windows.Forms.RadioButton rdbDontSort;
+        private System.Windows.Forms.NumericUpDown nudAmount;
     }
 }

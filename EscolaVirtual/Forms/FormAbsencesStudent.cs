@@ -33,7 +33,7 @@ namespace EscolaVirtual
             if(rbJustified.Checked == true)
             {
                 lvwAbsences.Items.Clear();
-                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 1).Select(ab => ab.ToListViewItem(ab)).ToList();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == AbsenceStatus.Justified).Select(ab => ab.ToListViewItem(ab)).ToList();
                 listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
                 lvwAbsences.SelectedItems.Clear();
                 btnConfirm.Enabled = false;
@@ -46,7 +46,7 @@ namespace EscolaVirtual
             if (rbUnjustified.Checked == true)
             {
                 lvwAbsences.Items.Clear();
-                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 2).Select(ab => ab.ToListViewItem(ab)).ToList();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == AbsenceStatus.Unjustified).Select(ab => ab.ToListViewItem(ab)).ToList();
                 listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
                 lvwAbsences.SelectedItems.Clear();
                 btnConfirm.Enabled = false;
@@ -79,13 +79,13 @@ namespace EscolaVirtual
         {
             Absence absenceSelected = student.Absence.Find(ab => ab.Id == (int)lvwAbsences.SelectedItems[0].Tag);
 
-            if(absenceSelected.State == 1)
+            if(absenceSelected.State == AbsenceStatus.Justified)
             {
                 MessageBox.Show("Falta selecionada já está justificada!", "Erro de seleção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else
             {
                 absenceSelected.Justification = txtJustification.Text;
-                absenceSelected.State = 1;
+                absenceSelected.State = AbsenceStatus.Justified;
                 MessageBox.Show("Falta justificada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 lvwAbsences.SelectedItems[0].Remove();
@@ -95,7 +95,7 @@ namespace EscolaVirtual
             if (rbJustified.Checked == true)
             {
                 lvwAbsences.Items.Clear();
-                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 1).Select(ab => ab.ToListViewItem(ab)).ToList();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == AbsenceStatus.Justified).Select(ab => ab.ToListViewItem(ab)).ToList();
                 listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
                 lvwAbsences.SelectedItems.Clear();
                 btnConfirm.Enabled = false;
@@ -103,7 +103,7 @@ namespace EscolaVirtual
             }else if (rbUnjustified.Checked == true)
             {
                 lvwAbsences.Items.Clear();
-                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == 2).Select(ab => ab.ToListViewItem(ab)).ToList();
+                List<ListViewItem> listViewAbsences = student.Absence.Where(ab => ab.State == AbsenceStatus.Unjustified).Select(ab => ab.ToListViewItem(ab)).ToList();
                 listViewAbsences.ForEach(li => lvwAbsences.Items.Add(li));
                 lvwAbsences.SelectedItems.Clear();
                 btnConfirm.Enabled = false;
@@ -118,6 +118,8 @@ namespace EscolaVirtual
                 btnConfirm.Enabled = false;
                 btnSeeMore.Enabled = false;
             }
+
+            txtJustification.Text = "";
 
         }
 

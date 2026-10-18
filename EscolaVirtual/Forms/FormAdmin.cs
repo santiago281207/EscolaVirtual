@@ -52,13 +52,13 @@ namespace EscolaVirtual
             {
                 case 0: //Aluno
                     lvwStudent.Items.Clear();
-                    List<ListViewItem> listViewItems1 = admin.Users.Where(u => u.UserType == 1).Select(u => u.ToListViewItem(u,admin)).ToList();
+                    List<ListViewItem> listViewItems1 = admin.Users.Where(u => u.UserType == UserRole.Student).Select(u => u.ToListViewItem(u,admin)).ToList();
                     listViewItems1.ForEach(li => lvwStudent.Items.Add(li));
 
                     break;
                 case 1: //Professor
                     lvwTeacher.Items.Clear();
-                    List<ListViewItem> listViewItems2 = admin.Users.Where(u => u.UserType == 2).Select(u => u.ToListViewItem(u,admin)).ToList();
+                    List<ListViewItem> listViewItems2 = admin.Users.Where(u => u.UserType == UserRole.Teacher).Select(u => u.ToListViewItem(u,admin)).ToList();
                     listViewItems2.ForEach(li => lvwTeacher.Items.Add(li));
 
                     break;

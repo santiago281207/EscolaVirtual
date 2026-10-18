@@ -11,7 +11,7 @@ namespace EscolaVirtual.Classes
 {
     public abstract class User
     {
-        public User(string password,string name,string nif,string email,string phoneNumber,string address,int userType)
+        public User(string password,string name,string nif,string email,string phoneNumber,string address,UserRole userType)
         {
             this.Password = password;
             this.Name = name;
@@ -51,10 +51,8 @@ namespace EscolaVirtual.Classes
             set { m_name = value; }
         }
 
-        //Valor 1 = Aluno 
-        //Valor 2 = Professor
-        private int m_userType; 
-        public int UserType
+        private UserRole m_userType;
+        public UserRole UserType
         {
             get { return m_userType; }
             set { m_userType = value; }
@@ -89,7 +87,7 @@ namespace EscolaVirtual.Classes
             ListViewItem listViewItem = new ListViewItem(user.Name);    //Nome do user
 
 
-            if(user.UserType == 1) //Aluno
+            if(user.UserType == UserRole.Student) //Aluno
             {
                 Student student = (Student)user;
                 ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, student.Nif); //Nif

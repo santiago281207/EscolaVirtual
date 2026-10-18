@@ -9,7 +9,7 @@ namespace EscolaVirtual.Classes
 {
     public class Absence
     {
-        public Absence(int state,Student student,DateTime date,Subject subject,string justification)
+        public Absence(AbsenceStatus state,Student student,DateTime date,Subject subject,string justification)
         {
             this.Id = student.AbsenceId++;
             this.State = state;
@@ -30,10 +30,8 @@ namespace EscolaVirtual.Classes
             set { m_id = value; }
         }
 
-        //Valor 1 = Justificada
-        //Valor 2 = Injustificada
-        private int m_state;
-        public int State
+        private AbsenceStatus m_state;
+        public AbsenceStatus State
         {
             get { return m_state; }
             set { m_state = value; }
@@ -80,7 +78,7 @@ namespace EscolaVirtual.Classes
              ListViewItem item = new ListViewItem(absence.Date.ToShortDateString());
 
             item.SubItems.Add(absence.Subject.SubjectName);
-            item.SubItems.Add(absence.State == 1 ? "Justificada" : "Injustificada");
+            item.SubItems.Add(absence.State == AbsenceStatus.Justified ? "Justificada" : "Injustificada");
 
             if (absence.Justification == null)
             {

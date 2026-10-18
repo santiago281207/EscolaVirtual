@@ -193,9 +193,15 @@ namespace EscolaVirtual.Classes
             #endregion
 
             #region FALTAS
-            Absence absence1 = new Absence(2, student1, DateTime.Now, subject1, "Sem justificação");
+            Absence absence1 = new Absence(AbsenceStatus.Unjustified, student1, DateTime.Now, subject1, "Sem justificação");
 
 
+
+            #endregion
+
+            #region MOVIMENTOS 
+            Transaction transaction1 = new Transaction(TransactionType.Deposit, 21.2m, DateTime.Now, schoolCard1);
+            Transaction transaction2 = new Transaction(TransactionType.Withdraw, 10.3m, DateTime.Now, schoolCard1);
 
             #endregion
             //=========================================
