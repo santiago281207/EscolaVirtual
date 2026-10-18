@@ -192,6 +192,12 @@ namespace EscolaVirtual.Classes
 
             #endregion
 
+            #region FALTAS
+            Absence absence1 = new Absence(2, student1, DateTime.Now, subject1, "Sem justificação");
+
+
+
+            #endregion
             //=========================================
             //=========================================
             //=========================================

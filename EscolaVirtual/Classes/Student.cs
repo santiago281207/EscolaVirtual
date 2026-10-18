@@ -18,6 +18,13 @@ namespace EscolaVirtual.Classes
 
         #region Properties and Members
 
+        private int m_absenceId;
+        public int AbsenceId
+        {
+            get { return m_absenceId; }
+            set { m_absenceId = value; }
+        }
+
         private SchoolCard m_schoolCard;
         public SchoolCard SchoolCard
         {
