@@ -74,12 +74,12 @@ namespace EscolaVirtual.Forms
                 return;
             }
 
-            //var alreadyExists = selectedClassYear.Subject.FirstOrDefault(s => s.SubjectName  selectedClassYear.Subject));
+            /* var alreadyExists = selectedClassYear.Subject.FirstOrDefault(s => s.SubjectName  selectedClassYear.Subject));
 
-            //if (alreadyExists) 
-            //{
-            //    MessageBox.Show("A disciplina já existe para este ano escolar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            if (alreadyExists) 
+            {
+                MessageBox.Show("A disciplina já existe para este ano escolar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } */
         }
     }
 }

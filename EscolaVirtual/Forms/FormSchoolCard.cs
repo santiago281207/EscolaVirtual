@@ -14,6 +14,7 @@ namespace EscolaVirtual.Forms
     public partial class FormSchoolCard : Form
     {
         Student student;
+        SchoolCard schoolCard => student.SchoolCard;
         public FormSchoolCard(Student student)
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace EscolaVirtual.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnDeposit_Click(object sender, EventArgs e)
@@ -31,11 +32,17 @@ namespace EscolaVirtual.Forms
 
             if(decimal.TryParse(txtAmount.Text, out amount))
             {
-                student.SchoolCard.Balance += amount;
+                try { Transaction transaction = new Transaction(1, amount, DateTime.Now, schoolCard); }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 MessageBox.Show($"Depósito de {amount} € realizado com sucesso!", "Depósito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtAmount.Clear();
                 lblBalance.Text = $"Saldo Atual: {amount} €";
-                
+                lvMovementsHistory.Items.Add(new ListViewItem(new string[] { DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), "Depósito", amount.ToString("F2"), schoolCard.Balance.ToString("F2") }));
+
             }
             else
             {

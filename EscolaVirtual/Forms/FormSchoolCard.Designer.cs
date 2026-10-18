@@ -36,7 +36,11 @@
             this.lvwMovementsHistory = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.grbTransactionType = new System.Windows.Forms.GroupBox();
+            this.rbWithdraw = new System.Windows.Forms.RadioButton();
+            this.rbDeposit = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.grbTransactionType.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBalance
@@ -74,6 +78,7 @@
             this.btnDeposit.TabIndex = 2;
             this.btnDeposit.Text = "Efetuar Depósito";
             this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnExit
             // 
@@ -87,6 +92,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblDeposit
             // 
@@ -130,11 +136,45 @@
             this.panel2.Size = new System.Drawing.Size(898, 3);
             this.panel2.TabIndex = 8;
             // 
+            // grbTransactionType
+            // 
+            this.grbTransactionType.Controls.Add(this.rbDeposit);
+            this.grbTransactionType.Controls.Add(this.rbWithdraw);
+            this.grbTransactionType.Location = new System.Drawing.Point(287, 510);
+            this.grbTransactionType.Name = "grbTransactionType";
+            this.grbTransactionType.Size = new System.Drawing.Size(258, 36);
+            this.grbTransactionType.TabIndex = 10;
+            this.grbTransactionType.TabStop = false;
+            this.grbTransactionType.Text = "Tipo";
+            // 
+            // rbWithdraw
+            // 
+            this.rbWithdraw.AutoSize = true;
+            this.rbWithdraw.Location = new System.Drawing.Point(6, 13);
+            this.rbWithdraw.Name = "rbWithdraw";
+            this.rbWithdraw.Size = new System.Drawing.Size(93, 17);
+            this.rbWithdraw.TabIndex = 0;
+            this.rbWithdraw.TabStop = true;
+            this.rbWithdraw.Text = "Levantamento";
+            this.rbWithdraw.UseVisualStyleBackColor = true;
+            // 
+            // rbDeposit
+            // 
+            this.rbDeposit.AutoSize = true;
+            this.rbDeposit.Location = new System.Drawing.Point(153, 13);
+            this.rbDeposit.Name = "rbDeposit";
+            this.rbDeposit.Size = new System.Drawing.Size(67, 17);
+            this.rbDeposit.TabIndex = 1;
+            this.rbDeposit.TabStop = true;
+            this.rbDeposit.Text = "Depósito";
+            this.rbDeposit.UseVisualStyleBackColor = true;
+            // 
             // FormSchoolCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.grbTransactionType);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvwMovementsHistory);
@@ -147,6 +187,8 @@
             this.Name = "FormSchoolCard";
             this.Text = "Cartão da Escola";
             this.panel1.ResumeLayout(false);
+            this.grbTransactionType.ResumeLayout(false);
+            this.grbTransactionType.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +204,8 @@
         private System.Windows.Forms.ListView lvwMovementsHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox grbTransactionType;
+        private System.Windows.Forms.RadioButton rbDeposit;
+        private System.Windows.Forms.RadioButton rbWithdraw;
     }
 }
