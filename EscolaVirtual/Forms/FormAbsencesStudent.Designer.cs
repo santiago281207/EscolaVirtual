@@ -48,6 +48,7 @@
             this.chJustification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSeeMore = new System.Windows.Forms.Button();
             this.grbAbsenceState.SuspendLayout();
             this.pDescricao.SuspendLayout();
             this.pEstado.SuspendLayout();
@@ -67,12 +68,13 @@
             // txtJustification
             // 
             this.txtJustification.Location = new System.Drawing.Point(12, 34);
-            this.txtJustification.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJustification.Margin = new System.Windows.Forms.Padding(2);
             this.txtJustification.MaxLength = 2000;
             this.txtJustification.Multiline = true;
             this.txtJustification.Name = "txtJustification";
             this.txtJustification.Size = new System.Drawing.Size(319, 477);
             this.txtJustification.TabIndex = 3;
+            this.txtJustification.TextChanged += new System.EventHandler(this.txtJustification_TextChanged);
             // 
             // grbAbsenceState
             // 
@@ -83,10 +85,10 @@
             this.grbAbsenceState.Controls.Add(this.rbJustified);
             this.grbAbsenceState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAbsenceState.Location = new System.Drawing.Point(15, 11);
-            this.grbAbsenceState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbAbsenceState.Margin = new System.Windows.Forms.Padding(2);
             this.grbAbsenceState.Name = "grbAbsenceState";
-            this.grbAbsenceState.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grbAbsenceState.Size = new System.Drawing.Size(482, 110);
+            this.grbAbsenceState.Padding = new System.Windows.Forms.Padding(2);
+            this.grbAbsenceState.Size = new System.Drawing.Size(541, 110);
             this.grbAbsenceState.TabIndex = 6;
             this.grbAbsenceState.TabStop = false;
             this.grbAbsenceState.Text = "Estado de Falta";
@@ -96,7 +98,7 @@
             this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.Location = new System.Drawing.Point(0, 107);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(485, 4);
+            this.panel3.Size = new System.Drawing.Size(540, 4);
             this.panel3.TabIndex = 11;
             // 
             // rbAllAbsences
@@ -105,7 +107,7 @@
             this.rbAllAbsences.Checked = true;
             this.rbAllAbsences.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAllAbsences.Location = new System.Drawing.Point(4, 80);
-            this.rbAllAbsences.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbAllAbsences.Margin = new System.Windows.Forms.Padding(2);
             this.rbAllAbsences.Name = "rbAllAbsences";
             this.rbAllAbsences.Size = new System.Drawing.Size(132, 22);
             this.rbAllAbsences.TabIndex = 7;
@@ -119,7 +121,7 @@
             this.rbUnjustified.AutoSize = true;
             this.rbUnjustified.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbUnjustified.Location = new System.Drawing.Point(4, 51);
-            this.rbUnjustified.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbUnjustified.Margin = new System.Windows.Forms.Padding(2);
             this.rbUnjustified.Name = "rbUnjustified";
             this.rbUnjustified.Size = new System.Drawing.Size(102, 22);
             this.rbUnjustified.TabIndex = 8;
@@ -132,7 +134,7 @@
             this.rbJustified.AutoSize = true;
             this.rbJustified.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbJustified.Location = new System.Drawing.Point(4, 24);
-            this.rbJustified.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbJustified.Margin = new System.Windows.Forms.Padding(2);
             this.rbJustified.Name = "rbJustified";
             this.rbJustified.Size = new System.Drawing.Size(96, 22);
             this.rbJustified.TabIndex = 9;
@@ -172,6 +174,7 @@
             this.btnConfirm.TabIndex = 9;
             this.btnConfirm.Text = "Confirmar";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // lblDescription
             // 
@@ -186,13 +189,14 @@
             // pEstado
             // 
             this.pEstado.BackColor = System.Drawing.Color.Silver;
+            this.pEstado.Controls.Add(this.btnSeeMore);
             this.pEstado.Controls.Add(this.lvwAbsences);
             this.pEstado.Controls.Add(this.btnExit);
             this.pEstado.Controls.Add(this.panel4);
             this.pEstado.Controls.Add(this.grbAbsenceState);
             this.pEstado.Location = new System.Drawing.Point(410, 55);
             this.pEstado.Name = "pEstado";
-            this.pEstado.Size = new System.Drawing.Size(509, 569);
+            this.pEstado.Size = new System.Drawing.Size(558, 569);
             this.pEstado.TabIndex = 9;
             // 
             // lvwAbsences
@@ -204,12 +208,14 @@
             this.chJustification});
             this.lvwAbsences.HideSelection = false;
             this.lvwAbsences.Location = new System.Drawing.Point(15, 128);
-            this.lvwAbsences.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwAbsences.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwAbsences.MultiSelect = false;
             this.lvwAbsences.Name = "lvwAbsences";
-            this.lvwAbsences.Size = new System.Drawing.Size(482, 378);
+            this.lvwAbsences.Size = new System.Drawing.Size(541, 378);
             this.lvwAbsences.TabIndex = 12;
             this.lvwAbsences.UseCompatibleStateImageBehavior = false;
             this.lvwAbsences.View = System.Windows.Forms.View.Details;
+            this.lvwAbsences.SelectedIndexChanged += new System.EventHandler(this.lvwAbsences_SelectedIndexChanged);
             // 
             // chDate
             // 
@@ -232,15 +238,15 @@
             // 
             this.chJustification.Text = "Justificação";
             this.chJustification.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chJustification.Width = 130;
+            this.chJustification.Width = 120;
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Green;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(11, 526);
+            this.btnExit.Location = new System.Drawing.Point(322, 526);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(485, 36);
+            this.btnExit.Size = new System.Drawing.Size(233, 36);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -251,23 +257,36 @@
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.Location = new System.Drawing.Point(11, 511);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(485, 4);
+            this.panel4.Size = new System.Drawing.Size(542, 5);
             this.panel4.TabIndex = 11;
+            // 
+            // btnSeeMore
+            // 
+            this.btnSeeMore.BackColor = System.Drawing.Color.Green;
+            this.btnSeeMore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSeeMore.Location = new System.Drawing.Point(15, 526);
+            this.btnSeeMore.Name = "btnSeeMore";
+            this.btnSeeMore.Size = new System.Drawing.Size(242, 36);
+            this.btnSeeMore.TabIndex = 13;
+            this.btnSeeMore.Text = "Ver mais";
+            this.btnSeeMore.UseVisualStyleBackColor = false;
+            this.btnSeeMore.Click += new System.EventHandler(this.btnSeeMore_Click);
             // 
             // FormAbsencesStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 650);
+            this.ClientSize = new System.Drawing.Size(999, 650);
             this.Controls.Add(this.pEstado);
             this.Controls.Add(this.pDescricao);
             this.Controls.Add(this.lblJustification);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormAbsencesStudent";
             this.Text = "FormAbsencesStudent";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAbsencesStudent_FormClosed);
             this.Load += new System.EventHandler(this.FormAbsencesStudent_Load);
             this.grbAbsenceState.ResumeLayout(false);
             this.grbAbsenceState.PerformLayout();
@@ -299,5 +318,6 @@
         private System.Windows.Forms.ColumnHeader chSubject;
         private System.Windows.Forms.ColumnHeader chState;
         private System.Windows.Forms.ColumnHeader chJustification;
+        private System.Windows.Forms.Button btnSeeMore;
     }
 }

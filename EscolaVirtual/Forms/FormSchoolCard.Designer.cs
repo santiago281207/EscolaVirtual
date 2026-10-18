@@ -33,7 +33,7 @@
             this.btnDeposit = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblDeposit = new System.Windows.Forms.Label();
-            this.lvMovementsHistory = new System.Windows.Forms.ListView();
+            this.lvwMovementsHistory = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbTransactionType = new System.Windows.Forms.GroupBox();
@@ -105,16 +105,16 @@
             this.lblDeposit.TabIndex = 4;
             this.lblDeposit.Text = "Depósito : ";
             // 
-            // lvMovementsHistory
+            // lvwMovementsHistory
             // 
-            this.lvMovementsHistory.HideSelection = false;
-            this.lvMovementsHistory.Location = new System.Drawing.Point(23, 52);
-            this.lvMovementsHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.lvMovementsHistory.Name = "lvMovementsHistory";
-            this.lvMovementsHistory.Size = new System.Drawing.Size(899, 442);
-            this.lvMovementsHistory.TabIndex = 5;
-            this.lvMovementsHistory.UseCompatibleStateImageBehavior = false;
-            this.lvMovementsHistory.View = System.Windows.Forms.View.Details;
+            this.lvwMovementsHistory.HideSelection = false;
+            this.lvwMovementsHistory.Location = new System.Drawing.Point(23, 52);
+            this.lvwMovementsHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwMovementsHistory.Name = "lvwMovementsHistory";
+            this.lvwMovementsHistory.Size = new System.Drawing.Size(899, 442);
+            this.lvwMovementsHistory.TabIndex = 5;
+            this.lvwMovementsHistory.UseCompatibleStateImageBehavior = false;
+            this.lvwMovementsHistory.View = System.Windows.Forms.View.Details;
             // 
             // panel1
             // 
@@ -177,7 +177,7 @@
             this.Controls.Add(this.grbTransactionType);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lvMovementsHistory);
+            this.Controls.Add(this.lvwMovementsHistory);
             this.Controls.Add(this.lblDeposit);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.lblBalance);
@@ -201,7 +201,7 @@
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblDeposit;
-        private System.Windows.Forms.ListView lvMovementsHistory;
+        private System.Windows.Forms.ListView lvwMovementsHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox grbTransactionType;

@@ -24,7 +24,12 @@ namespace EscolaVirtual.Classes
             get { return m_classYears; }
             set { m_classYears = value; }
         }
-
+        private List<DataChange> m_dataChanges = new List<DataChange>();
+        public List<DataChange> DataChanges
+        {
+            get { return m_dataChanges; }
+            set { m_dataChanges = value; }
+        }
         private List<Teacher> m_teachers = new List<Teacher>();
         public List<Teacher> Teachers
         {
@@ -132,7 +137,7 @@ namespace EscolaVirtual.Classes
 
             #region ALUNOS TESTE
 
-            Student student1 = new Student("3333", "João", "333333333","joazinhofixe143@gmail.com","9829102381","Avenida dos aliados 38 2735",class1,null);
+            Student student1 = new Student("3333", "João", "333333333","joazinhofixe143@gmail.com","982910238","Avenida dos aliados 38 2735",class1,null);
             SchoolCard schoolCard1 = new SchoolCard(0, student1);
 
             class1.Student.Add(student1);
@@ -180,8 +185,19 @@ namespace EscolaVirtual.Classes
             this.TeacherClassSubjects.Add(teacherClassSubject8);
             #endregion
 
+            #region MENSAGENS TESTE
+
+            TextMessage textMessage1 = new TextMessage(teacher1, student1, "Bem vindo à escola!", "Sê bem vindo à nossa escola virtual!", DateTime.Now);
 
 
+            #endregion
+
+            #region FALTAS
+            Absence absence1 = new Absence(2, student1, DateTime.Now, subject1, "Sem justificação");
+
+
+
+            #endregion
             //=========================================
             //=========================================
             //=========================================

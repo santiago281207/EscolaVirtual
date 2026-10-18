@@ -17,17 +17,5 @@ namespace EscolaVirtual.Classes
         }
 
 
-
-        #region Properties and Members
-
-        private List<TextMessage> m_messages = new List<TextMessage>();
-        public List<TextMessage> Messages
-        {
-            get { return m_messages; }
-            set { m_messages = value; }
-        }
-
-        #endregion
-
     }
 }

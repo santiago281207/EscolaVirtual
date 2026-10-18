@@ -37,7 +37,12 @@ namespace EscolaVirtual.Classes
             get { return m_password; }
             set { m_password = value; }
         }
-
+        private List<TextMessage> m_messages = new List<TextMessage>();
+        public List<TextMessage> Messages
+        {
+            get { return m_messages; }
+            set { m_messages = value; }
+        }
         private string m_name;
 
         public string Name

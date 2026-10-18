@@ -9,15 +9,26 @@ namespace EscolaVirtual.Classes
 {
     public class Absence
     {
-        public Absence(int state,Student student,DateTime date,Subject subject)
+        public Absence(int state,Student student,DateTime date,Subject subject,string justification)
         {
+            this.Id = student.AbsenceId++;
             this.State = state;
             this.Student = student;
             this.Date = date;
             this.Subject = subject;
+            this.Justification = justification;
+
+            student.Absence.Add(this);
         }
 
         #region Properties and Members
+
+        private int m_id;
+        public int Id
+        {
+            get { return m_id; }
+            set { m_id = value; }
+        }
 
         //Valor 1 = Justificada
         //Valor 2 = Injustificada
@@ -79,6 +90,7 @@ namespace EscolaVirtual.Classes
                 item.SubItems.Add(absence.Justification);
             }
 
+            item.Tag = this.Id;
             return item;
         }
 

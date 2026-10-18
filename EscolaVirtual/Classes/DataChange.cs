@@ -8,18 +8,41 @@ namespace EscolaVirtual.Classes
 {
     public class DataChange
     {
-        public DataChange(Teacher teacher,string changeTitle,string description)
+        public DataChange(Admin admin,Teacher teacher,string changeTitle,string description,string newName,string newEmail,string newAddress,string newPhoneNumber)
         {
+            
             this.Teacher = teacher;
             this.ChangeTitle = changeTitle;
             this.Description = description;
+            IsApproved = false;
+
+            this.NewName = newName;
+            this.NewEmail = newEmail;
+            this.NewAddress = newAddress;
+            this.NewPhoneNumber = NewPhoneNumber;
+
+            admin.DataChanges.Add(this);
         }
 
-        public DataChange(Student student, string changeTitle, string description)
+        public DataChange(Admin admin,Student student, string changeTitle, string description, string newName, string newEmail, string newAddress, string newPhoneNumber)
         {
             this.Student = student;
             this.ChangeTitle = changeTitle;
             this.Description = description;
+            IsApproved = false;
+
+            this.NewName = newName;
+            this.NewEmail = newEmail;
+            this.NewAddress = newAddress;
+            this.NewPhoneNumber = NewPhoneNumber;
+
+        }
+
+        private bool m_isApproved;
+        public bool IsApproved 
+        { 
+          get { return m_isApproved; }
+          set { m_isApproved = value; } 
         }
 
         private Teacher m_teacher;
@@ -49,7 +72,30 @@ namespace EscolaVirtual.Classes
             set { m_description = value; }
         }
 
-
+        private string m_newName;
+        public string NewName
+        {
+            get { return m_newName; }
+            set { m_newName = value; }
+        }
+        private string m_newEmail;
+        public string NewEmail
+        {
+            get { return m_newEmail; }
+            set { m_newEmail = value; }
+        }
+        private string m_newAddress;
+        public string NewAddress
+        {
+            get { return m_newAddress; }
+            set { m_newAddress = value; }
+        }
+        private string m_newPhoneNumber;
+        public string NewPhoneNumber
+        {
+            get { return m_newPhoneNumber; }
+            set { m_newPhoneNumber = value; }
+        }
 
 
     }
