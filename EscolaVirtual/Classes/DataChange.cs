@@ -36,6 +36,7 @@ namespace EscolaVirtual.Classes
             this.NewAddress = newAddress;
             this.NewPhoneNumber = NewPhoneNumber;
 
+            admin.DataChanges.Add(this);
         }
 
         private bool m_isApproved;

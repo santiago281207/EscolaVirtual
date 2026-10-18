@@ -11,7 +11,7 @@ namespace EscolaVirtual.Classes
 {
     public class Teacher : User
     {
-        public Teacher(string password,string name,string nif,string email,string phoneNumber,string address) : base(password, name, nif, email, phoneNumber, address, 2)
+        public Teacher(string password,string name,string nif,string email,string phoneNumber,string address) : base(password, name, nif, email, phoneNumber, address, UserRole.Teacher)
         {
 
         }

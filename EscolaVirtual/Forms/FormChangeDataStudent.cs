@@ -137,7 +137,11 @@ namespace EscolaVirtual.Forms
 
             DataChange dataChange = new DataChange(admin,student, titleText, descriptionText, txtName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
 
-            
+            MessageBox.Show("Pedido de alteração de dados enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FormStudent formStudent = new FormStudent(admin, student);
+            this.Close();
+            formStudent.Show();
         }
     }
 }

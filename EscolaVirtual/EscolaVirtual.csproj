@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataChange.cs" />
+    <Compile Include="Classes\Enums.cs" />
     <Compile Include="Classes\Methods.cs" />
     <Compile Include="Forms\FormAddTeacher.cs">
       <SubType>Form</SubType>
