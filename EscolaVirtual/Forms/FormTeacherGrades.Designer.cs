@@ -108,7 +108,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(90, 42);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Adicionar";
+            this.btnAdd.Text = "Avaliar";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -132,6 +132,7 @@
             this.cbStudent.Name = "cbStudent";
             this.cbStudent.Size = new System.Drawing.Size(162, 21);
             this.cbStudent.TabIndex = 6;
+            this.cbStudent.SelectedIndexChanged += new System.EventHandler(this.cbStudent_SelectedIndexChanged);
             // 
             // lblStudent
             // 
@@ -185,6 +186,7 @@
             this.cbModule.Name = "cbModule";
             this.cbModule.Size = new System.Drawing.Size(162, 21);
             this.cbModule.TabIndex = 11;
+            this.cbModule.SelectedIndexChanged += new System.EventHandler(this.cbModule_SelectedIndexChanged);
             // 
             // panel1
             // 

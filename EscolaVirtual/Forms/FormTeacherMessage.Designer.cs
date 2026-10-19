@@ -98,6 +98,7 @@
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbClass
             // 
