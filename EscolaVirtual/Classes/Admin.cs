@@ -137,7 +137,7 @@ namespace EscolaVirtual.Classes
 
             #region ALUNOS TESTE
 
-            Student student1 = new Student("3333", "João", "333333333","joazinhofixe143@gmail.com","982910238","Avenida dos aliados 38 2735",class1,null);
+            Student student1 = new Student("3333", "João", "202601", "333333333","joazinhofixe143@gmail.com","982910238","Avenida dos aliados 38 2735",class1,null);
             SchoolCard schoolCard1 = new SchoolCard(0, student1);
 
             class1.Student.Add(student1);

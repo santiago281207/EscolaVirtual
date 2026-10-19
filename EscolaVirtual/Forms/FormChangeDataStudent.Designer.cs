@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pChange = new System.Windows.Forms.Panel();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnChangeData = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
             this.pChange.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,48 @@
             this.pChange.Size = new System.Drawing.Size(407, 306);
             this.pChange.TabIndex = 1;
             // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(51, 157);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(43, 13);
+            this.lblAddress.TabIndex = 11;
+            this.lblAddress.Text = "Morada";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(53, 172);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.MaxLength = 70;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(295, 20);
+            this.txtAddress.TabIndex = 10;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(49, 108);
+            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(111, 13);
+            this.lblPhoneNumber.TabIndex = 9;
+            this.lblPhoneNumber.Text = "Número de Telemóvel";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(51, 123);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.MaxLength = 9;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(295, 20);
+            this.txtPhoneNumber.TabIndex = 8;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Green;
@@ -73,6 +115,7 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnChangeData
             // 
@@ -130,48 +173,6 @@
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(49, 108);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(111, 13);
-            this.lblPhoneNumber.TabIndex = 9;
-            this.lblPhoneNumber.Text = "Número de Telemóvel";
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(51, 123);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhoneNumber.MaxLength = 9;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(295, 20);
-            this.txtPhoneNumber.TabIndex = 8;
-            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
-            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(51, 157);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(43, 13);
-            this.lblAddress.TabIndex = 11;
-            this.lblAddress.Text = "Morada";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(53, 172);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAddress.MaxLength = 70;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(295, 20);
-            this.txtAddress.TabIndex = 10;
-            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // FormChangeDataStudent
             // 

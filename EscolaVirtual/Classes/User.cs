@@ -90,6 +90,7 @@ namespace EscolaVirtual.Classes
             if(user.UserType == UserRole.Student) //Aluno
             {
                 Student student = (Student)user;
+                ListViewItem.ListViewSubItem lisiSchoolNumber = new ListViewItem.ListViewSubItem(listViewItem, student.SchoolNumber); //Número escolar
                 ListViewItem.ListViewSubItem lisiNif = new ListViewItem.ListViewSubItem(listViewItem, student.Nif); //Nif
                 ListViewItem.ListViewSubItem lisiClassYear = new ListViewItem.ListViewSubItem(listViewItem, student.Class.SchoolYear.YearName); //Ano
                 ListViewItem.ListViewSubItem lisiClass = new ListViewItem.ListViewSubItem(listViewItem, student.Class.Name); //Turma
@@ -114,6 +115,7 @@ namespace EscolaVirtual.Classes
                 ListViewItem.ListViewSubItem lisiContact = new ListViewItem.ListViewSubItem(listViewItem, user.PhoneNumber); //Numero
                 ListViewItem.ListViewSubItem lisiAddr = new ListViewItem.ListViewSubItem(listViewItem,user.Address); //Morada
 
+                listViewItem.SubItems.Add(lisiSchoolNumber);
                 listViewItem.SubItems.Add(lisiNif);
                 listViewItem.SubItems.Add(lisiClassYear);
                 listViewItem.SubItems.Add(lisiClass);

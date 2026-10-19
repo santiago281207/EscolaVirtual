@@ -43,20 +43,18 @@
             // 
             // tvwSubjectClass
             // 
-            this.tvwSubjectClass.Location = new System.Drawing.Point(4, 4);
-            this.tvwSubjectClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tvwSubjectClass.Location = new System.Drawing.Point(3, 3);
             this.tvwSubjectClass.Name = "tvwSubjectClass";
-            this.tvwSubjectClass.Size = new System.Drawing.Size(1204, 596);
+            this.tvwSubjectClass.Size = new System.Drawing.Size(904, 485);
             this.tvwSubjectClass.TabIndex = 1;
             // 
             // btnGrades
             // 
             this.btnGrades.BackColor = System.Drawing.Color.Green;
             this.btnGrades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGrades.Location = new System.Drawing.Point(14, 640);
-            this.btnGrades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrades.Location = new System.Drawing.Point(10, 520);
             this.btnGrades.Name = "btnGrades";
-            this.btnGrades.Size = new System.Drawing.Size(185, 65);
+            this.btnGrades.Size = new System.Drawing.Size(139, 53);
             this.btnGrades.TabIndex = 2;
             this.btnGrades.Text = "Notas";
             this.btnGrades.UseVisualStyleBackColor = false;
@@ -66,10 +64,9 @@
             // 
             this.btnAbsences.BackColor = System.Drawing.Color.Green;
             this.btnAbsences.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAbsences.Location = new System.Drawing.Point(242, 640);
-            this.btnAbsences.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbsences.Location = new System.Drawing.Point(182, 520);
             this.btnAbsences.Name = "btnAbsences";
-            this.btnAbsences.Size = new System.Drawing.Size(185, 65);
+            this.btnAbsences.Size = new System.Drawing.Size(139, 53);
             this.btnAbsences.TabIndex = 3;
             this.btnAbsences.Text = "Faltas";
             this.btnAbsences.UseVisualStyleBackColor = false;
@@ -79,10 +76,9 @@
             // 
             this.btnChangeData.BackColor = System.Drawing.Color.Green;
             this.btnChangeData.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChangeData.Location = new System.Drawing.Point(464, 640);
-            this.btnChangeData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangeData.Location = new System.Drawing.Point(348, 520);
             this.btnChangeData.Name = "btnChangeData";
-            this.btnChangeData.Size = new System.Drawing.Size(185, 65);
+            this.btnChangeData.Size = new System.Drawing.Size(139, 53);
             this.btnChangeData.TabIndex = 4;
             this.btnChangeData.Text = "Alterar Dados";
             this.btnChangeData.UseVisualStyleBackColor = false;
@@ -92,10 +88,9 @@
             // 
             this.btnMessages.BackColor = System.Drawing.Color.Green;
             this.btnMessages.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMessages.Location = new System.Drawing.Point(688, 640);
-            this.btnMessages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMessages.Location = new System.Drawing.Point(516, 520);
             this.btnMessages.Name = "btnMessages";
-            this.btnMessages.Size = new System.Drawing.Size(185, 65);
+            this.btnMessages.Size = new System.Drawing.Size(139, 53);
             this.btnMessages.TabIndex = 5;
             this.btnMessages.Text = "Mensagens";
             this.btnMessages.UseVisualStyleBackColor = false;
@@ -105,10 +100,9 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Green;
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogOut.Location = new System.Drawing.Point(1009, 640);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOut.Location = new System.Drawing.Point(757, 520);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(185, 65);
+            this.btnLogOut.Size = new System.Drawing.Size(139, 53);
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Sair";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -118,10 +112,9 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(22, 9);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWelcome.Location = new System.Drawing.Point(16, 7);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(85, 29);
+            this.lblWelcome.Size = new System.Drawing.Size(66, 24);
             this.lblWelcome.TabIndex = 7;
             this.lblWelcome.Text = "label1";
             // 
@@ -135,32 +128,34 @@
             this.pFormTeacher.Controls.Add(this.btnGrades);
             this.pFormTeacher.Controls.Add(this.btnAbsences);
             this.pFormTeacher.Controls.Add(this.btnChangeData);
-            this.pFormTeacher.Location = new System.Drawing.Point(27, 52);
+            this.pFormTeacher.Location = new System.Drawing.Point(20, 42);
+            this.pFormTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pFormTeacher.Name = "pFormTeacher";
-            this.pFormTeacher.Size = new System.Drawing.Size(1212, 736);
+            this.pFormTeacher.Size = new System.Drawing.Size(909, 598);
             this.pFormTeacher.TabIndex = 8;
             // 
             // pcolor
             // 
             this.pcolor.BackColor = System.Drawing.Color.Green;
-            this.pcolor.Location = new System.Drawing.Point(4, 596);
+            this.pcolor.Location = new System.Drawing.Point(3, 484);
+            this.pcolor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcolor.Name = "pcolor";
-            this.pcolor.Size = new System.Drawing.Size(1203, 4);
+            this.pcolor.Size = new System.Drawing.Size(902, 3);
             this.pcolor.TabIndex = 9;
             // 
             // FormTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 800);
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.pFormTeacher);
             this.Controls.Add(this.lblWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTeacher_FormClosed);
             this.Load += new System.EventHandler(this.FormTeacher_Load);
             this.pFormTeacher.ResumeLayout(false);
             this.ResumeLayout(false);

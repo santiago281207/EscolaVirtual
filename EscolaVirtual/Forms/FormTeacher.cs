@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace EscolaVirtual
 {
@@ -47,7 +46,7 @@ namespace EscolaVirtual
 
         private void btnMessages_Click(object sender, EventArgs e)
         {
-            FormTeacherMessage formteachermessage = new FormTeacherMessage(teacher);
+            FormTeacherMessage formteachermessage = new FormTeacherMessage(teacher, admin);
             formteachermessage.ShowDialog();
         }
 
@@ -159,6 +158,11 @@ namespace EscolaVirtual
                     }
                 }
             }
+        }
+
+        private void FormTeacher_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
