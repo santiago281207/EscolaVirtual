@@ -61,7 +61,7 @@ namespace EscolaVirtual
                             cbStudent.Items.Clear();
 
                             List<Student> students = @class.Student;
-                            cbStudent.Items.Add("Todos os alunos")
+                            cbStudent.Items.Add("Todos os alunos");
                             students.ForEach(student => cbStudent.Items.Add($"{student.Name} {student.SchoolNumber}"));
                             
                         }
@@ -130,6 +130,8 @@ namespace EscolaVirtual
             List<Class> classes = teacherClassSubjects.Select(tcs => tcs.Class).Distinct().ToList();
 
             classes.ForEach(cls => cbClass.Items.Add($"{cls.SchoolYear.YearName} {cls.Name}"));
+
+            
         }
 
         private void txtTitle_TextChanged(object sender, EventArgs e)
@@ -174,6 +176,11 @@ namespace EscolaVirtual
             {
                 btnSend.Enabled = false;
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

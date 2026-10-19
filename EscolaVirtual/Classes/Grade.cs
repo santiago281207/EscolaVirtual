@@ -17,7 +17,13 @@ namespace EscolaVirtual.Classes
             this.Value = value;
             this.GradingPeriod = gradingPeriod;
 
-            student.Grades.Add(this);
+            if(student.Grades.Find(gr => gr.Module == Module) != null)
+            {
+                throw new Exception("Módulo já avaliado!");
+            }else
+            {
+                student.Grades.Add(this);
+            }
         }
 
         #region Properties and Members

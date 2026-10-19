@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace EscolaVirtual.Forms
 {
@@ -36,15 +38,53 @@ namespace EscolaVirtual.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string selectedStudent = cbStudent.SelectedItem.ToString();
+            string selectedClass = cbClass.SelectedItem.ToString();
+            string selectedSubject = cbSubject.SelectedItem.ToString();
+            string selectedModule = cbModule.SelectedItem.ToString();
+            string schoolNumber;
+            
+
+            for(int i = 0;i < selectedStudent.Length;i++)
+            {
+                if (Char.IsDigit(selectedStudent[i]))
+                {
+                    schoolNumber = selectedStudent.Substring(i);
+                    break;
+                }
+            }
+
+            
+
+            Class @class = admin.TeacherClassSubjects.Select(tcs => tcs.Class).FirstOrDefault(c => $"{c.SchoolYear.YearName} {c.Name}" == selectedClass);
+            Student student = @class.Student.FirstOrDefault(std => std.SchoolNumber == schoolNumber);
+            Subject subject = admin.TeacherClassSubjects.FirstOrDefault(tcs => tcs.Class == @class && tcs.Teacher == teacher && tcs.Subject.SubjectName == selectedSubject).Subject;
+            Module module = subject.Module.FirstOrDefault(sub => sub.ModuleName == selectedModule);
+
+            try
+            {
+                Grade grade = new Grade(teacher, module, (double)nudGrade.Value, student, DateTime.Now);
+                MessageBox.Show("Nota criada com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         private void cbClass_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbClass.SelectedIndex >= 0)
+            if (cbClass.SelectedItem != null)
             {
+                cbModule.Items.Clear();
+                cbModule.Enabled = false;
+                cbStudent.Items.Clear();
+                cbSubject.Items.Clear();
+
                 string selectedClass = cbClass.SelectedItem.ToString();
-                Class @class = admin.TeacherClassSubjects.Select(tcs => tcs.Class).Distinct().FirstOrDefault(c => $"{c.SchoolYear.YearName} {c.Name}" == selectedClass);
+                Class @class = admin.TeacherClassSubjects.Select(tcs => tcs.Class).FirstOrDefault(c => $"{c.SchoolYear.YearName} {c.Name}" == selectedClass);
+                
                 if (@class != null)
                 {
                     List<Subject> subjects = admin.TeacherClassSubjects.Where(tcs => tcs.Class == @class && tcs.Teacher == teacher).Select(tcs => tcs.Subject).ToList();
@@ -53,16 +93,68 @@ namespace EscolaVirtual.Forms
                     cbSubject.Enabled = true;
                     
                     List<Student> students = @class.Student;
-                    students.ForEach(std => cbStudent.Items.Add(std.Name));
+                    students.ForEach(std => cbStudent.Items.Add($"{std.Name} {std.SchoolNumber}"));
                     cbStudent.Enabled = true;
 
                 }
             }
+
+
         }
 
         private void cbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbSubject.SelectedItem != null && cbClass.SelectedItem != null)
+            {
+                cbModule.Items.Clear();
+                cbModule.SelectedIndex = -1;
+                cbModule.Enabled = false;
+
+                string selectedClass = cbClass.SelectedItem.ToString();
+                string selectedSubject = cbSubject.SelectedItem.ToString();
+
+                Class @class = admin.TeacherClassSubjects.Select(tcs => tcs.Class).FirstOrDefault(c => $"{c.SchoolYear.YearName} {c.Name}" == selectedClass);
+                
+                Subject subject = admin.TeacherClassSubjects.FirstOrDefault(tcs => tcs.Class == @class && tcs.Teacher == teacher && tcs.Subject.SubjectName == selectedSubject)
+                    .Subject;
+
+                subject.Module.ForEach(module => cbModule.Items.Add(module.ModuleName));
+
+                cbModule.Enabled = true;
+            }
+
+            if(cbStudent.SelectedItem != null && cbSubject.SelectedItem != null && cbModule.SelectedItem != null)
+            {
+                btnAdd.Enabled = true;
+            }else
+            {
+                btnAdd.Enabled = false;
+            }
             
+        }
+
+        private void cbStudent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbStudent.SelectedItem != null && cbSubject.SelectedItem != null && cbModule.SelectedItem != null)
+            {
+                btnAdd.Enabled = true;
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+            }
+        }
+
+        private void cbModule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbStudent.SelectedItem != null && cbSubject.SelectedItem != null && cbModule.SelectedItem != null)
+            {
+                btnAdd.Enabled = true;
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+            }
         }
     }
 }
