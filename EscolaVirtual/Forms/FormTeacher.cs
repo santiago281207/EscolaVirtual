@@ -26,7 +26,7 @@ namespace EscolaVirtual
 
         private void btnGrades_Click(object sender, EventArgs e)
         {
-            FormTeacherGrades formTeacherGrades = new FormTeacherGrades();
+            FormTeacherGrades formTeacherGrades = new FormTeacherGrades(admin, teacher);
             formTeacherGrades.ShowDialog();
         }
 
