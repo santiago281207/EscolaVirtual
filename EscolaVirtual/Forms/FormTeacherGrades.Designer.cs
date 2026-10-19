@@ -55,10 +55,11 @@
             this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClass.FormattingEnabled = true;
             this.cbClass.Location = new System.Drawing.Point(11, 42);
-            this.cbClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClass.Margin = new System.Windows.Forms.Padding(2);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(162, 21);
             this.cbClass.TabIndex = 0;
+            this.cbClass.SelectedIndexChanged += new System.EventHandler(this.cbClass_SelectedIndexChanged);
             // 
             // lblGrade
             // 
@@ -74,7 +75,7 @@
             // 
             this.nudGrade.DecimalPlaces = 2;
             this.nudGrade.Location = new System.Drawing.Point(11, 178);
-            this.nudGrade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudGrade.Margin = new System.Windows.Forms.Padding(2);
             this.nudGrade.Maximum = new decimal(new int[] {
             20,
             0,
@@ -89,7 +90,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBack.Location = new System.Drawing.Point(10, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 42);
             this.btnBack.TabIndex = 3;
@@ -103,12 +104,13 @@
             this.btnAdd.Enabled = false;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Location = new System.Drawing.Point(260, 6);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(90, 42);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblClass
             // 
@@ -123,9 +125,10 @@
             // cbStudent
             // 
             this.cbStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStudent.Enabled = false;
             this.cbStudent.FormattingEnabled = true;
             this.cbStudent.Location = new System.Drawing.Point(208, 42);
-            this.cbStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStudent.Margin = new System.Windows.Forms.Padding(2);
             this.cbStudent.Name = "cbStudent";
             this.cbStudent.Size = new System.Drawing.Size(162, 21);
             this.cbStudent.TabIndex = 6;
@@ -143,12 +146,14 @@
             // cbSubject
             // 
             this.cbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSubject.Enabled = false;
             this.cbSubject.FormattingEnabled = true;
             this.cbSubject.Location = new System.Drawing.Point(12, 118);
-            this.cbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbSubject.Margin = new System.Windows.Forms.Padding(2);
             this.cbSubject.Name = "cbSubject";
             this.cbSubject.Size = new System.Drawing.Size(162, 21);
             this.cbSubject.TabIndex = 8;
+            this.cbSubject.SelectedIndexChanged += new System.EventHandler(this.cbSubject_SelectedIndexChanged);
             // 
             // lblSubject
             // 
@@ -173,9 +178,10 @@
             // cbModule
             // 
             this.cbModule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbModule.Enabled = false;
             this.cbModule.FormattingEnabled = true;
             this.cbModule.Location = new System.Drawing.Point(211, 118);
-            this.cbModule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbModule.Margin = new System.Windows.Forms.Padding(2);
             this.cbModule.Name = "cbModule";
             this.cbModule.Size = new System.Drawing.Size(162, 21);
             this.cbModule.TabIndex = 11;
@@ -186,7 +192,7 @@
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Location = new System.Drawing.Point(12, 224);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 55);
             this.panel1.TabIndex = 12;
@@ -195,7 +201,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.Location = new System.Drawing.Point(11, 193);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(360, 3);
             this.panel2.TabIndex = 13;
@@ -204,7 +210,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.Location = new System.Drawing.Point(12, 134);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(160, 3);
             this.panel3.TabIndex = 14;
@@ -213,7 +219,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.Location = new System.Drawing.Point(211, 134);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(160, 3);
             this.panel4.TabIndex = 15;
@@ -222,7 +228,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Green;
             this.panel5.Location = new System.Drawing.Point(208, 59);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(160, 3);
             this.panel5.TabIndex = 16;
@@ -231,7 +237,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Green;
             this.panel6.Location = new System.Drawing.Point(11, 59);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(160, 3);
             this.panel6.TabIndex = 15;
@@ -258,7 +264,7 @@
             this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.cbClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormTeacherGrades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
