@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTeacherMessage));
             this.lvwMessages = new System.Windows.Forms.ListView();
-            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.cbClass = new System.Windows.Forms.ComboBox();
             this.cbStudent = new System.Windows.Forms.ComboBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.lblStudent = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,28 +56,30 @@
             // 
             this.lvwMessages.HideSelection = false;
             this.lvwMessages.Location = new System.Drawing.Point(9, 18);
-            this.lvwMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwMessages.Margin = new System.Windows.Forms.Padding(2);
             this.lvwMessages.Name = "lvwMessages";
             this.lvwMessages.Size = new System.Drawing.Size(456, 570);
             this.lvwMessages.TabIndex = 0;
             this.lvwMessages.UseCompatibleStateImageBehavior = false;
             this.lvwMessages.View = System.Windows.Forms.View.Details;
             // 
-            // txtMessage
+            // txtTitle
             // 
-            this.txtMessage.Location = new System.Drawing.Point(8, 31);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtMessage.MaxLength = 70;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(238, 20);
-            this.txtMessage.TabIndex = 1;
+            this.txtTitle.Enabled = false;
+            this.txtTitle.Location = new System.Drawing.Point(8, 31);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTitle.MaxLength = 70;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(238, 20);
+            this.txtTitle.TabIndex = 1;
+            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // btnSend
             // 
             this.btnSend.BackColor = System.Drawing.Color.Green;
             this.btnSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSend.Location = new System.Drawing.Point(590, 5);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(131, 37);
             this.btnSend.TabIndex = 2;
@@ -90,7 +92,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBack.Location = new System.Drawing.Point(8, 5);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(131, 37);
             this.btnBack.TabIndex = 3;
@@ -101,8 +103,8 @@
             // 
             this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(8, 62);
-            this.cbClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClass.Location = new System.Drawing.Point(7, 13);
+            this.cbClass.Margin = new System.Windows.Forms.Padding(2);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(238, 21);
             this.cbClass.TabIndex = 4;
@@ -111,17 +113,19 @@
             // cbStudent
             // 
             this.cbStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStudent.Enabled = false;
             this.cbStudent.FormattingEnabled = true;
-            this.cbStudent.Location = new System.Drawing.Point(8, 20);
-            this.cbStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStudent.Location = new System.Drawing.Point(7, 56);
+            this.cbStudent.Margin = new System.Windows.Forms.Padding(2);
             this.cbStudent.Name = "cbStudent";
             this.cbStudent.Size = new System.Drawing.Size(239, 21);
             this.cbStudent.TabIndex = 5;
+            this.cbStudent.SelectedIndexChanged += new System.EventHandler(this.cbStudent_SelectedIndexChanged);
             // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(6, 49);
+            this.lblClass.Location = new System.Drawing.Point(5, 0);
             this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(40, 13);
@@ -131,22 +135,24 @@
             // lblStudent
             // 
             this.lblStudent.AutoSize = true;
-            this.lblStudent.Location = new System.Drawing.Point(6, 5);
+            this.lblStudent.Location = new System.Drawing.Point(5, 41);
             this.lblStudent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStudent.Name = "lblStudent";
             this.lblStudent.Size = new System.Drawing.Size(37, 13);
             this.lblStudent.TabIndex = 7;
             this.lblStudent.Text = "Aluno:";
             // 
-            // textBox1
+            // txtMessage
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.MaxLength = 2000;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 363);
-            this.textBox1.TabIndex = 8;
+            this.txtMessage.Enabled = false;
+            this.txtMessage.Location = new System.Drawing.Point(8, 87);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMessage.MaxLength = 2000;
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(238, 363);
+            this.txtMessage.TabIndex = 8;
+            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
             // 
             // label1
             // 
@@ -173,12 +179,12 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.cbClass);
             this.panel1.Controls.Add(this.cbStudent);
             this.panel1.Controls.Add(this.lblStudent);
+            this.panel1.Controls.Add(this.cbClass);
             this.panel1.Controls.Add(this.lblClass);
             this.panel1.Location = new System.Drawing.Point(486, 18);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 91);
             this.panel1.TabIndex = 11;
@@ -186,8 +192,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Green;
-            this.panel6.Location = new System.Drawing.Point(8, 39);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Location = new System.Drawing.Point(7, 75);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(237, 3);
             this.panel6.TabIndex = 14;
@@ -195,8 +201,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Green;
-            this.panel5.Location = new System.Drawing.Point(8, 78);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(8, 36);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(237, 3);
             this.panel5.TabIndex = 14;
@@ -206,12 +212,12 @@
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txtMessage);
+            this.panel2.Controls.Add(this.txtTitle);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtMessage);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(486, 130);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 457);
             this.panel2.TabIndex = 12;
@@ -220,7 +226,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.Location = new System.Drawing.Point(8, 446);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(237, 3);
             this.panel4.TabIndex = 14;
@@ -229,7 +235,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.Location = new System.Drawing.Point(8, 46);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(237, 3);
             this.panel3.TabIndex = 13;
@@ -240,7 +246,7 @@
             this.panel7.Controls.Add(this.btnBack);
             this.panel7.Controls.Add(this.btnSend);
             this.panel7.Location = new System.Drawing.Point(9, 592);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(728, 49);
             this.panel7.TabIndex = 13;
@@ -256,10 +262,11 @@
             this.Controls.Add(this.lvwMessages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormTeacherMessage";
             this.Text = "FormTeacherMessage";
+            this.Load += new System.EventHandler(this.FormTeacherMessage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -272,14 +279,14 @@
         #endregion
 
         private System.Windows.Forms.ListView lvwMessages;
-        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cbClass;
         private System.Windows.Forms.ComboBox cbStudent;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.Label lblStudent;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

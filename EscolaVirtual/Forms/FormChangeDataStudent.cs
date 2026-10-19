@@ -139,9 +139,12 @@ namespace EscolaVirtual.Forms
 
             MessageBox.Show("Pedido de alteração de dados enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            FormStudent formStudent = new FormStudent(admin, student);
             this.Close();
-            formStudent.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

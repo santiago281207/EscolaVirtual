@@ -10,13 +10,27 @@ namespace EscolaVirtual.Classes
 {
     public class Student : User
     {
-        public Student(string password ,string name, string nif, string email, string phoneNumber, string address, Class schoolClass,SchoolCard schoolCard) : base(password,name,nif,email,phoneNumber,address,UserRole.Student)
+        public Student(string password, string name, string schoolNumber, string nif, string email, string phoneNumber, string address, Class schoolClass, SchoolCard schoolCard) : base(password,name,nif,email,phoneNumber,address,UserRole.Student)
         {
+            this.SchoolNumber = schoolNumber;
             this.Class = schoolClass;
             this.SchoolCard = schoolCard;
         }
 
         #region Properties and Members
+
+        private string m_schoolNumber;
+        public string SchoolNumber
+        {
+            get { return m_schoolNumber; }
+            set
+            {
+                if (value == null || value.Length != 6 || value.Any(c => c < '0' || c > '9'))
+                    throw new ArgumentException("O número escolar deve conter exatamente 6 dígitos.", nameof(value));
+
+                m_schoolNumber = value;
+            }
+        }
 
         private int m_absenceId;
         public int AbsenceId

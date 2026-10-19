@@ -40,6 +40,7 @@
             this.tpStudent = new System.Windows.Forms.TabPage();
             this.lvwStudent = new System.Windows.Forms.ListView();
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSchoolNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chNifStudent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chClassYear = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chClassName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -213,6 +214,7 @@
             // 
             this.lvwStudent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
+            this.chSchoolNumber,
             this.chNifStudent,
             this.chClassYear,
             this.chClassName,
@@ -235,6 +237,12 @@
             // 
             this.chName.Text = "Nome";
             this.chName.Width = 80;
+            // 
+            // chSchoolNumber
+            // 
+            this.chSchoolNumber.Text = "N.º escolar";
+            this.chSchoolNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chSchoolNumber.Width = 100;
             // 
             // chNifStudent
             // 
@@ -568,6 +576,7 @@
         private System.Windows.Forms.Panel pAdminSair;
         private System.Windows.Forms.ListView lvwTeacher;
         private System.Windows.Forms.ColumnHeader chName;
+        private System.Windows.Forms.ColumnHeader chSchoolNumber;
         private System.Windows.Forms.ColumnHeader chNifStudent;
         private System.Windows.Forms.ColumnHeader chClassYear;
         private System.Windows.Forms.ColumnHeader chClassName;
