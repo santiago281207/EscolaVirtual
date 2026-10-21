@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAssociate));
             this.cbTeacher = new System.Windows.Forms.ComboBox();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbSubject = new System.Windows.Forms.ComboBox();
             this.cbClass = new System.Windows.Forms.ComboBox();
-            this.classBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblTeacher = new System.Windows.Forms.Label();
             this.lblSubject = new System.Windows.Forms.Label();
             this.lblClass = new System.Windows.Forms.Label();
@@ -43,14 +41,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbTeacher
             // 
-            this.cbTeacher.DataSource = this.classBindingSource;
+        
             this.cbTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTeacher.FormattingEnabled = true;
             this.cbTeacher.Location = new System.Drawing.Point(9, 38);
@@ -59,10 +55,6 @@
             this.cbTeacher.Size = new System.Drawing.Size(457, 24);
             this.cbTeacher.TabIndex = 0;
             this.cbTeacher.SelectedIndexChanged += new System.EventHandler(this.cbTeacher_SelectedIndexChanged);
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataSource = typeof(EscolaVirtual.Classes.Class);
             // 
             // cbSubject
             // 
@@ -77,8 +69,8 @@
             this.cbSubject.SelectedIndexChanged += new System.EventHandler(this.cbSubject_SelectedIndexChanged);
             // 
             // cbClass
-            // 
-            this.cbClass.DataSource = this.classBindingSource1;
+            //
+            //
             this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClass.FormattingEnabled = true;
             this.cbClass.Location = new System.Drawing.Point(8, 88);
@@ -87,10 +79,6 @@
             this.cbClass.Size = new System.Drawing.Size(457, 24);
             this.cbClass.TabIndex = 2;
             this.cbClass.SelectedIndexChanged += new System.EventHandler(this.cbClass_SelectedIndexChanged);
-            // 
-            // classBindingSource1
-            // 
-            this.classBindingSource1.DataSource = typeof(EscolaVirtual.Classes.Class);
             // 
             // lblTeacher
             // 
@@ -211,8 +199,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Associar";
             this.Load += new System.EventHandler(this.FormAssociate_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
