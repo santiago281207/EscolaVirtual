@@ -9,15 +9,20 @@ namespace EscolaVirtual.Classes
 {
     public class TextMessage
     {
-        public TextMessage(User sender,User recipient,string title,string body,DateTime emissionDate)
+        public TextMessage(User sender,User recipient,string title,string body,DateTime emissionDate, bool addToSender,bool allStudents)
         {
             this.Sender = sender;
             this.Recipient = recipient;
             this.Title = title;
             this.Body = body;
             this.EmissionDate = emissionDate;
+            this.m_wholeClass = allStudents;
 
-            sender.Messages.Add(this);
+            if (addToSender)
+            {
+                sender.Messages.Add(this);
+            }
+
             recipient.Messages.Add(this);
         }
 
@@ -37,6 +42,13 @@ namespace EscolaVirtual.Classes
             get { return m_recipient; }
             set { m_recipient = value; }
         }
+
+        private bool m_wholeClass;
+        public string TeacherRecipient
+        {
+            get { return m_wholeClass == true ? "Todos os alunos" : this.Recipient.Name; }
+        }
+
 
         private string m_title;
         public string Title
@@ -64,9 +76,9 @@ namespace EscolaVirtual.Classes
         #endregion
 
 
-        public ListViewItem ToListViewItem(TextMessage txtMessage)
+        public ListViewItem ToListViewItem(TextMessage txtMessage,UserRole userRole)
         {
-            ListViewItem listViewItem = new ListViewItem(txtMessage.Sender.Name);
+            ListViewItem listViewItem = new ListViewItem(userRole == UserRole.Teacher ? TeacherRecipient : txtMessage.Sender.Name);
             ListViewItem.ListViewSubItem lisiDate = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.EmissionDate.Date.ToString("G"));
             ListViewItem.ListViewSubItem lisiTitle = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.Title);
             ListViewItem.ListViewSubItem lisiBody = new ListViewItem.ListViewSubItem(listViewItem, txtMessage.Body);

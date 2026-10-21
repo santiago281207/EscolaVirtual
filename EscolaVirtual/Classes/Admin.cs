@@ -187,7 +187,7 @@ namespace EscolaVirtual.Classes
 
             #region MENSAGENS TESTE
 
-            TextMessage textMessage1 = new TextMessage(teacher1, student1, "Bem vindo à escola!", "Sê bem vindo à nossa escola virtual!", DateTime.Now);
+            TextMessage textMessage1 = new TextMessage(teacher1, student1, "Bem vindo à escola!", "Sê bem vindo à nossa escola virtual!", DateTime.Now,true,false);
 
 
             #endregion
