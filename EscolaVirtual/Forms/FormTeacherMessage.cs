@@ -98,7 +98,12 @@ namespace EscolaVirtual
 
             if (studentName == "Todos os alunos")
             {
-                @class.Student.ForEach(std => std.Messages.Add(new TextMessage(teacher, std, txtTitle.Text, txtMessage.Text, DateTime.Now)));
+                bool firstMessage = true;
+                foreach (Student student in @class.Student)
+                {
+                    new TextMessage(teacher, student, txtTitle.Text, txtMessage.Text, DateTime.Now, firstMessage,true);
+                    firstMessage = false;
+                }
                 MessageBox.Show($"Mensagem enviada para todos os alunos da turma {@class.SchoolYear.YearName} {@class.Name}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -116,10 +121,26 @@ namespace EscolaVirtual
 
                 Student studentSelected = @class.Student.Find(std => std.SchoolNumber == schoolNumber);
 
-                studentSelected.Messages.Add(new TextMessage(teacher,studentSelected,txtTitle.Text,txtMessage.Text,DateTime.Now));
+                new TextMessage(teacher, studentSelected, txtTitle.Text, txtMessage.Text, DateTime.Now,true,false);
 
                 MessageBox.Show($"Mensagem enviada para {studentSelected.Name} com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+
+
+            cbClass.SelectedItem = null;
+
+            cbStudent.SelectedItem = null;
+            cbStudent.Enabled = false;
+
+            txtMessage.Text = "";
+            txtMessage.Enabled = false;
+
+            txtTitle.Text = "";
+            txtTitle.Enabled = false;
+
+            lvwMessages.Items.Clear();
+            List<ListViewItem> listViewItems = teacher.Messages.Select(msg => msg.ToListViewItem(msg, teacher.UserType)).ToList();
+            listViewItems.ForEach(msg => lvwMessages.Items.Add(msg));
         }
         
 
@@ -131,6 +152,9 @@ namespace EscolaVirtual
 
             classes.ForEach(cls => cbClass.Items.Add($"{cls.SchoolYear.YearName} {cls.Name}"));
 
+
+            List<ListViewItem> listViewItems = teacher.Messages.Select(msg => msg.ToListViewItem(msg, teacher.UserType)).ToList();
+            listViewItems.ForEach(msg => lvwMessages.Items.Add(msg));
             
         }
 

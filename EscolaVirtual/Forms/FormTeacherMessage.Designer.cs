@@ -47,6 +47,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.chStudent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chEmissionDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chMessageBody = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -54,6 +58,11 @@
             // 
             // lvwMessages
             // 
+            this.lvwMessages.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chStudent,
+            this.chEmissionDate,
+            this.chTitle,
+            this.chMessageBody});
             this.lvwMessages.HideSelection = false;
             this.lvwMessages.Location = new System.Drawing.Point(9, 18);
             this.lvwMessages.Margin = new System.Windows.Forms.Padding(2);
@@ -77,6 +86,7 @@
             // btnSend
             // 
             this.btnSend.BackColor = System.Drawing.Color.Green;
+            this.btnSend.Enabled = false;
             this.btnSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSend.Location = new System.Drawing.Point(590, 5);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2);
@@ -252,6 +262,29 @@
             this.panel7.Size = new System.Drawing.Size(728, 49);
             this.panel7.TabIndex = 13;
             // 
+            // chStudent
+            // 
+            this.chStudent.Text = "Aluno";
+            this.chStudent.Width = 80;
+            // 
+            // chEmissionDate
+            // 
+            this.chEmissionDate.Text = "Data de envio";
+            this.chEmissionDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chEmissionDate.Width = 100;
+            // 
+            // chTitle
+            // 
+            this.chTitle.Text = "Titulo da mensagem";
+            this.chTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chTitle.Width = 130;
+            // 
+            // chMessageBody
+            // 
+            this.chMessageBody.Text = "Corpo da mensagem";
+            this.chMessageBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chMessageBody.Width = 140;
+            // 
             // FormTeacherMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,5 +330,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ColumnHeader chStudent;
+        private System.Windows.Forms.ColumnHeader chEmissionDate;
+        private System.Windows.Forms.ColumnHeader chTitle;
+        private System.Windows.Forms.ColumnHeader chMessageBody;
     }
 }

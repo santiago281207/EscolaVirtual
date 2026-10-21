@@ -22,7 +22,7 @@ namespace EscolaVirtual.Forms
 
         private void FormStudentMessage_Load(object sender, EventArgs e)
         {
-            List<ListViewItem> listViewItems = student.Messages.Select(msg => msg.ToListViewItem(msg)).ToList();
+            List<ListViewItem> listViewItems = student.Messages.Select(msg => msg.ToListViewItem(msg,student.UserType)).ToList();
             listViewItems.ForEach(lvi => lvwMessage.Items.Add(lvi));
         }
 

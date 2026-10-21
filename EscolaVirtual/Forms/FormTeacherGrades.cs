@@ -42,7 +42,7 @@ namespace EscolaVirtual.Forms
             string selectedClass = cbClass.SelectedItem.ToString();
             string selectedSubject = cbSubject.SelectedItem.ToString();
             string selectedModule = cbModule.SelectedItem.ToString();
-            string schoolNumber;
+            string schoolNumber = "";
             
 
             for(int i = 0;i < selectedStudent.Length;i++)
