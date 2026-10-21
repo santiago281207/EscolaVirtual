@@ -72,7 +72,7 @@
             this.formLogin.Controls.Add(this.lblLogin);
             this.formLogin.Controls.Add(this.lbl_VirtualSchool);
             this.formLogin.Location = new System.Drawing.Point(351, -1);
-            this.formLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formLogin.Margin = new System.Windows.Forms.Padding(4);
             this.formLogin.Name = "formLogin";
             this.formLogin.Size = new System.Drawing.Size(575, 802);
             this.formLogin.TabIndex = 0;
@@ -81,7 +81,7 @@
             // 
             this.pbLogoInete.Image = global::EscolaVirtual.Properties.Resources.icon;
             this.pbLogoInete.Location = new System.Drawing.Point(125, 76);
-            this.pbLogoInete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogoInete.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogoInete.Name = "pbLogoInete";
             this.pbLogoInete.Size = new System.Drawing.Size(113, 97);
             this.pbLogoInete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogin.Location = new System.Drawing.Point(69, 593);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(439, 46);
             this.btnLogin.TabIndex = 6;
@@ -111,7 +111,7 @@
             this.pPassword.Controls.Add(this.pbPassword);
             this.pPassword.Controls.Add(this.txtPassword);
             this.pPassword.Location = new System.Drawing.Point(69, 401);
-            this.pPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pPassword.Name = "pPassword";
             this.pPassword.Size = new System.Drawing.Size(439, 44);
             this.pPassword.TabIndex = 5;
@@ -120,7 +120,7 @@
             // 
             this.pCorPassword.BackColor = System.Drawing.Color.Green;
             this.pCorPassword.Location = new System.Drawing.Point(0, 38);
-            this.pCorPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCorPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pCorPassword.Name = "pCorPassword";
             this.pCorPassword.Size = new System.Drawing.Size(439, 5);
             this.pCorPassword.TabIndex = 4;
@@ -129,7 +129,7 @@
             // 
             this.pbPassword.Image = global::EscolaVirtual.Properties.Resources.icons8_cadeado_50;
             this.pbPassword.Location = new System.Drawing.Point(401, 6);
-            this.pbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pbPassword.Name = "pbPassword";
             this.pbPassword.Size = new System.Drawing.Size(32, 31);
             this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +139,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(3, 12);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 4;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -165,7 +165,7 @@
             this.pUsername.Controls.Add(this.pbUsername);
             this.pUsername.Controls.Add(this.txtLogin);
             this.pUsername.Location = new System.Drawing.Point(69, 315);
-            this.pUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(439, 44);
             this.pUsername.TabIndex = 3;
@@ -174,7 +174,7 @@
             // 
             this.pCorUsername.BackColor = System.Drawing.Color.Green;
             this.pCorUsername.Location = new System.Drawing.Point(0, 38);
-            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCorUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pCorUsername.Name = "pCorUsername";
             this.pCorUsername.Size = new System.Drawing.Size(439, 5);
             this.pCorUsername.TabIndex = 4;
@@ -183,7 +183,7 @@
             // 
             this.pbUsername.Image = global::EscolaVirtual.Properties.Resources.icons8_pessoa_do_sexo_masculino_24;
             this.pbUsername.Location = new System.Drawing.Point(401, 6);
-            this.pbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.pbUsername.Name = "pbUsername";
             this.pbUsername.Size = new System.Drawing.Size(32, 31);
             this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +193,7 @@
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(3, 12);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.MaxLength = 9;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(389, 22);
@@ -233,7 +233,7 @@
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
