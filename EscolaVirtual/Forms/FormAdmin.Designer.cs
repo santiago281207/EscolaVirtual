@@ -496,7 +496,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(278, 41);
             this.btnEdit.TabIndex = 10;
-            this.btnEdit.Text = "Editar";
+            this.btnEdit.Text = "Aprovar alterações";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // pAdmin
