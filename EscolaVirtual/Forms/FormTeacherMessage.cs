@@ -30,7 +30,6 @@ namespace EscolaVirtual
             int firstLetter = -1;
             
 
-            //faz uma que se chame todos e mande msg para todos os alunos
             if(cbClass.SelectedItem != null)
             {
                 string selectedClass = cbClass.SelectedItem.ToString();
