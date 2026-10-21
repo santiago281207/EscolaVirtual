@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddTeacher));
             this.lblNif = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtNif = new System.Windows.Forms.TextBox();
@@ -49,77 +50,73 @@
             // lblNif
             // 
             this.lblNif.AutoSize = true;
-            this.lblNif.Location = new System.Drawing.Point(9, 71);
-            this.lblNif.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNif.Location = new System.Drawing.Point(12, 87);
             this.lblNif.Name = "lblNif";
-            this.lblNif.Size = new System.Drawing.Size(24, 13);
+            this.lblNif.Size = new System.Drawing.Size(28, 16);
             this.lblNif.TabIndex = 0;
             this.lblNif.Text = "NIF";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(9, 32);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Location = new System.Drawing.Point(12, 39);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.MaxLength = 30;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(386, 20);
+            this.txtName.Size = new System.Drawing.Size(513, 22);
             this.txtName.TabIndex = 1;
             // 
             // txtNif
             // 
-            this.txtNif.Location = new System.Drawing.Point(9, 86);
-            this.txtNif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNif.Location = new System.Drawing.Point(12, 106);
+            this.txtNif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNif.MaxLength = 9;
             this.txtNif.Name = "txtNif";
-            this.txtNif.Size = new System.Drawing.Size(386, 20);
+            this.txtNif.Size = new System.Drawing.Size(513, 22);
             this.txtNif.TabIndex = 2;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(9, 16);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(12, 20);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(44, 16);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Nome";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(9, 146);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Location = new System.Drawing.Point(12, 180);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.MaxLength = 30;
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(386, 20);
+            this.txtPass.Size = new System.Drawing.Size(513, 22);
             this.txtPass.TabIndex = 4;
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(7, 131);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPass.Location = new System.Drawing.Point(9, 161);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(53, 13);
+            this.lblPass.Size = new System.Drawing.Size(67, 16);
             this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Password";
             // 
             // lblVPass
             // 
             this.lblVPass.AutoSize = true;
-            this.lblVPass.Location = new System.Drawing.Point(9, 190);
-            this.lblVPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVPass.Location = new System.Drawing.Point(12, 234);
             this.lblVPass.Name = "lblVPass";
-            this.lblVPass.Size = new System.Drawing.Size(98, 13);
+            this.lblVPass.Size = new System.Drawing.Size(124, 16);
             this.lblVPass.TabIndex = 6;
             this.lblVPass.Text = "Vereficar Password";
             // 
             // txtVPass
             // 
-            this.txtVPass.Location = new System.Drawing.Point(9, 206);
-            this.txtVPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVPass.Location = new System.Drawing.Point(12, 254);
+            this.txtVPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVPass.MaxLength = 30;
             this.txtVPass.Name = "txtVPass";
-            this.txtVPass.Size = new System.Drawing.Size(386, 20);
+            this.txtVPass.Size = new System.Drawing.Size(513, 22);
             this.txtVPass.TabIndex = 7;
             // 
             // btnBack
@@ -127,10 +124,10 @@
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(12, 14);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(16, 17);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(104, 37);
+            this.btnBack.Size = new System.Drawing.Size(139, 46);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -142,10 +139,10 @@
             this.btnAdd.Enabled = false;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(267, 14);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(356, 17);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 37);
+            this.btnAdd.Size = new System.Drawing.Size(139, 46);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -155,53 +152,53 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Location = new System.Drawing.Point(9, 246);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(12, 303);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 64);
+            this.panel1.Size = new System.Drawing.Size(515, 79);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(9, 159);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(12, 196);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(383, 3);
+            this.panel2.Size = new System.Drawing.Size(511, 4);
             this.panel2.TabIndex = 11;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(9, 220);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(12, 271);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(383, 3);
+            this.panel3.Size = new System.Drawing.Size(511, 4);
             this.panel3.TabIndex = 12;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(9, 101);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(12, 124);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(383, 3);
+            this.panel4.Size = new System.Drawing.Size(511, 4);
             this.panel4.TabIndex = 13;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Green;
-            this.panel5.Location = new System.Drawing.Point(9, 46);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(12, 57);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(383, 3);
+            this.panel5.Size = new System.Drawing.Size(511, 4);
             this.panel5.TabIndex = 12;
             // 
             // FormAddTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 321);
+            this.ClientSize = new System.Drawing.Size(539, 395);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -216,9 +213,11 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblNif);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormAddTeacher";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Professor";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

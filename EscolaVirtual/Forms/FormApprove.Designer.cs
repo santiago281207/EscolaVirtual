@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApprove));
             this.lvwRequest = new System.Windows.Forms.ListView();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
@@ -40,10 +41,10 @@
             // lvwRequest
             // 
             this.lvwRequest.HideSelection = false;
-            this.lvwRequest.Location = new System.Drawing.Point(9, 10);
-            this.lvwRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwRequest.Location = new System.Drawing.Point(12, 12);
+            this.lvwRequest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwRequest.Name = "lvwRequest";
-            this.lvwRequest.Size = new System.Drawing.Size(424, 306);
+            this.lvwRequest.Size = new System.Drawing.Size(564, 376);
             this.lvwRequest.TabIndex = 0;
             this.lvwRequest.UseCompatibleStateImageBehavior = false;
             // 
@@ -52,10 +53,10 @@
             this.btnReject.BackColor = System.Drawing.Color.Green;
             this.btnReject.Enabled = false;
             this.btnReject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReject.Location = new System.Drawing.Point(12, 20);
-            this.btnReject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReject.Location = new System.Drawing.Point(16, 25);
+            this.btnReject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(96, 46);
+            this.btnReject.Size = new System.Drawing.Size(128, 57);
             this.btnReject.TabIndex = 1;
             this.btnReject.Text = "Rejeitar";
             this.btnReject.UseVisualStyleBackColor = false;
@@ -65,10 +66,10 @@
             this.btnApprove.BackColor = System.Drawing.Color.Green;
             this.btnApprove.Enabled = false;
             this.btnApprove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnApprove.Location = new System.Drawing.Point(166, 20);
-            this.btnApprove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApprove.Location = new System.Drawing.Point(221, 25);
+            this.btnApprove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(96, 46);
+            this.btnApprove.Size = new System.Drawing.Size(128, 57);
             this.btnApprove.TabIndex = 2;
             this.btnApprove.Text = "Aprovar";
             this.btnApprove.UseVisualStyleBackColor = false;
@@ -77,10 +78,10 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(314, 20);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(419, 25);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(96, 46);
+            this.btnBack.Size = new System.Drawing.Size(128, 57);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -91,34 +92,36 @@
             this.panel1.Controls.Add(this.btnApprove);
             this.panel1.Controls.Add(this.btnReject);
             this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Location = new System.Drawing.Point(9, 321);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(12, 395);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 81);
+            this.panel1.Size = new System.Drawing.Size(564, 100);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(10, 313);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(13, 385);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 3);
+            this.panel2.Size = new System.Drawing.Size(563, 4);
             this.panel2.TabIndex = 5;
             // 
             // FormApprove
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 410);
+            this.ClientSize = new System.Drawing.Size(588, 505);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvwRequest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormApprove";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aprovar";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
