@@ -38,9 +38,8 @@ namespace EscolaVirtual
 
         private void btnChangeData_Click(object sender, EventArgs e)
         {
-            
-        //    FormChangeDataTeacher formchangedatateacher = new FormChangeData(teacher);
-         //   formchangedatateacher.ShowDialog();
+            FormChangeDataTeacher formchangedatateacher = new FormChangeDataTeacher(teacher,admin);
+            formchangedatateacher.ShowDialog();
         }
 
         private void btnMessages_Click(object sender, EventArgs e)
