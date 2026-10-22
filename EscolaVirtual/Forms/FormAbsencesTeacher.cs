@@ -182,7 +182,7 @@ namespace EscolaVirtual
             Student student = @class.Student.FirstOrDefault(std => std.SchoolNumber == schoolNumber);
 
             string justification = rbJustified.Checked == true ? txtJustification.Text : "Sem justificação";
-
+            
             student.Absence.Add(new Absence(
                                 rbJustified.Checked == true ? AbsenceStatus.Justified : AbsenceStatus.Unjustified
                                 , student

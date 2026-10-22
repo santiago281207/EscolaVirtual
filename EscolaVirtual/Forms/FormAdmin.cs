@@ -88,6 +88,13 @@ namespace EscolaVirtual
             tcCategories.SelectedIndex = 1;
             tcCategories.SelectedIndex = 0;
 
+            if(admin.DataChanges.Count == 0)
+            {
+                btnEdit.Enabled = false;
+            }else
+            {
+                btnEdit.Enabled = true;
+            }
         }
 
         private void btnSubject_Click(object sender, EventArgs e)
@@ -113,5 +120,18 @@ namespace EscolaVirtual
             FormAssociate formassociate = new FormAssociate(admin);
             formassociate.ShowDialog();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            FormApprove formApprove = new FormApprove(admin);
+            formApprove.ShowDialog();
+
+            if(formApprove.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
+        }
+
     }
 }

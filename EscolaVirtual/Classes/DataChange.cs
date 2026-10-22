@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EscolaVirtual.Classes
 {
@@ -10,40 +11,69 @@ namespace EscolaVirtual.Classes
     {
         public DataChange(Admin admin,Teacher teacher,string changeTitle,string description,string newName,string newEmail,string newAddress,string newPhoneNumber)
         {
-            
+            this.Id = admin.DataChanges.Count + 1;
             this.Teacher = teacher;
             this.ChangeTitle = changeTitle;
             this.Description = description;
-            IsApproved = false;
+            IsApproved = null;
 
             this.NewName = newName;
             this.NewEmail = newEmail;
             this.NewAddress = newAddress;
-            this.NewPhoneNumber = NewPhoneNumber;
+            this.NewPhoneNumber = newPhoneNumber;
 
             admin.DataChanges.Add(this);
         }
 
         public DataChange(Admin admin,Student student, string changeTitle, string description, string newName, string newEmail, string newAddress, string newPhoneNumber)
         {
+            this.Id = admin.DataChanges.Count + 1;
             this.Student = student;
             this.ChangeTitle = changeTitle;
             this.Description = description;
-            IsApproved = false;
+            IsApproved = null;
 
             this.NewName = newName;
             this.NewEmail = newEmail;
             this.NewAddress = newAddress;
-            this.NewPhoneNumber = NewPhoneNumber;
+            this.NewPhoneNumber = newPhoneNumber;
 
             admin.DataChanges.Add(this);
         }
 
-        private bool m_isApproved;
-        public bool IsApproved 
-        { 
-          get { return m_isApproved; }
-          set { m_isApproved = value; } 
+        private int m_id;
+        public int Id
+        {
+            get { return m_id; }
+            set { m_id = value; }
+        }
+
+        private bool? m_isApproved;
+        public bool? IsApproved
+        {
+            get { return m_isApproved; }
+            set
+            {
+                m_isApproved = value;
+
+                if (m_isApproved == true)
+                {
+                    if (Teacher != null)
+                    {
+                        Teacher.Name = NewName;
+                        Teacher.Email = NewEmail;
+                        Teacher.Address = NewAddress;
+                        Teacher.PhoneNumber = NewPhoneNumber;
+                    }
+                    else if (Student != null)
+                    {
+                        Student.Name = NewName;
+                        Student.Email = NewEmail;
+                        Student.Address = NewAddress;
+                        Student.PhoneNumber = NewPhoneNumber;
+                    }
+                }
+            }
         }
 
         private Teacher m_teacher;
@@ -96,6 +126,17 @@ namespace EscolaVirtual.Classes
         {
             get { return m_newPhoneNumber; }
             set { m_newPhoneNumber = value; }
+        }
+
+        public ListViewItem ToListViewItem(DataChange dataChange)
+        {
+
+            ListViewItem listViewItem = new ListViewItem(Student == null ? Teacher.Name : Student.Name);
+            ListViewItem.ListViewSubItem lisiDescription = new ListViewItem.ListViewSubItem(listViewItem,Description);
+
+            listViewItem.SubItems.Add(lisiDescription);
+            listViewItem.Tag = Id;
+            return listViewItem;
         }
 
 

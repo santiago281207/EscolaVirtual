@@ -204,6 +204,14 @@ namespace EscolaVirtual.Classes
             Transaction transaction2 = new Transaction(TransactionType.Withdraw, 10.3m, DateTime.Now, schoolCard1);
 
             #endregion
+
+            #region PEDIDOS DE ALTERACAO
+            DataChange dataChange1 = new DataChange(this,student1, "Quero mudar as coisas", "Bora mudar tudo", "Vieira", "vieirafase@gmail.com", "rua fixe 123", "900900900");
+
+
+
+
+            #endregion
             //=========================================
             //=========================================
             //=========================================
