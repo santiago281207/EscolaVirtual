@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EscolaVirtual
 {
@@ -40,6 +41,45 @@ namespace EscolaVirtual
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (admin.ClassYears.Any(cy => cy.YearName == txtAddYear.Text))
+            {
+                MessageBox.Show("Ano letivo já existe!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ClassYear newYear = new ClassYear(txtAddYear.Text);
+                admin.ClassYears.Add(newYear);
+                MessageBox.Show("Ano letivo adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+        private void txtAddYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != 'º')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == 'º' && txtAddYear.SelectionStart != txtAddYear.Text.Length)
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == 'º' && txtAddYear.Text.Contains("º"))
+            {
+                e.Handled = true;
+            }
+
+            if (char.IsDigit(e.KeyChar) && txtAddYear.Text.Length >= 2)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
