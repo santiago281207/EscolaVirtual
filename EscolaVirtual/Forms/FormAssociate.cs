@@ -93,28 +93,49 @@ namespace EscolaVirtual.Forms
             Teacher teacher = cbTeacher.SelectedItem as Teacher;
             Subject subject = cbSubject.SelectedItem as Subject;
 
-            TeacherClassSubject validCheck = teacherClassSubjects.FirstOrDefault(tcs => tcs.Class == @class && tcs.Subject == subject && tcs.Teacher == teacher);
+            TeacherClassSubject validCheck = teacherClassSubjects.FirstOrDefault(
+                tcs => tcs.Class == @class &&
+                       tcs.Subject == subject &&
+                       tcs.Teacher == teacher);
 
-            if(validCheck != null)
+            if (validCheck != null)
             {
-                MessageBox.Show("Já existe esta relação!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Já existe esta relação!",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                return;
             }
 
             validCheck = teacherClassSubjects.FirstOrDefault(tcs => tcs.Class == @class && tcs.Subject == subject);
 
-            if(validCheck != null)
+            if (validCheck != null)
             {
-                MessageBox.Show("Já existe um professor a dar aulas na disciplina desta turma!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
-            {
-                admin.TeacherClassSubjects.Add(new TeacherClassSubject(teacher, subject, @class));
+                MessageBox.Show(
+                    "Já existe um professor a dar aulas na disciplina desta turma!",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                return;
             }
+
+            admin.TeacherClassSubjects.Add(new TeacherClassSubject(teacher, subject, @class));
 
             cbClass.SelectedItem = null;
             cbSubject.SelectedItem = null;
             cbTeacher.SelectedItem = null;
 
-            btnAdd.Enabled = cbClass.SelectedItem != null && cbSubject.SelectedItem != null && cbTeacher.SelectedItem != null;
+            btnAdd.Enabled = cbClass.SelectedItem != null &&
+                             cbSubject.SelectedItem != null &&
+                             cbTeacher.SelectedItem != null;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
