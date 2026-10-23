@@ -57,7 +57,10 @@ namespace EscolaVirtual.Classes
 
         }
 
-
+        public string ClassNameWithYear
+        {
+            get { return Name + " - " + SchoolYear.YearName + " Ano"; }
+        }
 
 
     }

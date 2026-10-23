@@ -145,7 +145,7 @@ namespace EscolaVirtual
 
         private void txtJustification_TextChanged(object sender, EventArgs e)
         {
-            if(txtJustification.Text.Length > 0 && lvwAbsences.SelectedIndices.Count > 0)
+            if(txtJustification.Text.Trim().Length > 0 && lvwAbsences.SelectedIndices.Count > 0)
             {
                 btnConfirm.Enabled = true;
             }else

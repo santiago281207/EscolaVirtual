@@ -35,14 +35,26 @@ namespace EscolaVirtual
 
         private void btnAddYear_Click(object sender, EventArgs e)
         {
-            FormAddYear formaddyear = new FormAddYear(admin);
-            formaddyear.ShowDialog();
+            FormAddYear formAddYear = new FormAddYear(admin);
+            formAddYear.ShowDialog();
+
+            if(formAddYear.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            FormAddStudent formaddstudent = new FormAddStudent(admin);
-            formaddstudent.ShowDialog();
+            FormAddStudent formAddStudent = new FormAddStudent(admin);
+            formAddStudent.ShowDialog();
+
+            if (formAddStudent.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
         }
 
         private void tcCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,20 +111,38 @@ namespace EscolaVirtual
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
-            FormCreateSubject formaddsubject = new FormCreateSubject(admin);
-            formaddsubject.ShowDialog();
+            FormCreateSubject formAddSubject = new FormCreateSubject(admin);
+            formAddSubject.ShowDialog();
+
+            if(formAddSubject.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
         }
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-            FormAddTeacher formaddteacher = new FormAddTeacher(admin);
-            formaddteacher.ShowDialog();
+            FormAddTeacher formAddTeacher = new FormAddTeacher(admin);
+            formAddTeacher.ShowDialog();
+
+            if (formAddTeacher.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            FormCreateClass formcreateclass  = new FormCreateClass(admin);
-            formcreateclass.ShowDialog();
+            FormCreateClass formCreateClass  = new FormCreateClass(admin);
+            formCreateClass.ShowDialog();
+
+            if (formCreateClass.Changed)
+            {
+                tcCategories.SelectedIndex = 1;
+                tcCategories.SelectedIndex = 0;
+            }
         }
 
         private void btnLink_Click(object sender, EventArgs e)

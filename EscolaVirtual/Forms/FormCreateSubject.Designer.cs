@@ -43,7 +43,7 @@
             // 
             this.lblClassYear.AutoSize = true;
             this.lblClassYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassYear.Location = new System.Drawing.Point(99, 67);
+            this.lblClassYear.Location = new System.Drawing.Point(89, 65);
             this.lblClassYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClassYear.Name = "lblClassYear";
             this.lblClassYear.Size = new System.Drawing.Size(121, 18);
@@ -54,7 +54,7 @@
             // 
             this.lblSubjectName.AutoSize = true;
             this.lblSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjectName.Location = new System.Drawing.Point(99, 148);
+            this.lblSubjectName.Location = new System.Drawing.Point(89, 147);
             this.lblSubjectName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubjectName.Name = "lblSubjectName";
             this.lblSubjectName.Size = new System.Drawing.Size(136, 18);
@@ -69,7 +69,7 @@
             this.btnCreateSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateSubject.ForeColor = System.Drawing.Color.White;
             this.btnCreateSubject.Location = new System.Drawing.Point(259, 234);
-            this.btnCreateSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateSubject.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateSubject.Name = "btnCreateSubject";
             this.btnCreateSubject.Size = new System.Drawing.Size(133, 36);
             this.btnCreateSubject.TabIndex = 3;
@@ -84,7 +84,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(92, 234);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(133, 36);
             this.btnExit.TabIndex = 4;
@@ -100,7 +100,7 @@
             "10º Ano",
             "11º Ano"});
             this.cbClassYear.Location = new System.Drawing.Point(92, 96);
-            this.cbClassYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClassYear.Margin = new System.Windows.Forms.Padding(2);
             this.cbClassYear.Name = "cbClassYear";
             this.cbClassYear.Size = new System.Drawing.Size(300, 21);
             this.cbClassYear.TabIndex = 5;
@@ -108,12 +108,14 @@
             // 
             // txtSubjectName
             // 
+            this.txtSubjectName.Enabled = false;
             this.txtSubjectName.Location = new System.Drawing.Point(92, 178);
-            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.Size = new System.Drawing.Size(300, 20);
             this.txtSubjectName.TabIndex = 6;
             this.txtSubjectName.TextChanged += new System.EventHandler(this.txtSubjectName_TextChanged);
+            this.txtSubjectName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubjectName_KeyPress);
             // 
             // pnlCreate
             // 
@@ -139,7 +141,7 @@
             this.Controls.Add(this.pnlCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormCreateSubject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

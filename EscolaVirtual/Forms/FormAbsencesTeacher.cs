@@ -183,12 +183,12 @@ namespace EscolaVirtual
 
             string justification = rbJustified.Checked == true ? txtJustification.Text : "Sem justificação";
             
-            student.Absence.Add(new Absence(
+            new Absence(
                                 rbJustified.Checked == true ? AbsenceStatus.Justified : AbsenceStatus.Unjustified
                                 , student
                                 , dtpAbsenceDate.Value
                                 , subject
-                                , justification));
+                                , justification);
 
             cbSubject.SelectedItem = null;
             cbSubject.Enabled = false;
