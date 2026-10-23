@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\DataChange.cs" />
     <Compile Include="Classes\Enums.cs" />
     <Compile Include="Classes\Methods.cs" />
@@ -273,6 +274,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Credenciais.txt" />
+    <None Include="Resources\31_104880.png" />
+    <Content Include="Resources\e-mail.png" />
+    <Content Include="Resources\Phone_43546.png" />
+    <None Include="Resources\Phone_435461.png" />
     <None Include="Resources\245204.png" />
     <None Include="Resources\icone-du-calendrier-des-evenements-vert.png" />
     <None Include="Resources\google-classroom.jpg" />

@@ -1,4 +1,5 @@
 ﻿using EscolaVirtual.Classes;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,13 @@ namespace EscolaVirtual.Forms
 {
     public partial class FormCreateSubject : Form
     {
+        private bool changed;
+
+        public bool Changed
+        {
+            get { return changed; }
+            set { changed = value; }
+        }
         Admin admin;
         public FormCreateSubject(Admin admin)
         {
@@ -22,19 +30,23 @@ namespace EscolaVirtual.Forms
             
         }
 
-        private void UpdateBouttuonState() 
+        private void UpdateButtonState() 
         {
             bool isValid = cbClassYear.SelectedItem != null && !string.IsNullOrWhiteSpace(txtSubjectName.Text);
             btnCreateSubject.Enabled = isValid;
         }
         private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateBouttuonState();
+            UpdateButtonState();
+            if(cbClassYear.SelectedItem != null)
+            {
+                txtSubjectName.Enabled = true;
+            }
         }
 
         private void txtSubjectName_TextChanged(object sender, EventArgs e)
         {
-            UpdateBouttuonState();
+            UpdateButtonState();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -91,9 +103,14 @@ namespace EscolaVirtual.Forms
             selectedClassYear.Subject.Add(newSubject);
 
             MessageBox.Show("Disciplina criada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.DialogResult = DialogResult.OK;
+            changed = true;
             txtSubjectName.Clear();
             cbClassYear.SelectedIndex = -1;
+        }
+
+        private void txtSubjectName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsDigit(e.KeyChar) || e.KeyChar == 32 || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar);
         }
     }
 }

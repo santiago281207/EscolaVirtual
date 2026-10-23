@@ -48,46 +48,54 @@
             this.pCreate.Controls.Add(this.lblClassName);
             this.pCreate.Controls.Add(this.btnExit);
             this.pCreate.Controls.Add(this.btnCreateClass);
-            this.pCreate.Location = new System.Drawing.Point(191, -1);
-            this.pCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pCreate.Location = new System.Drawing.Point(143, -1);
+            this.pCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCreate.Name = "pCreate";
-            this.pCreate.Size = new System.Drawing.Size(605, 377);
+            this.pCreate.Size = new System.Drawing.Size(454, 306);
             this.pCreate.TabIndex = 0;
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(57, 185);
-            this.txtClassName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtClassName.Enabled = false;
+            this.txtClassName.Location = new System.Drawing.Point(43, 145);
+            this.txtClassName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtClassName.MaxLength = 20;
             this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(481, 22);
+            this.txtClassName.Size = new System.Drawing.Size(362, 20);
             this.txtClassName.TabIndex = 5;
+            this.txtClassName.TextChanged += new System.EventHandler(this.txtClassName_TextChanged);
+            this.txtClassName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClassName_KeyPress);
             // 
             // cbClassYear
             // 
             this.cbClassYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClassYear.FormattingEnabled = true;
-            this.cbClassYear.Location = new System.Drawing.Point(57, 91);
-            this.cbClassYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbClassYear.Location = new System.Drawing.Point(43, 61);
+            this.cbClassYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbClassYear.Name = "cbClassYear";
-            this.cbClassYear.Size = new System.Drawing.Size(481, 24);
+            this.cbClassYear.Size = new System.Drawing.Size(362, 21);
             this.cbClassYear.TabIndex = 4;
+            this.cbClassYear.SelectedIndexChanged += new System.EventHandler(this.cbClassYear_SelectedIndexChanged);
             // 
             // lblClassYear
             // 
             this.lblClassYear.AutoSize = true;
-            this.lblClassYear.Location = new System.Drawing.Point(53, 71);
+            this.lblClassYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblClassYear.Location = new System.Drawing.Point(40, 41);
+            this.lblClassYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClassYear.Name = "lblClassYear";
-            this.lblClassYear.Size = new System.Drawing.Size(92, 16);
+            this.lblClassYear.Size = new System.Drawing.Size(101, 18);
             this.lblClassYear.TabIndex = 3;
             this.lblClassYear.Text = "Ano da Turma";
             // 
             // lblClassName
             // 
             this.lblClassName.AutoSize = true;
-            this.lblClassName.Location = new System.Drawing.Point(53, 165);
+            this.lblClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblClassName.Location = new System.Drawing.Point(40, 125);
+            this.lblClassName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(105, 16);
+            this.lblClassName.Size = new System.Drawing.Size(116, 18);
             this.lblClassName.TabIndex = 2;
             this.lblClassName.Text = "Nome da Turma";
             // 
@@ -97,10 +105,10 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(379, 270);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(284, 219);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(159, 57);
+            this.btnExit.Size = new System.Drawing.Size(119, 46);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -113,28 +121,30 @@
             this.btnCreateClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateClass.ForeColor = System.Drawing.Color.White;
-            this.btnCreateClass.Location = new System.Drawing.Point(57, 270);
-            this.btnCreateClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreateClass.Location = new System.Drawing.Point(43, 219);
+            this.btnCreateClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreateClass.Name = "btnCreateClass";
-            this.btnCreateClass.Size = new System.Drawing.Size(159, 57);
+            this.btnCreateClass.Size = new System.Drawing.Size(119, 46);
             this.btnCreateClass.TabIndex = 0;
             this.btnCreateClass.Text = "Criar Turma";
             this.btnCreateClass.UseVisualStyleBackColor = false;
+            this.btnCreateClass.Click += new System.EventHandler(this.btnCreateClass_Click);
             // 
             // FormCreateClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1003, 375);
+            this.ClientSize = new System.Drawing.Size(752, 305);
             this.Controls.Add(this.pCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormCreateClass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criar Turma";
+            this.Load += new System.EventHandler(this.FormCreateClass_Load);
             this.pCreate.ResumeLayout(false);
             this.pCreate.PerformLayout();
             this.ResumeLayout(false);

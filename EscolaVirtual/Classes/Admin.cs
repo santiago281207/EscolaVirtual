@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace EscolaVirtual.Classes
 {
+    
+
     public class Admin
     {
+        
 
         public Admin()
         {
@@ -15,7 +18,7 @@ namespace EscolaVirtual.Classes
             this.Password = "0000";
         }
 
-        const int maxStudentsPerClass = 25;
+        
 
         #region Properties and Members
         private List<ClassYear> m_classYears = new List<ClassYear>();
@@ -137,7 +140,7 @@ namespace EscolaVirtual.Classes
 
             #region ALUNOS TESTE
 
-            Student student1 = new Student("3333", "João", "202601", "333333333","joazinhofixe143@gmail.com","982910238","Avenida dos aliados 38 2735",class1,null);
+            Student student1 = new Student("3333", "João", "202601", "333333333","joazinhofixe143@gmail.com","982910238","Avenida dos aliados 38 2735",class1);
             SchoolCard schoolCard1 = new SchoolCard(0, student1);
 
             class1.Student.Add(student1);

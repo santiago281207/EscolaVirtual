@@ -14,6 +14,14 @@ namespace EscolaVirtual
 {
     public partial class FormAddYear : Form
     {
+        private bool changed;
+
+        public bool Changed
+        {
+            get { return changed; }
+            set { changed = value; }
+        }
+
         Admin admin;
         public FormAddYear(Admin admin)
         {
@@ -55,6 +63,7 @@ namespace EscolaVirtual
                 admin.ClassYears.Add(newYear);
                 MessageBox.Show("Ano letivo adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                changed = true;
             }
         }
 

@@ -10,11 +10,11 @@ namespace EscolaVirtual.Classes
 {
     public class Student : User
     {
-        public Student(string password, string name, string schoolNumber, string nif, string email, string phoneNumber, string address, Class schoolClass, SchoolCard schoolCard) : base(password,name,nif,email,phoneNumber,address,UserRole.Student)
+        public Student(string password, string name, string schoolNumber, string nif, string email, string phoneNumber, string address, Class schoolClass) : base(password,name,nif,email,phoneNumber,address,UserRole.Student)
         {
             this.SchoolNumber = schoolNumber;
             this.Class = schoolClass;
-            this.SchoolCard = schoolCard;
+            this.SchoolCard = new SchoolCard(0.0m,this);
         }
 
         #region Properties and Members
