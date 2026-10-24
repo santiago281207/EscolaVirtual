@@ -150,7 +150,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.ForeColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(6, 86);
+            this.panel2.Location = new System.Drawing.Point(7, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 3);
@@ -160,7 +160,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.ForeColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(7, 132);
+            this.panel3.Location = new System.Drawing.Point(7, 136);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(344, 3);
@@ -170,7 +170,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.ForeColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(7, 44);
+            this.panel4.Location = new System.Drawing.Point(7, 49);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(344, 3);
@@ -193,7 +193,7 @@
             this.Controls.Add(this.cbTeacher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormAssociate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
