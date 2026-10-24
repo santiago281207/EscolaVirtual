@@ -112,10 +112,10 @@
             this.pnlCreate.Controls.Add(this.btnExit);
             this.pnlCreate.Controls.Add(this.btnCreateStudent);
             this.pnlCreate.Controls.Add(this.lblName);
-            this.pnlCreate.Location = new System.Drawing.Point(154, 1);
+            this.pnlCreate.Location = new System.Drawing.Point(113, 1);
             this.pnlCreate.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCreate.Name = "pnlCreate";
-            this.pnlCreate.Size = new System.Drawing.Size(431, 600);
+            this.pnlCreate.Size = new System.Drawing.Size(507, 600);
             this.pnlCreate.TabIndex = 0;
             // 
             // panel9
@@ -123,7 +123,7 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.pictureBox5);
             this.panel9.Controls.Add(this.txtAddress);
-            this.panel9.Location = new System.Drawing.Point(51, 290);
+            this.panel9.Location = new System.Drawing.Point(91, 288);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(329, 36);
@@ -164,7 +164,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(51, 274);
+            this.lblAddress.Location = new System.Drawing.Point(91, 272);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(43, 13);
@@ -176,7 +176,7 @@
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.pictureBox4);
             this.panel7.Controls.Add(this.txtConfirmPassword);
-            this.panel7.Location = new System.Drawing.Point(50, 412);
+            this.panel7.Location = new System.Drawing.Point(90, 410);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(329, 36);
@@ -217,7 +217,7 @@
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(50, 396);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(90, 394);
             this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(100, 13);
@@ -229,7 +229,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.txtPassword);
-            this.panel5.Location = new System.Drawing.Point(50, 351);
+            this.panel5.Location = new System.Drawing.Point(90, 349);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(329, 36);
@@ -270,7 +270,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(50, 335);
+            this.lblPassword.Location = new System.Drawing.Point(90, 333);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
@@ -282,7 +282,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.txtPhoneNumber);
-            this.panel3.Location = new System.Drawing.Point(50, 235);
+            this.panel3.Location = new System.Drawing.Point(90, 233);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(329, 36);
@@ -323,7 +323,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(50, 219);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(90, 217);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(107, 13);
@@ -335,7 +335,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Location = new System.Drawing.Point(49, 174);
+            this.panel1.Location = new System.Drawing.Point(89, 172);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 36);
@@ -376,7 +376,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(49, 158);
+            this.lblEmail.Location = new System.Drawing.Point(89, 156);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
@@ -388,7 +388,7 @@
             this.pClass.Controls.Add(this.cbClass);
             this.pClass.Controls.Add(this.pColorClass);
             this.pClass.Controls.Add(this.pbClass);
-            this.pClass.Location = new System.Drawing.Point(50, 478);
+            this.pClass.Location = new System.Drawing.Point(90, 476);
             this.pClass.Margin = new System.Windows.Forms.Padding(2);
             this.pClass.Name = "pClass";
             this.pClass.Size = new System.Drawing.Size(329, 36);
@@ -429,7 +429,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(50, 462);
+            this.lblClass.Location = new System.Drawing.Point(90, 460);
             this.lblClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(37, 13);
@@ -441,7 +441,7 @@
             this.pNIF.Controls.Add(this.pColorNIF);
             this.pNIF.Controls.Add(this.pbNIF);
             this.pNIF.Controls.Add(this.txtNif);
-            this.pNIF.Location = new System.Drawing.Point(49, 109);
+            this.pNIF.Location = new System.Drawing.Point(89, 107);
             this.pNIF.Margin = new System.Windows.Forms.Padding(2);
             this.pNIF.Name = "pNIF";
             this.pNIF.Size = new System.Drawing.Size(329, 36);
@@ -482,7 +482,7 @@
             // lblNIF
             // 
             this.lblNIF.AutoSize = true;
-            this.lblNIF.Location = new System.Drawing.Point(49, 93);
+            this.lblNIF.Location = new System.Drawing.Point(89, 91);
             this.lblNIF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNIF.Name = "lblNIF";
             this.lblNIF.Size = new System.Drawing.Size(24, 13);
@@ -494,7 +494,7 @@
             this.pName.Controls.Add(this.pColorName);
             this.pName.Controls.Add(this.pbUsername);
             this.pName.Controls.Add(this.txtName);
-            this.pName.Location = new System.Drawing.Point(50, 47);
+            this.pName.Location = new System.Drawing.Point(90, 45);
             this.pName.Margin = new System.Windows.Forms.Padding(2);
             this.pName.Name = "pName";
             this.pName.Size = new System.Drawing.Size(329, 36);
@@ -533,11 +533,12 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Green;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(49, 562);
+            this.btnExit.Location = new System.Drawing.Point(89, 532);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(165, 36);
+            this.btnExit.Size = new System.Drawing.Size(104, 37);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -547,11 +548,12 @@
             // 
             this.btnCreateStudent.BackColor = System.Drawing.Color.Green;
             this.btnCreateStudent.Enabled = false;
+            this.btnCreateStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreateStudent.Location = new System.Drawing.Point(213, 562);
+            this.btnCreateStudent.Location = new System.Drawing.Point(316, 532);
             this.btnCreateStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateStudent.Name = "btnCreateStudent";
-            this.btnCreateStudent.Size = new System.Drawing.Size(165, 36);
+            this.btnCreateStudent.Size = new System.Drawing.Size(104, 37);
             this.btnCreateStudent.TabIndex = 6;
             this.btnCreateStudent.Text = "Criar Aluno";
             this.btnCreateStudent.UseVisualStyleBackColor = false;
@@ -560,7 +562,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(50, 32);
+            this.lblName.Location = new System.Drawing.Point(90, 30);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -580,7 +582,7 @@
             this.MaximizeBox = false;
             this.Name = "FormAddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdicionarAluno";
+            this.Text = "AdicionarAluno";
             this.Load += new System.EventHandler(this.FormAddStudent_Load);
             this.pnlCreate.ResumeLayout(false);
             this.pnlCreate.PerformLayout();
