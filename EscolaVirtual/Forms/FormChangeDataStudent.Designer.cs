@@ -114,7 +114,6 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(2, 10);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.MaxLength = 250;
@@ -166,7 +165,6 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.Location = new System.Drawing.Point(2, 10);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.MaxLength = 9;
@@ -218,7 +216,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(2, 10);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.MaxLength = 250;
