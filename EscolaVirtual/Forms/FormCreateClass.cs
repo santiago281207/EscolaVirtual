@@ -73,6 +73,8 @@ namespace EscolaVirtual.Forms
                 changed = true;
             }
             txtClassName.Text = "";
+
+            this.Close();
         }
 
         private void txtClassName_TextChanged(object sender, EventArgs e)

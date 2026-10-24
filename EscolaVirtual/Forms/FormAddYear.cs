@@ -65,6 +65,8 @@ namespace EscolaVirtual
                 this.Close();
                 changed = true;
             }
+
+            this.Close();
         }
 
         private void txtAddYear_KeyPress(object sender, KeyPressEventArgs e)

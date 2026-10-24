@@ -101,6 +101,8 @@ namespace EscolaVirtual.Forms
             changed = true;
             txtSubjectName.Clear();
             cbClassYear.SelectedIndex = -1;
+
+            this.Close();
         }
 
         private void txtSubjectName_TextChanged(object sender, EventArgs e)

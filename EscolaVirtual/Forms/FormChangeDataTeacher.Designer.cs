@@ -121,6 +121,8 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(293, 20);
             this.txtAddress.TabIndex = 2;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // lblAddress
             // 
@@ -171,6 +173,8 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(293, 20);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // lblPhoneNumber
             // 
@@ -221,6 +225,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(293, 20);
             this.txtEmail.TabIndex = 2;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // lblEmail
             // 
@@ -270,6 +276,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(293, 20);
             this.txtName.TabIndex = 2;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // lblName
             // 
@@ -293,6 +301,7 @@
             this.btnBack.TabIndex = 49;
             this.btnBack.Text = "Sair";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnChangeData
             // 
@@ -307,6 +316,7 @@
             this.btnChangeData.TabIndex = 48;
             this.btnChangeData.Text = "Alterar";
             this.btnChangeData.UseVisualStyleBackColor = false;
+            this.btnChangeData.Click += new System.EventHandler(this.btnChangeData_Click);
             // 
             // FormChangeDataTeacher
             // 

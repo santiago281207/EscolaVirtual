@@ -32,45 +32,50 @@ namespace EscolaVirtual.Forms
             txtPhoneNumber.Text = student.PhoneNumber;
         }
 
-        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnChangeData_Click(object sender, EventArgs e)
         {
-            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != 8;
+            string titleText = $"Alterar dados de aluno: {student.Name}.";
+            string descriptionText = "Caro administrador gostaria de alterar os seguintes dados:";
+
+            if (txtName.Text != student.Name)
+            {
+                descriptionText += $"\nO meu nome de {student.Name} para {txtName.Text}";
+            }
+
+            if (txtEmail.Text != student.Email)
+            {
+                descriptionText += $"\nO meu email de {student.Email} para {txtEmail.Text}";
+            }
+
+            if (txtPhoneNumber.Text != student.PhoneNumber)
+            {
+                descriptionText += $"\nO meu número de telemóvel de {student.PhoneNumber} para {txtPhoneNumber.Text}";
+            }
+
+            if (txtAddress.Text != student.Address)
+            {
+                descriptionText += $"\nA minha morada de {student.Address} para {txtAddress.Text}";
+            }
+
+            descriptionText += $"\nCom os melhores cumprimentos,\n{student.Name}";
+
+            DataChange dataChange = new DataChange(admin, student, titleText, descriptionText, txtName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
+
+            MessageBox.Show("Pedido de alteração de dados enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
 
-        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            e.Handled = Char.IsSymbol(e.KeyChar);
+            this.Close();
         }
 
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsWhiteSpace(e.KeyChar) && e.KeyChar != 8;
-        }
-
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void txtAddress_TextChanged(object sender, EventArgs e)
         {
             if ((txtAddress.Text != "" && txtEmail.Text != "" && txtName.Text != "" && txtPhoneNumber.Text != "") &&
-                (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
-                && txtPhoneNumber.Text.Length == 9)
-            {
-                btnChangeData.Enabled = Methods.IsEmail(txtEmail.Text);
-            }
-            else
-            {
-                btnChangeData.Enabled = false;
-            }
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            if ((txtAddress.Text != "" && txtEmail.Text != "" && txtName.Text != "" && txtPhoneNumber.Text != "") &&
-                (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
-                && txtPhoneNumber.Text.Length == 9)
+               (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
+               && txtPhoneNumber.Text.Length == 9)
             {
                 btnChangeData.Enabled = Methods.IsEmail(txtEmail.Text);
             }
@@ -83,8 +88,8 @@ namespace EscolaVirtual.Forms
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
             if ((txtAddress.Text != "" && txtEmail.Text != "" && txtName.Text != "" && txtPhoneNumber.Text != "") &&
-                (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
-                && txtPhoneNumber.Text.Length == 9)
+             (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
+             && txtPhoneNumber.Text.Length == 9)
             {
                 btnChangeData.Enabled = Methods.IsEmail(txtEmail.Text);
             }
@@ -94,11 +99,11 @@ namespace EscolaVirtual.Forms
             }
         }
 
-        private void txtAddress_TextChanged(object sender, EventArgs e)
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
             if ((txtAddress.Text != "" && txtEmail.Text != "" && txtName.Text != "" && txtPhoneNumber.Text != "") &&
-                (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
-                && txtPhoneNumber.Text.Length == 9)
+               (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
+               && txtPhoneNumber.Text.Length == 9)
             {
                 btnChangeData.Enabled = Methods.IsEmail(txtEmail.Text);
             }
@@ -108,43 +113,38 @@ namespace EscolaVirtual.Forms
             }
         }
 
-        private void btnChangeData_Click(object sender, EventArgs e)
+        private void txtName_TextChanged(object sender, EventArgs e)
         {
-            string titleText = $"Alterar dados de aluno: {student.Name}.";
-            string descriptionText = "Caro administrador gostaria de alterar os seguintes dados:";
-
-            if(txtName.Text != student.Name)
+            if ((txtAddress.Text != "" && txtEmail.Text != "" && txtName.Text != "" && txtPhoneNumber.Text != "") &&
+            (txtAddress.Text != student.Address || txtEmail.Text != student.Email || txtName.Text != student.Name || txtPhoneNumber.Text != student.PhoneNumber)
+            && txtPhoneNumber.Text.Length == 9)
             {
-                descriptionText += $"\nO meu nome de {student.Name} para {txtName.Text}";
+                btnChangeData.Enabled = Methods.IsEmail(txtEmail.Text);
             }
-
-            if(txtEmail.Text != student.Email)
+            else
             {
-                descriptionText += $"\nO meu email de {student.Email} para {txtEmail.Text}";
+                btnChangeData.Enabled = false;
             }
-
-            if(txtPhoneNumber.Text != student.PhoneNumber)
-            {
-                descriptionText += $"\nO meu número de telemóvel de {student.PhoneNumber} para {txtPhoneNumber.Text}";
-            }
-
-            if(txtAddress.Text != student.Address)
-            {
-                descriptionText += $"\nA minha morada de {student.Address} para {txtAddress.Text}";
-            }
-
-            descriptionText += $"\nCom os melhores cumprimentos,\n{student.Name}";
-
-            DataChange dataChange = new DataChange(admin,student, titleText, descriptionText, txtName.Text, txtEmail.Text, txtAddress.Text, txtPhoneNumber.Text);
-
-            MessageBox.Show("Pedido de alteração de dados enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            e.Handled = Char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsLetter(e.KeyChar) && !Char.IsWhiteSpace(e.KeyChar) && e.KeyChar != 8;
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsSymbol(e.KeyChar);
+        }
+
+        private void txtPhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != 8;
         }
     }
 }
