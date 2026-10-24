@@ -150,6 +150,8 @@
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.Size = new System.Drawing.Size(293, 20);
             this.txtSubjectName.TabIndex = 2;
+            this.txtSubjectName.TextChanged += new System.EventHandler(this.txtSubjectName_TextChanged);
+            this.txtSubjectName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubjectName_KeyPress);
             // 
             // lblName
             // 
@@ -173,6 +175,7 @@
             this.btnBack.TabIndex = 11;
             this.btnBack.Text = "Sair";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCreateSubject
             // 
@@ -187,6 +190,7 @@
             this.btnCreateSubject.TabIndex = 10;
             this.btnCreateSubject.Text = "Adicionar";
             this.btnCreateSubject.UseVisualStyleBackColor = false;
+            this.btnCreateSubject.Click += new System.EventHandler(this.btnCreateSubject_Click);
             // 
             // FormCreateSubject
             // 

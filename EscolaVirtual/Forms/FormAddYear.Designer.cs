@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddYear));
-
             this.formLogin = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -52,7 +51,7 @@
             this.formLogin.Controls.Add(this.lblName);
             this.formLogin.Location = new System.Drawing.Point(93, 0);
             this.formLogin.Name = "formLogin";
-            this.formLogin.Size = new System.Drawing.Size(431, 242);
+            this.formLogin.Size = new System.Drawing.Size(431, 206);
             this.formLogin.TabIndex = 1;
             // 
             // btnExit
@@ -62,9 +61,9 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnExit.Location = new System.Drawing.Point(44, 161);
+            this.btnExit.Location = new System.Drawing.Point(236, 132);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(329, 37);
+            this.btnExit.Size = new System.Drawing.Size(103, 37);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -78,9 +77,9 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCreate.Location = new System.Drawing.Point(44, 118);
+            this.btnCreate.Location = new System.Drawing.Point(76, 132);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(329, 37);
+            this.btnCreate.Size = new System.Drawing.Size(106, 37);
             this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Criar";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -91,7 +90,7 @@
             this.pUsername.Controls.Add(this.pCorUsername);
             this.pUsername.Controls.Add(this.pbYearName);
             this.pUsername.Controls.Add(this.txtAddYear);
-            this.pUsername.Location = new System.Drawing.Point(44, 51);
+            this.pUsername.Location = new System.Drawing.Point(44, 61);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(329, 36);
             this.pUsername.TabIndex = 3;
@@ -128,7 +127,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(44, 28);
+            this.lblName.Location = new System.Drawing.Point(44, 38);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(106, 20);
             this.lblName.TabIndex = 2;
@@ -139,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(617, 243);
+            this.ClientSize = new System.Drawing.Size(617, 206);
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

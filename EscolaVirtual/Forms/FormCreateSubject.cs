@@ -35,22 +35,24 @@ namespace EscolaVirtual.Forms
             bool isValid = cbClassYear.SelectedItem != null && !string.IsNullOrWhiteSpace(txtSubjectName.Text);
             btnCreateSubject.Enabled = isValid;
         }
-       
-
-        private void txtSubjectName_TextChanged(object sender, EventArgs e)
+  
+        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateButtonState();
+            if (cbClassYear.SelectedItem != null)
+            {
+                txtSubjectName.Enabled = true;
+            }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void btnCreateSubject_Click(object sender, EventArgs e)
         {
-
-           if(cbClassYear.SelectedItem == null) 
+            if (cbClassYear.SelectedItem == null)
             {
                 MessageBox.Show("Seleciona um ano!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -58,23 +60,23 @@ namespace EscolaVirtual.Forms
 
             string subjectName = txtSubjectName.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(subjectName)) 
+            if (string.IsNullOrWhiteSpace(subjectName))
             {
-                MessageBox.Show("Introduz o nome da disciplina!","ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Introduz o nome da disciplina!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             string selectedYearText = cbClassYear.SelectedItem.ToString();
 
-       
+
             string cleanYearName = selectedYearText.Replace(" Ano", "").Trim();
 
-           
+
             ClassYear selectedClassYear = admin.ClassYears.FirstOrDefault(cy => cy.YearName.Equals(cleanYearName, StringComparison.OrdinalIgnoreCase));
 
-            if (selectedClassYear == null) 
+            if (selectedClassYear == null)
             {
-                MessageBox.Show("O ano escolar selecionado é Invalido!","ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("O ano escolar selecionado é Invalido!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -88,8 +90,8 @@ namespace EscolaVirtual.Forms
 
             Subject newSubject = new Subject(selectedClassYear, subjectName);
 
-            if(selectedClassYear.Subject == null) 
-            { 
+            if (selectedClassYear.Subject == null)
+            {
                 selectedClassYear.Subject = new List<Subject>();
             }
 
@@ -101,18 +103,14 @@ namespace EscolaVirtual.Forms
             cbClassYear.SelectedIndex = -1;
         }
 
+        private void txtSubjectName_TextChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+        }
+
         private void txtSubjectName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Char.IsDigit(e.KeyChar) || e.KeyChar == 32 || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar);
-        }
-
-        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            UpdateButtonState();
-            if (cbClassYear.SelectedItem != null)
-            {
-                txtSubjectName.Enabled = true;
-            }
         }
     }
 }
