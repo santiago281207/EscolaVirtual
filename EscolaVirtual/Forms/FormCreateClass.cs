@@ -43,14 +43,6 @@ namespace EscolaVirtual.Forms
             
         }
 
-        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cbClassYear.SelectedItem != null)
-            {
-                txtClassName.Enabled = true;
-            }
-        }
-
         private void txtClassName_TextChanged(object sender, EventArgs e)
         {
             if(txtClassName.Text != "")
@@ -83,6 +75,14 @@ namespace EscolaVirtual.Forms
         private void txtClassName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Char.IsDigit(e.KeyChar) || e.KeyChar == 32 || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar);
+        }
+
+        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbClassYear.SelectedItem != null)
+            {
+                txtClassName.Enabled = true;
+            }
         }
     }
 }

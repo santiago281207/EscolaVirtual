@@ -35,14 +35,7 @@ namespace EscolaVirtual.Forms
             bool isValid = cbClassYear.SelectedItem != null && !string.IsNullOrWhiteSpace(txtSubjectName.Text);
             btnCreateSubject.Enabled = isValid;
         }
-        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            UpdateButtonState();
-            if(cbClassYear.SelectedItem != null)
-            {
-                txtSubjectName.Enabled = true;
-            }
-        }
+       
 
         private void txtSubjectName_TextChanged(object sender, EventArgs e)
         {
@@ -111,6 +104,15 @@ namespace EscolaVirtual.Forms
         private void txtSubjectName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Char.IsDigit(e.KeyChar) || e.KeyChar == 32 || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar);
+        }
+
+        private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+            if (cbClassYear.SelectedItem != null)
+            {
+                txtSubjectName.Enabled = true;
+            }
         }
     }
 }

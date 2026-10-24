@@ -91,6 +91,7 @@
             this.cbClassYear.Name = "cbClassYear";
             this.cbClassYear.Size = new System.Drawing.Size(291, 21);
             this.cbClassYear.TabIndex = 10;
+            this.cbClassYear.SelectedIndexChanged += new System.EventHandler(this.cbClassYear_SelectedIndexChanged);
             // 
             // pColorYear
             // 
