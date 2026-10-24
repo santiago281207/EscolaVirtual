@@ -51,7 +51,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnChangeData = new System.Windows.Forms.Button();
             this.pChange.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -75,9 +75,9 @@
             this.pChange.Controls.Add(this.pName);
             this.pChange.Controls.Add(this.lblName);
             this.pChange.Controls.Add(this.btnBack);
-            this.pChange.Controls.Add(this.btnAdd);
+            this.pChange.Controls.Add(this.btnChangeData);
             this.pChange.Location = new System.Drawing.Point(102, 1);
-            this.pChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pChange.Margin = new System.Windows.Forms.Padding(2);
             this.pChange.Name = "pChange";
             this.pChange.Size = new System.Drawing.Size(407, 404);
             this.pChange.TabIndex = 0;
@@ -294,19 +294,19 @@
             this.btnBack.Text = "Sair";
             this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
+            // btnChangeData
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Green;
-            this.btnAdd.Enabled = false;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(66, 334);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 37);
-            this.btnAdd.TabIndex = 48;
-            this.btnAdd.Text = "Alterar";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnChangeData.BackColor = System.Drawing.Color.Green;
+            this.btnChangeData.Enabled = false;
+            this.btnChangeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeData.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnChangeData.Location = new System.Drawing.Point(66, 334);
+            this.btnChangeData.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangeData.Name = "btnChangeData";
+            this.btnChangeData.Size = new System.Drawing.Size(104, 37);
+            this.btnChangeData.TabIndex = 48;
+            this.btnChangeData.Text = "Alterar";
+            this.btnChangeData.UseVisualStyleBackColor = false;
             // 
             // FormChangeDataTeacher
             // 
@@ -316,7 +316,7 @@
             this.ClientSize = new System.Drawing.Size(624, 405);
             this.Controls.Add(this.pChange);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormChangeDataTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar Dados do Professor";
@@ -363,6 +363,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnChangeData;
     }
 }

@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateSubject));
             this.pnlCreate = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.pColorName = new System.Windows.Forms.Panel();
             this.pYear = new System.Windows.Forms.Panel();
+            this.cbClassYear = new System.Windows.Forms.ComboBox();
             this.pColorYear = new System.Windows.Forms.Panel();
             this.pbYear = new System.Windows.Forms.PictureBox();
             this.lblYear = new System.Windows.Forms.Label();
             this.pName = new System.Windows.Forms.Panel();
-            this.pColorName = new System.Windows.Forms.Panel();
             this.pbUsername = new System.Windows.Forms.PictureBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSubjectName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnCreateSubject = new System.Windows.Forms.Button();
             this.pnlCreate.SuspendLayout();
             this.pYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbYear)).BeginInit();
@@ -58,42 +58,24 @@
             this.pnlCreate.Controls.Add(this.pName);
             this.pnlCreate.Controls.Add(this.lblName);
             this.pnlCreate.Controls.Add(this.btnBack);
-            this.pnlCreate.Controls.Add(this.btnAdd);
+            this.pnlCreate.Controls.Add(this.btnCreateSubject);
             this.pnlCreate.Location = new System.Drawing.Point(87, 0);
             this.pnlCreate.Name = "pnlCreate";
             this.pnlCreate.Size = new System.Drawing.Size(392, 275);
             this.pnlCreate.TabIndex = 7;
             // 
-            // btnAdd
+            // pColorName
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Green;
-            this.btnAdd.Enabled = false;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(223, 198);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 37);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Adicionar";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Green;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(66, 198);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(104, 37);
-            this.btnBack.TabIndex = 11;
-            this.btnBack.Text = "Sair";
-            this.btnBack.UseVisualStyleBackColor = false;
+            this.pColorName.BackColor = System.Drawing.Color.Green;
+            this.pColorName.Location = new System.Drawing.Point(30, 83);
+            this.pColorName.Margin = new System.Windows.Forms.Padding(2);
+            this.pColorName.Name = "pColorName";
+            this.pColorName.Size = new System.Drawing.Size(329, 4);
+            this.pColorName.TabIndex = 9;
             // 
             // pYear
             // 
-            this.pYear.Controls.Add(this.cbYear);
+            this.pYear.Controls.Add(this.cbClassYear);
             this.pYear.Controls.Add(this.pColorYear);
             this.pYear.Controls.Add(this.pbYear);
             this.pYear.Location = new System.Drawing.Point(32, 126);
@@ -101,6 +83,14 @@
             this.pYear.Name = "pYear";
             this.pYear.Size = new System.Drawing.Size(329, 36);
             this.pYear.TabIndex = 57;
+            // 
+            // cbClassYear
+            // 
+            this.cbClassYear.FormattingEnabled = true;
+            this.cbClassYear.Location = new System.Drawing.Point(4, 6);
+            this.cbClassYear.Name = "cbClassYear";
+            this.cbClassYear.Size = new System.Drawing.Size(291, 21);
+            this.cbClassYear.TabIndex = 10;
             // 
             // pColorYear
             // 
@@ -134,21 +124,12 @@
             // pName
             // 
             this.pName.Controls.Add(this.pbUsername);
-            this.pName.Controls.Add(this.txtName);
+            this.pName.Controls.Add(this.txtSubjectName);
             this.pName.Location = new System.Drawing.Point(32, 51);
             this.pName.Margin = new System.Windows.Forms.Padding(2);
             this.pName.Name = "pName";
             this.pName.Size = new System.Drawing.Size(329, 36);
             this.pName.TabIndex = 55;
-            // 
-            // pColorName
-            // 
-            this.pColorName.BackColor = System.Drawing.Color.Green;
-            this.pColorName.Location = new System.Drawing.Point(30, 83);
-            this.pColorName.Margin = new System.Windows.Forms.Padding(2);
-            this.pColorName.Name = "pColorName";
-            this.pColorName.Size = new System.Drawing.Size(329, 4);
-            this.pColorName.TabIndex = 9;
             // 
             // pbUsername
             // 
@@ -160,14 +141,14 @@
             this.pbUsername.TabIndex = 5;
             this.pbUsername.TabStop = false;
             // 
-            // txtName
+            // txtSubjectName
             // 
-            this.txtName.Location = new System.Drawing.Point(2, 10);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtName.MaxLength = 30;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(293, 20);
-            this.txtName.TabIndex = 2;
+            this.txtSubjectName.Location = new System.Drawing.Point(2, 10);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubjectName.MaxLength = 30;
+            this.txtSubjectName.Name = "txtSubjectName";
+            this.txtSubjectName.Size = new System.Drawing.Size(293, 20);
+            this.txtSubjectName.TabIndex = 2;
             // 
             // lblName
             // 
@@ -179,13 +160,32 @@
             this.lblName.TabIndex = 54;
             this.lblName.Text = "Nome da Disciplina";
             // 
-            // cbYear
+            // btnBack
             // 
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(4, 6);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(291, 21);
-            this.cbYear.TabIndex = 10;
+            this.btnBack.BackColor = System.Drawing.Color.Green;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(66, 198);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(104, 37);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Sair";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
+            // btnCreateSubject
+            // 
+            this.btnCreateSubject.BackColor = System.Drawing.Color.Green;
+            this.btnCreateSubject.Enabled = false;
+            this.btnCreateSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateSubject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreateSubject.Location = new System.Drawing.Point(223, 198);
+            this.btnCreateSubject.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateSubject.Name = "btnCreateSubject";
+            this.btnCreateSubject.Size = new System.Drawing.Size(104, 37);
+            this.btnCreateSubject.TabIndex = 10;
+            this.btnCreateSubject.Text = "Adicionar";
+            this.btnCreateSubject.UseVisualStyleBackColor = false;
             // 
             // FormCreateSubject
             // 
@@ -215,7 +215,7 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlCreate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCreateSubject;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pColorName;
         private System.Windows.Forms.Panel pYear;
@@ -224,8 +224,8 @@
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Panel pName;
         private System.Windows.Forms.PictureBox pbUsername;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSubjectName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.ComboBox cbClassYear;
     }
 }

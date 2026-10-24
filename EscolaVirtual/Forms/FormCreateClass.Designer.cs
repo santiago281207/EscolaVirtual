@@ -32,16 +32,16 @@
             this.pnlCreate = new System.Windows.Forms.Panel();
             this.pColorName = new System.Windows.Forms.Panel();
             this.pYear = new System.Windows.Forms.Panel();
-            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.cbClassYear = new System.Windows.Forms.ComboBox();
             this.pColorYear = new System.Windows.Forms.Panel();
             this.pbYear = new System.Windows.Forms.PictureBox();
             this.lblYear = new System.Windows.Forms.Label();
             this.pName = new System.Windows.Forms.Panel();
             this.pbUsername = new System.Windows.Forms.PictureBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtClassName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnCreateClass = new System.Windows.Forms.Button();
             this.pnlCreate.SuspendLayout();
             this.pYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbYear)).BeginInit();
@@ -58,7 +58,7 @@
             this.pnlCreate.Controls.Add(this.pName);
             this.pnlCreate.Controls.Add(this.lblName);
             this.pnlCreate.Controls.Add(this.btnBack);
-            this.pnlCreate.Controls.Add(this.btnAdd);
+            this.pnlCreate.Controls.Add(this.btnCreateClass);
             this.pnlCreate.Location = new System.Drawing.Point(87, 0);
             this.pnlCreate.Name = "pnlCreate";
             this.pnlCreate.Size = new System.Drawing.Size(392, 275);
@@ -75,7 +75,7 @@
             // 
             // pYear
             // 
-            this.pYear.Controls.Add(this.cbYear);
+            this.pYear.Controls.Add(this.cbClassYear);
             this.pYear.Controls.Add(this.pColorYear);
             this.pYear.Controls.Add(this.pbYear);
             this.pYear.Location = new System.Drawing.Point(32, 126);
@@ -84,13 +84,13 @@
             this.pYear.Size = new System.Drawing.Size(329, 36);
             this.pYear.TabIndex = 57;
             // 
-            // cbYear
+            // cbClassYear
             // 
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(4, 6);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(291, 21);
-            this.cbYear.TabIndex = 10;
+            this.cbClassYear.FormattingEnabled = true;
+            this.cbClassYear.Location = new System.Drawing.Point(4, 6);
+            this.cbClassYear.Name = "cbClassYear";
+            this.cbClassYear.Size = new System.Drawing.Size(291, 21);
+            this.cbClassYear.TabIndex = 10;
             // 
             // pColorYear
             // 
@@ -124,7 +124,7 @@
             // pName
             // 
             this.pName.Controls.Add(this.pbUsername);
-            this.pName.Controls.Add(this.txtName);
+            this.pName.Controls.Add(this.txtClassName);
             this.pName.Location = new System.Drawing.Point(32, 51);
             this.pName.Margin = new System.Windows.Forms.Padding(2);
             this.pName.Name = "pName";
@@ -141,14 +141,14 @@
             this.pbUsername.TabIndex = 5;
             this.pbUsername.TabStop = false;
             // 
-            // txtName
+            // txtClassName
             // 
-            this.txtName.Location = new System.Drawing.Point(2, 10);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtName.MaxLength = 30;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(293, 20);
-            this.txtName.TabIndex = 2;
+            this.txtClassName.Location = new System.Drawing.Point(2, 10);
+            this.txtClassName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClassName.MaxLength = 30;
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(293, 20);
+            this.txtClassName.TabIndex = 2;
             // 
             // lblName
             // 
@@ -173,19 +173,19 @@
             this.btnBack.Text = "Sair";
             this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
+            // btnCreateClass
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Green;
-            this.btnAdd.Enabled = false;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(223, 198);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 37);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Adicionar";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnCreateClass.BackColor = System.Drawing.Color.Green;
+            this.btnCreateClass.Enabled = false;
+            this.btnCreateClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateClass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreateClass.Location = new System.Drawing.Point(223, 198);
+            this.btnCreateClass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateClass.Name = "btnCreateClass";
+            this.btnCreateClass.Size = new System.Drawing.Size(104, 37);
+            this.btnCreateClass.TabIndex = 10;
+            this.btnCreateClass.Text = "Adicionar";
+            this.btnCreateClass.UseVisualStyleBackColor = false;
             // 
             // FormCreateClass
             // 
@@ -218,15 +218,15 @@
         private System.Windows.Forms.Panel pnlCreate;
         private System.Windows.Forms.Panel pColorName;
         private System.Windows.Forms.Panel pYear;
-        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.ComboBox cbClassYear;
         private System.Windows.Forms.Panel pColorYear;
         private System.Windows.Forms.PictureBox pbYear;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Panel pName;
         private System.Windows.Forms.PictureBox pbUsername;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtClassName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCreateClass;
     }
 }
