@@ -74,7 +74,6 @@ namespace EscolaVirtual.Forms
         {
             List<ClassYear> classYears = admin.ClassYears;
             List<Class> classes = classYears.SelectMany(cy => cy.Classes).ToList();
-            List<Student> students = classes.SelectMany(cls => cls.Student).ToList();
 
             Class selectedClass = cbClass.SelectedItem as Class;
 
@@ -90,9 +89,11 @@ namespace EscolaVirtual.Forms
                 return;
             }
 
+            string email = txtEmail.Text.Trim();
+
             if (txtName.Text.Trim() == "" ||
                 txtNif.Text.Length != 9 ||
-                !Methods.IsEmail(txtEmail.Text) ||
+                !Methods.IsEmail(email) ||
                 txtPhoneNumber.Text.Length != 9 ||
                 txtAddress.Text.Trim().Length <= 6 ||
                 txtPassword.Text == "" ||
@@ -103,33 +104,34 @@ namespace EscolaVirtual.Forms
                 return;
             }
 
-            if (students.Any(std => std.Nif == txtNif.Text))
+            if (admin.Users.Any(u => u.Nif == txtNif.Text))
             {
-                MessageBox.Show("Já existe um aluno com este NIF.",
-                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Já existe um utilizador com este NIF.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            List<Student> students = admin.Users.OfType<Student>().ToList();
             Random random = new Random();
             string schoolNumber;
 
             do
             {
                 schoolNumber = random.Next(100000, 1000000).ToString();
-            }while (students.Any(std => std.SchoolNumber == schoolNumber));
+            } while (students.Any(std => std.SchoolNumber == schoolNumber));
 
             Student student = new Student(
                 txtPassword.Text,
                 txtName.Text.Trim(),
                 schoolNumber,
                 txtNif.Text,
-                txtAddress.Text.Trim(),
-                txtPhoneNumber.Text,
                 txtEmail.Text,
+                txtPhoneNumber.Text,
+                txtAddress.Text.Trim(),
                 selectedClass
             );
 
             selectedClass.Student.Add(student);
+
 
             MessageBox.Show("Aluno criado com sucesso!\nNúmero de aluno: " + schoolNumber,"Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             changed = true;

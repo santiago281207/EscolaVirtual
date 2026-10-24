@@ -250,7 +250,41 @@ namespace EscolaVirtual.Forms
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-            List<Teacher> teachers = admin.Teachers.ToList();
+            string email = txtEmail.Text.Trim();
+
+            if (txtName.Text.Trim() == "" ||
+                txtNif.Text.Length != 9 ||
+                !Methods.IsEmail(email) ||
+                txtPhoneNumber.Text.Length != 9 ||
+                txtAddress.Text.Trim().Length <= 6 ||
+                txtPassword.Text.Length != 4 ||
+                txtPassword.Text != txtConfirmPassword.Text)
+            {
+                MessageBox.Show("Verifica os dados introduzidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (admin.Users.Any(u => u.Nif == txtNif.Text))
+            {
+                MessageBox.Show("Já existe um utilizador com este NIF.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Teacher teacher = new Teacher(
+                txtPassword.Text,
+                txtName.Text.Trim(),
+                txtNif.Text,
+                email,
+                txtPhoneNumber.Text,
+                txtAddress.Text.Trim()
+            );
+
+            admin.Teachers.Add(teacher);
+            admin.Users.Add(teacher);
+
+            MessageBox.Show("Professor criado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            changed = true;
+            this.Close();
         }
     }
 }
