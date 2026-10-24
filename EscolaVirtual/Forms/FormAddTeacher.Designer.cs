@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddTeacher));
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAddTeacher = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -90,7 +90,7 @@
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBack.Location = new System.Drawing.Point(75, 497);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(104, 37);
             this.btnBack.TabIndex = 8;
@@ -98,19 +98,20 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnAdd
+            // btnAddTeacher
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Green;
-            this.btnAdd.Enabled = false;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(299, 497);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 37);
-            this.btnAdd.TabIndex = 9;
-            this.btnAdd.Text = "Adicionar";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAddTeacher.BackColor = System.Drawing.Color.Green;
+            this.btnAddTeacher.Enabled = false;
+            this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeacher.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddTeacher.Location = new System.Drawing.Point(299, 497);
+            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddTeacher.Name = "btnAddTeacher";
+            this.btnAddTeacher.Size = new System.Drawing.Size(104, 37);
+            this.btnAddTeacher.TabIndex = 9;
+            this.btnAddTeacher.Text = "Adicionar";
+            this.btnAddTeacher.UseVisualStyleBackColor = false;
+            this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
             // 
             // panel6
             // 
@@ -129,7 +130,7 @@
             this.panel6.Controls.Add(this.lblNIF);
             this.panel6.Controls.Add(this.pName);
             this.panel6.Controls.Add(this.lblName);
-            this.panel6.Controls.Add(this.btnAdd);
+            this.panel6.Controls.Add(this.btnAddTeacher);
             this.panel6.Controls.Add(this.btnBack);
             this.panel6.Location = new System.Drawing.Point(100, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
@@ -176,6 +177,9 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(293, 20);
             this.txtAddress.TabIndex = 2;
+            this.txtAddress.EnabledChanged += new System.EventHandler(this.txtAddress_EnabledChanged);
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // lblAddress
             // 
@@ -226,6 +230,9 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(293, 20);
             this.txtConfirmPassword.TabIndex = 2;
+            this.txtConfirmPassword.EnabledChanged += new System.EventHandler(this.txtConfirmPassword_EnabledChanged);
+            this.txtConfirmPassword.TextChanged += new System.EventHandler(this.txtConfirmPassword_TextChanged);
+            this.txtConfirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmPassword_KeyPress);
             // 
             // lblConfirmPassword
             // 
@@ -276,6 +283,9 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(293, 20);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.EnabledChanged += new System.EventHandler(this.txtPassword_EnabledChanged);
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // lblPassword
             // 
@@ -326,6 +336,9 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(293, 20);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.EnabledChanged += new System.EventHandler(this.txtPhoneNumber_EnabledChanged);
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // lblPhoneNumber
             // 
@@ -376,6 +389,9 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(293, 20);
             this.txtEmail.TabIndex = 2;
+            this.txtEmail.EnabledChanged += new System.EventHandler(this.txtEmail_EnabledChanged);
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // lblEmail
             // 
@@ -426,6 +442,9 @@
             this.txtNif.Name = "txtNif";
             this.txtNif.Size = new System.Drawing.Size(293, 20);
             this.txtNif.TabIndex = 2;
+            this.txtNif.EnabledChanged += new System.EventHandler(this.txtNif_EnabledChanged);
+            this.txtNif.TextChanged += new System.EventHandler(this.txtNif_TextChanged);
+            this.txtNif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNif_KeyPress);
             // 
             // lblNIF
             // 
@@ -475,6 +494,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(293, 20);
             this.txtName.TabIndex = 2;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // lblName
             // 
@@ -495,11 +516,12 @@
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormAddTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Professor";
+            this.Load += new System.EventHandler(this.FormAddTeacher_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -529,7 +551,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnAddTeacher;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
