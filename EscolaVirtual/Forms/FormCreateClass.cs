@@ -31,11 +31,12 @@ namespace EscolaVirtual.Forms
         private void FormCreateClass_Load(object sender, EventArgs e)
         {
             btnCreateClass.Enabled = false;
+            txtClassName.Enabled = false;
+            txtMaxStudents.Enabled = false;
 
             List<ClassYear> classYears = admin.ClassYears;
             cbClassYear.DataSource = classYears;
             cbClassYear.DisplayMember = "YearName";
-            
         }
 
         private void cbClassYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace EscolaVirtual.Forms
             if (cbClassYear.SelectedItem != null)
             {
                 txtClassName.Enabled = true;
+                txtMaxStudents.Enabled = true;
             }
         }
 
@@ -68,18 +70,31 @@ namespace EscolaVirtual.Forms
             }
             else
             {
-                classValid = new Class(txtClassName.Text, classYear);
-                MessageBox.Show("Turma criada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                changed = true;
-            }
-            txtClassName.Text = "";
+               
+                if (int.TryParse(txtMaxStudents.Text, out int maxStudents) && maxStudents > 0)
+                {
+                   
+                    classValid = new Class(txtClassName.Text, classYear, maxStudents);
 
-            this.Close();
+                    MessageBox.Show("Turma criada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    changed = true;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Insere um número máximo de alunos válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+            }
+
+            txtClassName.Text = "";
+            txtMaxStudents.Text = "";
         }
 
-        private void txtClassName_TextChanged(object sender, EventArgs e)
+      
+        private void CheckFields()
         {
-            if (txtClassName.Text != "")
+            if (!string.IsNullOrWhiteSpace(txtClassName.Text) && !string.IsNullOrWhiteSpace(txtMaxStudents.Text))
             {
                 btnCreateClass.Enabled = true;
             }
@@ -87,6 +102,16 @@ namespace EscolaVirtual.Forms
             {
                 btnCreateClass.Enabled = false;
             }
+        }
+
+        private void txtClassName_TextChanged(object sender, EventArgs e)
+        {
+            CheckFields();
+        }
+
+        private void txtMaxStudents_TextChanged(object sender, EventArgs e)
+        {
+            CheckFields();
         }
     }
 }

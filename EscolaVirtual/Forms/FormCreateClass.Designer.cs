@@ -42,16 +42,25 @@
             this.lblName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCreateClass = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMaxStudents = new System.Windows.Forms.Label();
+            this.txtMaxStudents = new System.Windows.Forms.TextBox();
             this.pnlCreate.SuspendLayout();
             this.pYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbYear)).BeginInit();
             this.pName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCreate
             // 
             this.pnlCreate.BackColor = System.Drawing.Color.White;
+            this.pnlCreate.Controls.Add(this.panel1);
+            this.pnlCreate.Controls.Add(this.lblMaxStudents);
             this.pnlCreate.Controls.Add(this.pColorName);
             this.pnlCreate.Controls.Add(this.pYear);
             this.pnlCreate.Controls.Add(this.lblYear);
@@ -61,7 +70,7 @@
             this.pnlCreate.Controls.Add(this.btnCreateClass);
             this.pnlCreate.Location = new System.Drawing.Point(87, 0);
             this.pnlCreate.Name = "pnlCreate";
-            this.pnlCreate.Size = new System.Drawing.Size(392, 275);
+            this.pnlCreate.Size = new System.Drawing.Size(392, 307);
             this.pnlCreate.TabIndex = 8;
             // 
             // pColorName
@@ -168,7 +177,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Green;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(66, 198);
+            this.btnBack.Location = new System.Drawing.Point(67, 259);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(104, 37);
@@ -183,7 +192,7 @@
             this.btnCreateClass.Enabled = false;
             this.btnCreateClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateClass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreateClass.Location = new System.Drawing.Point(223, 198);
+            this.btnCreateClass.Location = new System.Drawing.Point(214, 259);
             this.btnCreateClass.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateClass.Name = "btnCreateClass";
             this.btnCreateClass.Size = new System.Drawing.Size(104, 37);
@@ -192,12 +201,62 @@
             this.btnCreateClass.UseVisualStyleBackColor = false;
             this.btnCreateClass.Click += new System.EventHandler(this.btnCreateClass_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtMaxStudents);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(32, 193);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(329, 36);
+            this.panel1.TabIndex = 59;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.Location = new System.Drawing.Point(0, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(329, 4);
+            this.panel2.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EscolaVirtual.Properties.Resources.icone_du_calendrier_des_evenements_vert;
+            this.pictureBox1.Location = new System.Drawing.Point(299, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblMaxStudents
+            // 
+            this.lblMaxStudents.AutoSize = true;
+            this.lblMaxStudents.Location = new System.Drawing.Point(32, 177);
+            this.lblMaxStudents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaxStudents.Name = "lblMaxStudents";
+            this.lblMaxStudents.Size = new System.Drawing.Size(93, 13);
+            this.lblMaxStudents.TabIndex = 58;
+            this.lblMaxStudents.Text = "Maximo de Alunos";
+            // 
+            // txtMaxStudents
+            // 
+            this.txtMaxStudents.Location = new System.Drawing.Point(3, 8);
+            this.txtMaxStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaxStudents.MaxLength = 2;
+            this.txtMaxStudents.Name = "txtMaxStudents";
+            this.txtMaxStudents.Size = new System.Drawing.Size(293, 20);
+            this.txtMaxStudents.TabIndex = 10;
+            this.txtMaxStudents.TextChanged += new System.EventHandler(this.txtMaxStudents_TextChanged);
+            // 
             // FormCreateClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(562, 276);
+            this.ClientSize = new System.Drawing.Size(562, 307);
             this.Controls.Add(this.pnlCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -214,6 +273,9 @@
             this.pName.ResumeLayout(false);
             this.pName.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +295,10 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCreateClass;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtMaxStudents;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblMaxStudents;
     }
 }
