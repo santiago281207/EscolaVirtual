@@ -131,8 +131,8 @@ namespace EscolaVirtual.Forms
             );
 
             selectedClass.Student.Add(student);
-
-
+            admin.Users.Add(student);
+            
             MessageBox.Show("Aluno criado com sucesso!\nNúmero de aluno: " + schoolNumber,"Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             changed = true;
 
