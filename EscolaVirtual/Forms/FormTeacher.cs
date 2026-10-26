@@ -28,6 +28,8 @@ namespace EscolaVirtual
         {
             FormTeacherGrades formTeacherGrades = new FormTeacherGrades(admin, teacher);
             formTeacherGrades.ShowDialog();
+
+            FormTeacher_Load(this, EventArgs.Empty);
         }
 
         private void btnAbsences_Click(object sender, EventArgs e)
@@ -58,6 +60,8 @@ namespace EscolaVirtual
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
+            tvwSubjectClass.Nodes.Clear();
+
             lblWelcome.Text = $"Bem vindo, {teacher.Name}";
 
             List<TeacherClassSubject> teacherClassSubjects = admin.TeacherClassSubjects.FindAll(t => t.Teacher == teacher);

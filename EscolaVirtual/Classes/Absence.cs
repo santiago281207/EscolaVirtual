@@ -68,11 +68,6 @@ namespace EscolaVirtual.Classes
 
         #endregion
 
-
-
-
-
-
         public ListViewItem ToListViewItem(Absence absence)
         {
              ListViewItem item = new ListViewItem(absence.Date.ToShortDateString());
