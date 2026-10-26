@@ -20,6 +20,11 @@ namespace EscolaVirtual.Classes
             classYear.Classes.Add(this);
         }
 
+        // Mantém uma sobrecarga caso precises noutra parte do código,ex: valoe padrão de 30 alunos
+        public Class(string name, ClassYear classYear) : this(name, classYear, 30)
+        {
+        }
+
         #region Properties and Members
 
         private string m_name;

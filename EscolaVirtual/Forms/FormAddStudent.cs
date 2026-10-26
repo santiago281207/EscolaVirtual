@@ -83,7 +83,7 @@ namespace EscolaVirtual.Forms
                 return;
             }
 
-            if (selectedClass.Student.Count >= Constants.MAX_STUDENTS_PER_CLASS)
+            if (selectedClass.Student.Count >= selectedClass.MaxStudents)
             {
                 MessageBox.Show("Esta turma já atingiu o número máximo de alunos!","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
