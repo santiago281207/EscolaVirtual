@@ -207,6 +207,7 @@
             this.Name = "FormCreateSubject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criar Disciplina";
+            this.Load += new System.EventHandler(this.FormCreateSubject_Load);
             this.pnlCreate.ResumeLayout(false);
             this.pnlCreate.PerformLayout();
             this.pYear.ResumeLayout(false);

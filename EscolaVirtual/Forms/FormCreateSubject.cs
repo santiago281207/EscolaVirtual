@@ -114,5 +114,10 @@ namespace EscolaVirtual.Forms
         {
             e.Handled = Char.IsDigit(e.KeyChar) || e.KeyChar == 32 || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar);
         }
+
+        private void FormCreateSubject_Load(object sender, EventArgs e)
+        {
+            cbClassYear.DataSource = admin.ClassYears.Select(cy => cy.YearName + " Ano").ToList();
+        }
     }
 }
