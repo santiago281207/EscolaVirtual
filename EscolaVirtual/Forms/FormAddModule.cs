@@ -90,6 +90,7 @@ namespace EscolaVirtual
                 "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             changed = true;
+
             this.Close();
         }
 
