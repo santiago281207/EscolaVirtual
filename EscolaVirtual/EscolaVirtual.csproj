@@ -49,10 +49,10 @@
     <Compile Include="Classes\DataChange.cs" />
     <Compile Include="Classes\Enums.cs" />
     <Compile Include="Classes\Methods.cs" />
-    <Compile Include="FormAddModule.cs">
+    <Compile Include="Forms\FormAddModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddModule.Designer.cs">
+    <Compile Include="Forms\FormAddModule.Designer.cs">
       <DependentUpon>FormAddModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormAddTeacher.cs">
@@ -185,7 +185,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAddModule.resx">
+    <EmbeddedResource Include="Forms\FormAddModule.resx">
       <DependentUpon>FormAddModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddTeacher.resx">
