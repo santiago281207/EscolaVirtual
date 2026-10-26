@@ -1,35 +1,82 @@
-FICHEIRO DE CREDENCIAIS
-=======================
-=======================
-Admin-
-Login: 0000
-Password: 0000
-=======================
+# FICHEIRO DE CREDENCIAIS
 =======================
 
-Professores============
+## ADMINISTRADOR
+
+**Admin**
+- Login: 0000
+- Password: 0000
 
 =======================
-=======================
-Santiago-Professor
-Login: 111111111
-Password: 1111
-=======================
-=======================
-=======================
-=======================
-Vincente-Professor
-Login: 222222222
-Password: 2222
-=======================
+
+## PROFESSORES
+
+**Santiago — Professor**
+- Login: 111111111
+- Password: 1111
+
+**Vicente — Professor**
+- Login: 222222222
+- Password: 2222
+
+**Miguel — Professor**
+- Login: 444444444
+- Password: 4444
+
+**Beatriz — Professora**
+- Login: 555555555
+- Password: 5555
+
+**André — Professor**
+- Login: 666666666
+- Password: 6666
+
 =======================
 
-Alunos=================
+## ALUNOS
 
-=======================
-=======================
-João-Aluno
-Login: 333333333
-Password: 3333
-=======================
+**João — Aluno**
+- Login: 333333333
+- Password: 3333
+
+**Maria — Aluna**
+- Login: 777777777
+- Password: 7777
+
+**Pedro — Aluno**
+- Login: 888888888
+- Password: 8888
+
+**Ana — Aluna**
+- Login: 999999999
+- Password: 9999
+
+**Diogo — Aluno**
+- Login: 101010101
+- Password: 1010
+
+**Inês — Aluna**
+- Login: 121212121
+- Password: 1212
+
+**Rafael — Aluno**
+- Login: 131313131
+- Password: 1313
+
+**Sofia — Aluna**
+- Login: 141414141
+- Password: `1414`
+
+**Gonçalo — Aluno**
+- Login: 151515151
+- Password: 1515
+
+**Matilde — Aluna**
+- Login: 161616161
+- Password: 1616
+
+**Tomás — Aluno**
+- Login: 171717171
+- Password: 1717
+
 =======================
