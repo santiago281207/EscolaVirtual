@@ -75,6 +75,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.pAdmin = new System.Windows.Forms.Panel();
             this.pAdminSair = new System.Windows.Forms.Panel();
+            this.btnAddModule = new System.Windows.Forms.Button();
             this.tcCategories.SuspendLayout();
             this.tpStudent.SuspendLayout();
             this.tpTeacher.SuspendLayout();
@@ -91,7 +92,7 @@
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddStudent.Location = new System.Drawing.Point(327, 511);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(278, 41);
             this.btnAddStudent.TabIndex = 1;
@@ -105,7 +106,7 @@
             this.btnAddYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddYear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddYear.Location = new System.Drawing.Point(327, 448);
-            this.btnAddYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddYear.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddYear.Name = "btnAddYear";
             this.btnAddYear.Size = new System.Drawing.Size(278, 41);
             this.btnAddYear.TabIndex = 2;
@@ -119,7 +120,7 @@
             this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTeacher.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddTeacher.Location = new System.Drawing.Point(637, 511);
-            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTeacher.Name = "btnAddTeacher";
             this.btnAddTeacher.Size = new System.Drawing.Size(278, 41);
             this.btnAddTeacher.TabIndex = 3;
@@ -133,7 +134,7 @@
             this.btnAddClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddClass.Location = new System.Drawing.Point(14, 511);
-            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClass.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(278, 41);
             this.btnAddClass.TabIndex = 4;
@@ -147,7 +148,7 @@
             this.btnSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSubject.Location = new System.Drawing.Point(637, 448);
-            this.btnSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubject.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubject.Name = "btnSubject";
             this.btnSubject.Size = new System.Drawing.Size(278, 41);
             this.btnSubject.TabIndex = 5;
@@ -161,7 +162,7 @@
             this.btnLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLink.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLink.Location = new System.Drawing.Point(637, 8);
-            this.btnLink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLink.Margin = new System.Windows.Forms.Padding(2);
             this.btnLink.Name = "btnLink";
             this.btnLink.Size = new System.Drawing.Size(278, 41);
             this.btnLink.TabIndex = 6;
@@ -175,7 +176,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogOut.Location = new System.Drawing.Point(10, 8);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(278, 41);
             this.btnLogOut.TabIndex = 8;
@@ -191,7 +192,7 @@
             this.tcCategories.Controls.Add(this.tpYear);
             this.tcCategories.Controls.Add(this.tpSubject);
             this.tcCategories.Location = new System.Drawing.Point(10, 11);
-            this.tcCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcCategories.Margin = new System.Windows.Forms.Padding(2);
             this.tcCategories.Name = "tcCategories";
             this.tcCategories.SelectedIndex = 0;
             this.tcCategories.Size = new System.Drawing.Size(892, 421);
@@ -202,9 +203,9 @@
             // 
             this.tpStudent.Controls.Add(this.lvwStudent);
             this.tpStudent.Location = new System.Drawing.Point(4, 22);
-            this.tpStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpStudent.Margin = new System.Windows.Forms.Padding(2);
             this.tpStudent.Name = "tpStudent";
-            this.tpStudent.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpStudent.Padding = new System.Windows.Forms.Padding(2);
             this.tpStudent.Size = new System.Drawing.Size(884, 395);
             this.tpStudent.TabIndex = 0;
             this.tpStudent.Text = "Aluno";
@@ -226,7 +227,7 @@
             this.lvwStudent.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lvwStudent.HideSelection = false;
             this.lvwStudent.Location = new System.Drawing.Point(2, 3);
-            this.lvwStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwStudent.Margin = new System.Windows.Forms.Padding(2);
             this.lvwStudent.Name = "lvwStudent";
             this.lvwStudent.Size = new System.Drawing.Size(882, 395);
             this.lvwStudent.TabIndex = 0;
@@ -295,9 +296,9 @@
             // 
             this.tpTeacher.Controls.Add(this.lvwTeacher);
             this.tpTeacher.Location = new System.Drawing.Point(4, 22);
-            this.tpTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.tpTeacher.Name = "tpTeacher";
-            this.tpTeacher.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpTeacher.Padding = new System.Windows.Forms.Padding(2);
             this.tpTeacher.Size = new System.Drawing.Size(884, 395);
             this.tpTeacher.TabIndex = 1;
             this.tpTeacher.Text = "Professor";
@@ -314,7 +315,7 @@
             this.chTeacherAddress});
             this.lvwTeacher.HideSelection = false;
             this.lvwTeacher.Location = new System.Drawing.Point(2, 2);
-            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.lvwTeacher.Name = "lvwTeacher";
             this.lvwTeacher.Size = new System.Drawing.Size(882, 395);
             this.lvwTeacher.TabIndex = 2;
@@ -360,7 +361,7 @@
             // 
             this.tpClass.Controls.Add(this.lvwClass);
             this.tpClass.Location = new System.Drawing.Point(4, 22);
-            this.tpClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpClass.Margin = new System.Windows.Forms.Padding(2);
             this.tpClass.Name = "tpClass";
             this.tpClass.Size = new System.Drawing.Size(884, 395);
             this.tpClass.TabIndex = 2;
@@ -375,7 +376,7 @@
             this.chSchoolYear});
             this.lvwClass.HideSelection = false;
             this.lvwClass.Location = new System.Drawing.Point(0, 0);
-            this.lvwClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwClass.Margin = new System.Windows.Forms.Padding(2);
             this.lvwClass.Name = "lvwClass";
             this.lvwClass.Size = new System.Drawing.Size(882, 395);
             this.lvwClass.TabIndex = 1;
@@ -403,7 +404,7 @@
             // 
             this.tpYear.Controls.Add(this.lvwYear);
             this.tpYear.Location = new System.Drawing.Point(4, 22);
-            this.tpYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpYear.Margin = new System.Windows.Forms.Padding(2);
             this.tpYear.Name = "tpYear";
             this.tpYear.Size = new System.Drawing.Size(884, 395);
             this.tpYear.TabIndex = 3;
@@ -418,7 +419,7 @@
             this.chSubjectQtt});
             this.lvwYear.HideSelection = false;
             this.lvwYear.Location = new System.Drawing.Point(2, 2);
-            this.lvwYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwYear.Margin = new System.Windows.Forms.Padding(2);
             this.lvwYear.Name = "lvwYear";
             this.lvwYear.Size = new System.Drawing.Size(882, 395);
             this.lvwYear.TabIndex = 1;
@@ -446,7 +447,7 @@
             // 
             this.tpSubject.Controls.Add(this.lvwSubject);
             this.tpSubject.Location = new System.Drawing.Point(4, 22);
-            this.tpSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpSubject.Margin = new System.Windows.Forms.Padding(2);
             this.tpSubject.Name = "tpSubject";
             this.tpSubject.Size = new System.Drawing.Size(884, 395);
             this.tpSubject.TabIndex = 4;
@@ -461,7 +462,7 @@
             this.chModules});
             this.lvwSubject.HideSelection = false;
             this.lvwSubject.Location = new System.Drawing.Point(2, 0);
-            this.lvwSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwSubject.Margin = new System.Windows.Forms.Padding(2);
             this.lvwSubject.Name = "lvwSubject";
             this.lvwSubject.Size = new System.Drawing.Size(882, 395);
             this.lvwSubject.TabIndex = 1;
@@ -492,7 +493,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEdit.Location = new System.Drawing.Point(14, 448);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(278, 41);
             this.btnEdit.TabIndex = 10;
@@ -511,7 +512,7 @@
             this.pAdmin.Controls.Add(this.btnAddYear);
             this.pAdmin.Controls.Add(this.btnAddStudent);
             this.pAdmin.Location = new System.Drawing.Point(9, 11);
-            this.pAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.pAdmin.Name = "pAdmin";
             this.pAdmin.Size = new System.Drawing.Size(925, 570);
             this.pAdmin.TabIndex = 11;
@@ -519,13 +520,28 @@
             // pAdminSair
             // 
             this.pAdminSair.BackColor = System.Drawing.Color.Silver;
+            this.pAdminSair.Controls.Add(this.btnAddModule);
             this.pAdminSair.Controls.Add(this.btnLogOut);
             this.pAdminSair.Controls.Add(this.btnLink);
             this.pAdminSair.Location = new System.Drawing.Point(9, 587);
-            this.pAdminSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pAdminSair.Margin = new System.Windows.Forms.Padding(2);
             this.pAdminSair.Name = "pAdminSair";
             this.pAdminSair.Size = new System.Drawing.Size(925, 53);
             this.pAdminSair.TabIndex = 12;
+            // 
+            // btnAddModule
+            // 
+            this.btnAddModule.BackColor = System.Drawing.Color.Green;
+            this.btnAddModule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddModule.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddModule.Location = new System.Drawing.Point(327, 7);
+            this.btnAddModule.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddModule.Name = "btnAddModule";
+            this.btnAddModule.Size = new System.Drawing.Size(278, 41);
+            this.btnAddModule.TabIndex = 9;
+            this.btnAddModule.Text = "Adicionar Modúlo";
+            this.btnAddModule.UseVisualStyleBackColor = false;
+            this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
             // 
             // FormAdmin
             // 
@@ -536,7 +552,7 @@
             this.Controls.Add(this.pAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -602,5 +618,6 @@
         private System.Windows.Forms.ColumnHeader chSubjectName;
         private System.Windows.Forms.ColumnHeader chClassYearSubject;
         private System.Windows.Forms.ColumnHeader chModules;
+        private System.Windows.Forms.Button btnAddModule;
     }
 }

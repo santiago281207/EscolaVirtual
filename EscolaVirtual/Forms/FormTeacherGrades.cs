@@ -71,6 +71,11 @@ namespace EscolaVirtual.Forms
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            cbSubject.SelectedIndex = -1;
+            cbModule.SelectedIndex = -1;
+            cbStudent.SelectedIndex = -1;
+            nudGrade.Value = nudGrade.Minimum;
+
         }
 
         private void cbClass_SelectedIndexChanged(object sender, EventArgs e)

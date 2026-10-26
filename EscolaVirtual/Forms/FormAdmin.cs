@@ -163,5 +163,10 @@ namespace EscolaVirtual
             }
         }
 
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            FormAddModule formModule = new FormAddModule(admin);
+            formModule.ShowDialog();
+        }
     }
 }
