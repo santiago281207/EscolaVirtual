@@ -10,14 +10,20 @@ namespace EscolaVirtual.Classes
 {
     public class Class
     {
-        public Class(string name,ClassYear classYear)
+        // Construtor atualizado com o parâmetro maxStudents
+        public Class(string name, ClassYear classYear, int maxStudents)
         {
             this.Name = name;
             this.SchoolYear = classYear;
+            this.m_maxStudents = maxStudents;
 
             classYear.Classes.Add(this);
         }
 
+        // Mantém uma sobrecarga sem maxStudents caso precises noutra parte do código (ex: valor predefinido de 25 ou 30)
+        public Class(string name, ClassYear classYear) : this(name, classYear, 30)
+        {
+        }
 
         #region Properties and Members
 
@@ -26,6 +32,13 @@ namespace EscolaVirtual.Classes
         {
             get { return m_name; }
             set { m_name = value; }
+        }
+
+        private int m_maxStudents;
+        public int MaxStudents
+        {
+            get { return m_maxStudents; }
+            set { m_maxStudents = value; }
         }
 
         List<Student> m_students = new List<Student>();
@@ -44,6 +57,12 @@ namespace EscolaVirtual.Classes
 
         #endregion
 
+        // Método auxiliar para verificar se a turma ainda tem vagas
+        public bool HasAvailableSlots()
+        {
+            return Student.Count < MaxStudents;
+        }
+
         public ListViewItem ToListViewItem(Class @class)
         {
             ListViewItem listViewItem = new ListViewItem(@class.Name);
@@ -54,14 +73,11 @@ namespace EscolaVirtual.Classes
             listViewItem.SubItems.Add(lisiClassYear);
 
             return listViewItem;
-
         }
 
         public string ClassNameWithYear
         {
             get { return Name + " - " + SchoolYear.YearName + " Ano"; }
         }
-
-
     }
 }
