@@ -20,11 +20,6 @@ namespace EscolaVirtual.Classes
             classYear.Classes.Add(this);
         }
 
-        // Mantém uma sobrecarga sem maxStudents caso precises noutra parte do código (ex: valor predefinido de 25 ou 30)
-        public Class(string name, ClassYear classYear) : this(name, classYear, 30)
-        {
-        }
-
         #region Properties and Members
 
         private string m_name;
