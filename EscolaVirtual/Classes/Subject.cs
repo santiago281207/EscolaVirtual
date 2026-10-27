@@ -52,9 +52,6 @@ namespace EscolaVirtual.Classes
             return listViewItem;
         }
 
-        public string SubjectWithYear
-        {
-            return SubjectName + "-" + ClassYear.YearName + "Ano";
-        }
+        
     }
 }
